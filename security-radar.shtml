@@ -141,7 +141,7 @@ function createDots(color, fill, minR, maxR){
 					+ techList[i].COLORCODE
 					+ "</span><br />Status: &nbsp;<span class='col'>" 
 					+ techList[i].DETAILS 
-					+ "</p>"));
+					+ "</span></p>"));
 		dot.setAttribute("onmouseover", "showText(this)");		
 		}
 function RandomAngle(minA, maxA){
