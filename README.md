@@ -13,11 +13,10 @@ I've also created a radar in photoshop - and png dots - if preferable to SVGs.<b
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
-
-             Safari 10.1.1<br />
-             Chrome 59.0.3071.115 (latest version)<br />
-             IE 9
-             IE 11
+    Safari 10.1.1<br />
+    Chrome 59.0.3071.115 (latest version)<br />
+    IE 9
+    IE 11
 Fixed text box style for IE 9+ :<br />
 Haven't tested 10, but 11 is fine.<br />
     Added display:inline-block to .tx - as was mis-aligned.<br /><br />
