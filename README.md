@@ -19,7 +19,7 @@ I've also created a radar in photoshop - and png dots - if preferable to SVGs.<b
     IE 11
 Fixed text box style for IE 9+ :<br />
 Haven't tested 10, but 11 is fine.<br />
-    Added display:inline-block to .tx - as was mis-aligned.<br /><br />
+    For IE - Added display:inline-block to .tx - as was mis-aligned.<br /><br />
     IE8 has nothing - is anybody still using IE8?!<br />
     Found missing end tag - fixed.<br /><br />
 Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br />
