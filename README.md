@@ -7,5 +7,8 @@ I've also created a radar in photoshop - and png dots - if preferable to SVGs.<b
 Tested in:   FireFox 54.0.1 (latest version) & the previous version<br />
              Safari 10.1.1<br />
              Chrome 59.0.3071.115 (latest version)<br />
-Not tested in IE yet.<br /><br />
+Fixed text box style for IE 9+ :
+    Added display:inline-block to .tx - as was mis-aligned.<br /><br />
+    IE8 has nothing - is anybody still using IE8?!
+    Also found missing end tag.
 Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br />
