@@ -1,5 +1,5 @@
 # appSecRadar
-Sherif Mansour's idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
+Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
 Built with SVG and JavaScript.<br /><br />
 ## Example
 ![Example Radar](https://user-images.githubusercontent.com/13433538/27764799-86ec735a-5e9a-11e7-8599-9d11c1120025.png)
