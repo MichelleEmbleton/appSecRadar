@@ -29,10 +29,12 @@ body{	  max-height:100%;
 		z-index:100;
 		}
 
-.tx{	text-transform:capitalize;
+.tx{	text-transform:capitalize; 
+	display:inline-block;
 	padding:1em;
 	}
 .col{color:#11ffff;
 	float:right;
+	margin-left:2em;
 	}
 
