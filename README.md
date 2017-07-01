@@ -1,5 +1,5 @@
 # appSecRadar
-Sherif Mansour's idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.
+Sherif Mansour's idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out. 
 Built with SVG and JavaScript.
 Contains 2 files at present - the main .shtml file containing the SVGs and the JS and a small CSS file - which may be best split into separate files if the project is going to grow?!
 Initially, a test object array is hard-coded into the page, but will need to be able to import a csv, json or text file to be of any use.
