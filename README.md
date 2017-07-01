@@ -12,12 +12,13 @@ Initially, a test object array is hard-coded into the page, but will need to be 
 I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br />
 
 ## Browser Compatibility
-Tested in:   FireFox 54.0.1 (latest version) & the previous version<br />
-
-             Safari 10.1.1<br />
-             Chrome 59.0.3071.115 (latest version)<br />
-Fixed text box style for IE 9+ :<br />
-    Added display:inline-block to .tx - as was mis-aligned.<br /><br />
+    FireFox 54.0.1 (latest version) & the previous version<br />
+    Safari 10.1.1<br />
+    Chrome 59.0.3071.115 (latest version)<br />
+    IE 9
+    IE 11
+Fixed text box style for IE 9+ : Added display:inline-block to .tx - as was mis-aligned.<br />
+Haven't tested 10, but 9 & 11 are fine.<br />
     IE8 has nothing - is anybody still using IE8?!<br />
-    Also found missing end tag.<br /><br />
+    Found missing end tag - fixed.<br /><br />
 Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br />
