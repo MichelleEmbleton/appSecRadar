@@ -1,5 +1,4 @@
 <script>
-
 	var i;	
 	var len = techList.length;
 	var svg = document.getElementById('svgRadar'); 
