@@ -6,10 +6,23 @@ Built with SVG and JavaScript.<br /><br />
 
 
 ## Contents
-Contains 2 files at present - the main .shtml file containing the SVGs and the JS and a small CSS file - which may be best split into separate files if the project is going to grow?!<br /><br />
+Updated 2-7-17:<br />
+Files split into folders for css, js and other, mainly txt includes. So the main .shtml file is the vehicle to contain everything else.<br />
+
 ## Roadmap
-Initially, a test object array is hard-coded into the page, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
+Initially, a test object array is hard-coded into a file, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
 I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br />
+Legend added:<br />
+    It can be moved down if you don't want it covering the radar:<br />
+            #legend-wrapper	:top:40em;  sits nicely below the radar.<br />
+
+    Adding / changing Legend text:<br />
+        .show-legend -	height is set to 33em - change that for another fixed height.<br />
+        Or you can set it to auto - but then you lose the nice transition effect.<br />
+        Or you can add a scrollbar:<br />
+	        change #legend - overflow-y:auto;<br />
+	        but then it doesn't look as neat - depends on your colour scheme. It's still not easy to change scrollbars          across all the browsers...(was in IE6!).<br />
+    IE9 doesn't have the transition effect.<br />
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
