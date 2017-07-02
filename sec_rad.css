@@ -16,30 +16,3 @@ body{	max-height:100%;
 		left:2em;	
 		}
 
-				/* DETAILS TEXT BOX */	
-		
-	
-#detailsPos{	position:absolute; 
-			display:block; 
-			top:3em; 
-			right:10%;
-			background-color:rgba(0, 0, 0, 0.7);
-			border:1px solid #005fff;
-			font:80% arial, sans-serif;
-			color:#005fff;
-			letter-spacing:0.1em;	
-			line-height:1.4em;
-			z-index:100;
-			}
-
-.details-text{	text-transform:capitalize; 
-			display:inline-block;
-			padding:1em;
-			}
-
-.details-text .col{	color:#11ffff;
-				float:right;
-				margin-left:2em;
-				}
-
-
