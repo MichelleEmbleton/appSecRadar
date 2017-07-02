@@ -13,7 +13,7 @@
 
 <div id="detailsPos"></div>
 
-<!--#include file="data/input_data.js"-->
+<!--#include file="js/input_data.js"-->
 <!--#include file="js/color_coded_dots.js"-->
 <!--#include file="inc/legend.txt"-->
 <!--#include file="js/legend.js"-->
