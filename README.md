@@ -11,11 +11,11 @@ Files split into folders for css, js and other, mainly txt includes. So the main
 
 ## Roadmap
 Initially, a test object array is hard-coded into a file, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
-I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br />
+I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br /><br />
+
 Legend added:<br />
     It can be moved down if you don't want it covering the radar:<br />
-            #legend-wrapper	:top:40em;  sits nicely below the radar.<br />
-
+            #legend-wrapper	top:40em;  sits nicely below the radar.<br />
     Adding / changing Legend text:<br />
         .show-legend -	height is set to 33em - change that for another fixed height.<br />
         Or you can set it to auto - but then you lose the nice transition effect.<br />
