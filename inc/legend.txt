@@ -1,0 +1,34 @@
+<div id="legend-wrapper">
+<div class="legend-button" onClick="showLegend()"> + LEGEND </div>
+
+<div id="legend" class="hide-legend">
+<div id="hide-button" onClick="hideLegend()">x</div>
+
+<p class='legend-text'>
+
+<span class='key-heading'>Technology States in the Radars</span><br /><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-red'>HOLD</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-orange'>ADOPT</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-cadmium-yellow'>TRIAL</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-lemon-yellow'>EVALUATE</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-yellow-green'>NO NEW USE</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+<span class='key-lime-green'>PLAN FOR REMOVAL</span><br />
+Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...Lorum ipsum...
+<br /><br />
+</p>
+
+</div>
+</div>
+	
