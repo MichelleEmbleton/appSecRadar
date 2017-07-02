@@ -13,6 +13,8 @@ Files split into folders for css, js and other, mainly txt includes. So the main
 Initially, a test object array is hard-coded into a file, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
 I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br /><br />
 
+Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br /><br />
+
 Legend added:<br />
     It can be moved down if you don't want it covering the radar:<br />
             #legend-wrapper	top:40em;  sits nicely below the radar.<br />
@@ -30,8 +32,8 @@ Legend added:<br />
     Chrome 59.0.3071.115 (latest version)<br />
     IE 9
     IE 11
-Fixed text box style for IE 9+ : Added display:inline-block to .tx - as was mis-aligned.<br />
+Fixed text box style for IE 9+ : Added display:inline-block - as was mis-aligned.<br />
 Haven't tested 10, but 9 & 11 are fine.<br />
     IE8 has nothing - is anybody still using IE8?!<br />
-    Found missing end tag - fixed.<br /><br />
-Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br />
+    
+
