@@ -1,4 +1,3 @@
-<script>
 		//FOR TEST - REPLACE WITH IMPORTED CSV & CONFIGURE TO USE WITH CSV
 		//LISTINGS ARE PLACEHOLDERS FOR DEMO PURPOSES & DONT REFLECT THE BRANDS USED
 var techList = [
@@ -48,5 +47,4 @@ var techList = [
 		{TECH:"sed", CAT:"platform", PLAN_FOR_REMOVAL:"", NO_NEW_USE:"", EVALUATE:"", TRIAL:"y", ADOPT:"", HOLD:"", DATE:"2-8-2017", DETAILS:"terminal scripting - put in platform to make up the dots"},
 		{TECH:"nano", CAT:"service", PLAN_FOR_REMOVAL:"", NO_NEW_USE:"", EVALUATE:"", TRIAL:"y", ADOPT:"", HOLD:"", DATE:"2-7-2016", DETAILS:"terminal file editor - easy to use"},
 		{TECH:"emacs", CAT:"platform", PLAN_FOR_REMOVAL:"", NO_NEW_USE:"", EVALUATE:"", TRIAL:"", ADOPT:"y", HOLD:"", DATE:"2-8-2017", DETAILS:"terminal file editor - favourite editor"}
-	];
-</script>
+		];
