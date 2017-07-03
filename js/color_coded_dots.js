@@ -1,4 +1,3 @@
-<script>
 	var i;	
 	var len = techList.length;
 	var svg = document.getElementById('svgRadar'); 
@@ -56,5 +55,3 @@ function showText(obj){
 	targetDot = obj.id;
 	document.getElementById("detailsPos").innerHTML = targetDot;
 	}
-    
-</script>
