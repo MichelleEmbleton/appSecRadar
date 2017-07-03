@@ -6,6 +6,10 @@ Built with SVG and JavaScript.<br /><br />
 
 
 ## Contents
+Updated 3-7-17:<br />
+Main container file renamed to .html from .shtml - so it can render properly without the need for a virtual server offline. This file contains the content components: The SVG radar, the legend etc.<br />
+The css and js files are still separate from the main content.<br /> <br />
+
 Updated 2-7-17:<br />
 Files split into folders for css, js and other, mainly txt includes. So the main .shtml file is the vehicle to contain everything else.<br />
 
