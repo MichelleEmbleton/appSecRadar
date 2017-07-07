@@ -1,6 +1,5 @@
 #legend-wrapper{	position:absolute; 
-			top:0em;
-			right:0;	
+			top:0em;				
 			}
 
 .legend-button{	position:absolute; 	
@@ -31,17 +30,17 @@
     		transition:height 0.7s; 
 		}
 
-.show-legend{	height:33em; 
+.showlegend{	height:33em; 
 		border:1px solid #555;
 		}
 
-.hide-legend{	height:0; 
+.hidelegend{	height:0; 
 		border:none;
 		}
 
 #hide-button{	position:absolute;
 		left:0;
-		padding:0.5em 0.8em;
+		padding:0.4em 0.8em;
 		text-decoration:none;
 		color:#fff;
 		cursor:pointer;
@@ -65,5 +64,7 @@
 .key-cadmium-yellow		{font:90% arial; color:#ffc000;}
 .key-orange			{font:90% arial; color:#fa8000;}
 .key-red			{font:90% arial; color:#dd0000;}
+
+
 
 
