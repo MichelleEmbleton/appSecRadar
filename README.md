@@ -28,7 +28,16 @@ Legend added:<br />
         Or you can add a scrollbar:<br />
 	        change #legend - overflow-y:auto;<br />
 	        but then it doesn't look as neat - depends on your colour scheme. It's still not easy to change scrollbars          across all the browsers...(was in IE6!).<br />
-    IE9 doesn't have the transition effect.<br />
+    IE9 doesn't have the transition effect.<br /><br />
+    
+7-7-2017 <br />
+Added list representation tables for sectors.<br />
+Added a table, on the right, for anomalies in the input data - to catch unallocated category/sectors and unallocated statii (? status's) - which can not appear on the radar with this info missing:<br />
+A way to check errors in the input data and also add technologies to be assigned later.<br />
+Tidied up and consolidated code a bit.<br />
+Renamed a few files to better reflect their contents.<br />
+Created some 'anomalies' in the test input data to show how it works.<br />
+  	
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
