@@ -1,9 +1,9 @@
-#detailsPos{	position:absolute; 
+#detailsPos{		position:absolute; 
 			display:block; 
 			top:3em; 
-			right:10%;
+			right:3.5em;
 			background-color:rgba(0, 0, 0, 0.7);
-			border:1px solid #005fff;
+			border:1px solid rgba(0, 0, 255, 0.7);
 			font:80% arial, sans-serif;
 			color:#005fff;
 			letter-spacing:0.1em;	
@@ -11,12 +11,12 @@
 			z-index:1;
 			}
 
-.details-text{	text-transform:capitalize; 
+.details-text{		text-transform:capitalize; 
 			display:inline-block;
 			padding:1em;
 			}
 
-.details-text .col{	color:#11ffff;
+.details-text .col{		color:#00afff;
 				float:right;
 				margin-left:2em;
 				}
