@@ -6,8 +6,12 @@
 <link rel="stylesheet" type="text/css" href="css/sec_rad.css" />
 <link rel="stylesheet" type="text/css" href="css/legend.css" />
 <link rel="stylesheet" type="text/css" href="css/details_box.css" />
+<link rel="stylesheet" type="text/css" href="css/list_tables.css" />
+<link rel="stylesheet" type="text/css" href="css/anomaly_table.css" />
 </head>
 <body>
+
+<!------------------------RADAR SVG------------------------>
 
 <div id="radar">
 <svg height="630" width="630" id="svgRadar">
@@ -42,20 +46,17 @@
   </g>
 </svg>
 </div>
-
+<!--------------------------POP-UP DETAILS----------------------->
+       
 <div id="detailsPos"></div>
 
-
-<script src="js/input_data.js"></script>
-<script src="js/color_coded_dots.js"></script>
-<script src="js/legend.js"></script>
-
+<!-------------------------------LEGEND-------------------------->
 
 <div id="legend-wrapper">
-<div class="legend-button" onClick="showLegend()"> + LEGEND </div>
+<div class="legend-button" onClick="showModule('legend', 'showlegend')"> + LEGEND </div>
 
-<div id="legend" class="hide-legend">
-<div id="hide-button" onClick="hideLegend()">x</div>
+<div id="legend" class="hidelegend">
+<div id="hide-button" onClick="hideModule('legend', 'hidelegend')">x</div>
 
 <p class='legend-text'>
 
@@ -83,5 +84,42 @@ Technology that is nearing End of Life (EoL) or is soon to be deprecated. AppSec
 </p>
 </div>
 </div>
+
+<!------------------------ANOMALY CHART--------------------->
+
+
+<div id="anomalyTablePos"></div>
+
+
+<!-------------------------TABLE LISTS---------------------->
+
+<div id="listwrapper">
+<div class="showlist-button" onClick="showModule('listrep', 'showlist')"> + List Representation By Sector</div>
+
+<div id="listrep" class="hidelist">
+<div id="hidelist-button" onClick="hideModule('listrep', 'hidelist')">x</div><br />
+
+	<div id="listrep-buttons" onClick="showModule('tablewrapper', 'showtable'); createTable('Applications', 'app');">+ Applications</div>
+	<div id="listrep-buttons" onClick="showModule('tablewrapper', 'showtable'); createTable('Services', 'service');">+ Services</div>
+	<div id="listrep-buttons" onClick="showModule('tablewrapper', 'showtable'); createTable('Platforms', 'platform');">+ Platforms</div>
+	<div id="listrep-buttons" onClick="showModule('tablewrapper', 'showtable'); createTable('Unallocated Sector', 'unknown');">+ Unallocated</div>
+	</div>
+	</div>
+		<div id="tablewrapper" class="hidetable">
+		<div id="catTable" >
+		<div id="hidetable-button" onClick="hideModule('tablewrapper', 'hidetable')">x</div>
+
+		<div id="tablesPos"></div>
+		</div>
+		</div>
+
+
+<!---------------------------SCRIPTS--------------------------------->
+
+<script src="js/input_data.js"></script>
+<script src="js/radar.js"></script>
+<script src="js/show_hide_module.js"></script>
+<script src="js/list_tables.js"></script>
+
 </body>
 </html>
