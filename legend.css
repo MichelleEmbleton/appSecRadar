@@ -1,0 +1,68 @@
+#legend-wrapper{	position:absolute; 
+			top:0em;				
+			}
+
+.legend-button{	position:absolute; 	
+		display:inline-block;
+		top:0.5em;
+		left:1.5em;
+		width:9em;
+		padding:1em;
+		font:80% arial, sans-serif;
+		color:#fff;
+		cursor:pointer;
+		}
+
+.legend-button:hover{color:#ff0000;}
+
+#legend{	position:relative; 
+		max-width:90%;
+		width:auto;		
+		overflow-y:hidden;
+		top:3em; 
+		left:2em;	
+		z-index:2;	
+		background-color:rgba(0, 0, 0, 0.8);		
+		-webkit-transition:height 0.8s;
+   		-moz-transition: all 0.8s;
+   		-ms-transition: all 0.8s;
+   		-o-transition: all 0.8s;
+    		transition:height 0.7s; 
+		}
+
+.showlegend{	height:33em; 
+		border:1px solid #555;
+		}
+
+.hidelegend{	height:0; 
+		border:none;
+		}
+
+#hide-button{	position:absolute;
+		left:0;
+		padding:0.4em 0.8em;
+		text-decoration:none;
+		color:#fff;
+		cursor:pointer;
+		}
+
+#hide-button:hover{color:#ff0000;}
+
+#legend .legend-text{	display:inline-block; 
+			padding:1.5em; 
+			font:80% arial, sans-serif;
+			color:#fff;
+			letter-spacing:0.1em;	
+			line-height:1.4em;
+			z-index:2;
+			}
+
+.key-heading			{font:130% arial; color:#b3b3b3;}
+.key-lime-green			{font:90% arial; color:#008f00;}
+.key-yellow-green		{font:90% arial; color:#0fff00;}
+.key-lemon-yellow		{font:90% arial; color:#ffff00;}
+.key-cadmium-yellow		{font:90% arial; color:#ffc000;}
+.key-orange			{font:90% arial; color:#fa8000;}
+.key-red			{font:90% arial; color:#dd0000;}
+
+
