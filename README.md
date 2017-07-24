@@ -60,4 +60,6 @@ Status names can now be easily added, deleted or changed - and the radiuses of e
 Fixed text box style for IE 9+ : Added display:inline-block - as was mis-aligned.<br />
 Haven't tested 10, but 9 & 11 are fine.<br />
     IE8 has nothing - is anybody still using IE8?!<br />
+    I found that IE will not accept \` as an alternative to \" or \' whilst the other browsers do.<br />
+       Also, that IE and FF won't accept the svg circle params cx, cy and r on the external css files.
     
