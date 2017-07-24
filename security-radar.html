@@ -5,41 +5,23 @@
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="stylesheet" type="text/css" href="css/sec_rad.css" />
+<link rel="stylesheet" type="text/css" href="css/radar.css" />
 <link rel="stylesheet" type="text/css" href="css/legend.css" />
 <link rel="stylesheet" type="text/css" href="css/details_box.css" />
-<link rel="stylesheet" type="text/css" href="css/list_tables.css" />
 <link rel="stylesheet" type="text/css" href="css/anomaly_table.css" />
+<link rel="stylesheet" type="text/css" href="css/lists_by_sector.css" />
+<link rel="stylesheet" type="text/css" href="css/lists_by_status.css" />
 </head>
 <body>
 
 <!------------------------RADAR SVG------------------------>
 
 
-
 <div id="radar">
-<svg height="660" width="660" id="svgRadar">
- 
-  <g stroke="#fff" stroke-width="1" fill="#000">
-  <circle id="circ6" cx="330" cy="330" r="300" />
-  <circle id="circ5" cx="330" cy="330" r="250" />
-  <circle id="circ4" cx="330" cy="330" r="200" />
-  <circle id="circ3" cx="330" cy="330" r="150" />
-  <circle id="circ2" cx="330" cy="330" r="100" />
-  <circle id="circ1" cx="330" cy="330" r="50" />
-  </g>
- 
-  <g font-size="10" font-family="sans-serif" text-anchor="middle">
-    <text x="330" y="45" fill="#ff0000">PLAN FOR REMOVAL</text>
-    <text x="330" y="90" fill="#fa8000">NO NEW USE</text>
-    <text x="330" y="140" fill="#ffc000">EVALUATE</text>
-    <text x="330" y="190" fill="#ffff00">TRIAL</text>
-    <text x="330" y="240" fill="#0fff00">ADOPT</text>
-    <text x="330" y="290" fill="#008f00">HOLD</text>
-  </g>
-
-</svg>
+	<svg height="660" width="660" id="svgRadar">
+	</svg>
 </div>
+
 
 <!--------------------------POP-UP DETAILS----------------------->
        
@@ -47,73 +29,98 @@
 
 <!-------------------------------LEGEND-------------------------->
 
-<div id="legend-wrapper">
-<div class="legend-button" onClick="showModule('legend', 'showlegend')"> + LEGEND </div>
+<div id="legend_wrapper">
+	<div class="legend_button" onClick="showModule('legend', 'show_legend')"> + LEGEND 
+	</div>
 
-<div id="legend" class="hidelegend">
-<div id="hide-button" onClick="hideModule('legend', 'hidelegend')">x</div>
+	<div id="legend" class="hide_legend">
+		<div id="hide_legend_button" onClick="hideModule('legend', 'hide_legend')">x
+		</div>
 
-<p class='legend-text'>
-
-<span class='key-heading'>Technology States in the Radars</span><br /><br />
+		<p id='legend_text'>
+		<span class='key-heading'>Technology States in the Radars</span><br /><br />
 The radar serves as a one-stop-shop for making appsec security decisions about technologies to use in your applications.
-<br /><br />
-<span class='key-lime-green'>HOLD</span><br />
-Stable AppSec Technology that is currently not planned to be phased out, and recommended for continued use.
-<br /><br />
-<span class='key-yellow-green'>ADOPT</span><br />
-AppSec Technology that is new but should be adopted to account for a changing threat landscape.
-<br /><br />
-<span class='key-lemon-yellow'>TRIAL</span><br />
-AppSec technology that should be trialled and AppSec teams are recommended to provide feedback on the new technology.
-<br /><br />
-<span class='key-cadmium-yellow'>EVALUATE</span><br />
-Technology that is too early for production use, however AppSec teams are encouraged to PoC.
-<br /><br />
-<span class='key-orange'>NO NEW USE</span><br />
-Tech teams should not use this technology for new projects.
-<br /><br />
-<span class='key-red'>PLAN FOR REMOVAL</span><br />
-Technology that is nearing End of Life (EoL) or is soon to be deprecated. AppSec teams should be actively planning for removal of such technology.
-<br /><br />
-</p>
-</div>
+		<br /><br />
+		</p>
+	</div>
 </div>
 
 <!------------------------ANOMALY CHART--------------------->
 
 
- <div id="anomalyTablePos"></div> 
+<div class="show_anomalies_button" onClick="showModule('anomalyTable', 'show_anomalies')"> + Anomaly Chart 
+</div>
 
+<div id="anomaly_table_wrapper">
 
-<!-------------------------TABLE LISTS---------------------->
-
-<div id="listwrapper">
-<div class="showlist-button" onClick="showModule('listrep', 'showlist')"> + List Representation By Sector</div>
-<div id="listrep" class="hidelist">
-<div id="hidelist-button" onClick="hideModule('listrep', 'hidelist')">x</div><br />	
-	<div id="tableMenu"></div>
-	</div>
-	</div>
-		<div id="tablewrapper" class="hidetable">
-		<div id="catTable" >
-		<div id="hidetable-button" onClick="hideModule('tablewrapper', 'hidetable')">x</div>
-
-		<div id="tablesPos"></div>
+	<div id="anomalyTable" class="hide_anomalies">
+		<div id="hide_anomalies_button" onClick="hideModule('anomalyTable', 'hide_anomalies')">x
 		</div>
+
+		<div id="anomalyTablePos"></div>
+
+	</div>
+</div>
+
+
+<!-------------------------LISTS BY SECTOR---------------------->
+
+
+
+<div id="sector_list_wrapper">
+	<div class="show_sector_list_button" onClick="showModule('sector_list', 'show_sector_list')"> 
+	+ List Representation By Sector
+	</div>
+	<div id="sector_list" class="hide_sector_list">
+		<div id="hide_sector_list_button" onClick="hideModule('sector_list', 'hide_sector_list')">x
+		</div><br />
+		<div id="sector_table_menu"></div>
+	</div>
+</div>
+<div id="sector_table_wrapper" class="hide_sector_table">
+	<div id="sector_table" >
+		<div id="hide_sector_table_button" onClick="hideModule('sector_table_wrapper', 'hide_sector_table')">x
 		</div>
+	<div id="sectorTablesPos"></div>
+	</div>
+</div>
+
+
+
+<!-------------------------LISTS BY STATUS---------------------->
+
+
+
+<div id="status_list_wrapper">
+	<div class="show_status_list_button" onClick="showModule('status_list', 'show_status_list')"> 
+	+ List Representation By Status
+	</div>
+	<div id="status_list" class="hide_status_list">
+		<div id="hide_status_list_button" onClick="hideModule('status_list', 'hide_status_list')">x
+		</div><br />	
+		<div id="status_table_menu"></div>
+	</div>
+</div>
+<div id="status_table_wrapper" class="hide_status_table">
+	<div id="status_table" >
+		<div id="hide_status_table_button" onClick="hideModule('status_table_wrapper', 'hide_status_table')">x
+		</div>
+	<div id="statusTablesPos"></div>
+	</div>
+</div>
 
 <!------------------------------------------------------------------->
-
-<div id="test"></div>
 
 <!---------------------------SCRIPTS--------------------------------->
 
 
 <script src="js/input_data.js"></script>
+<script src="js/status_config.js"></script>
+<script src="js/legend.js"></script>
 <script src="js/radar.js"></script>
 <script src="js/show_hide_module.js"></script>
-<script src="js/list_tables.js"></script>
+<script src="js/lists_by_sector.js"></script>
+<script src="js/lists_by_status.js"></script>
 
 </body>
 </html>
