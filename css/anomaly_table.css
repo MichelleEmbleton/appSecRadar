@@ -1,47 +1,76 @@
+#anomaly_table_wrapper{	position:absolute; 
+				top:15em;	
+				right:1.2em;    
+				height:auto;
+				}
 
-#anomalyTablePos{	position:absolute; 				
-			top:12em;		
-			right:2.9em;
-			width:auto;
-			height:auto;
-			}
+.show_anomalies_button{	position:absolute; 	
+				top:17em;
+				right:2em;
+				width:10em;
+				padding:1em;
+				font:80% arial, sans-serif;
+				color:#fff;
+				cursor:pointer;
+				}
 
-table#anomalyTable{	position:relative; 
-			display:block; 
-			margin:0em; 
-			padding:0em 1em;
-			height:auto; 
+.show_anomalies_button:hover{color:#ff0000;}
+
+.show_anomalies{	height:auto; 
 			width:auto;
-			background-color:rgba(0, 0, 0, 0.8);					border-collapse:collapse;
 			border:1px solid rgba(0, 0, 255, 0.7);
 			}
 
-table#anomalyTable caption{	margin:1em 0;
-				font:85% arial;
-				color:#b3b3b3;
-				text-align:center;
-				letter-spacing:0.1em;
-				}		
+.hide_anomalies{	height:0; 
+			border:none;
+			}
+
+#hide_anomalies_button{position:absolute;
+			right:0;
+			padding:0.4em 0.8em;
+			text-decoration:none;
+			color:#fff;
+			cursor:pointer;
+			z-index:2;
+			}
+
+#hide_anomalies_button:hover{color:#ff0000;}
+
+
+#anomalyTable{	position:relative; 
+		overflow-y:hidden;
+		top:0em; 
+		margin:1em 1.5em;
+		background-color:rgba(0, 0, 0, 0.6);							border-collapse:collapse;
+		}
+
+#anomalyTable caption{	margin:0.7em 0;
+			font:85% arial;
+			color:#b3b3b3;
+			text-align:center;
+			letter-spacing:0.1em;
+			}		
 		
-table#anomalyTable th{	font:75% arial;
+#anomalyTable th{	font:75% arial;
 			color:#fff;
 			padding:0.7em 1.5em;
 			border-top:none; 
 			text-align:left;
 			}
 
-table#anomalyTable tr{	width:auto; 
+#anomalyTable tr{	width:auto; 
 			border-bottom:1px dotted #303030;
 			}
 
-table#anomalyTable tr.nostatus 	{color:#0000ff;}
-table#anomalyTable tr.nocatsec		{color:#00afff;}
+#anomalyTable tr.nostatus 	{color:#0000ff;}
+#anomalyTable tr.nocatsec	{color:#00afff;}
+#anomalyTable tr.no-entries	{color:#fff;}
 
-table#anomalyTable td{	font:70% arial;
+#anomalyTable td{	font:70% arial;
 			text-transform:capitalize; 
-			width:auto;
+			width:auto; 
 			height:auto;
-			padding:0.6em 1.5em;
+			padding:0.7em 1em;
 			border-bottom:none;
 			}
 

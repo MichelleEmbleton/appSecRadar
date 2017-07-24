@@ -16,8 +16,14 @@
 			padding:1em;
 			}
 
-.details-text .col{		color:#00afff;
-				float:right;
-				margin-left:2em;
-				}
+.details-text .col{	color:#00afff;
+			float:right;
+			margin-left:2em;
+			}
 
+.details-c1	{fill:#008f00;}
+.details-c2	{fill:#0fff00;}
+.details-c3	{fill:#ffff00;}
+.details-c4	{fill:#ffc000;}
+.details-c5	{fill:#fa8000;}
+.details-c6	{fill:#ff0000;}
