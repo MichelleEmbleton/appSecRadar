@@ -1,0 +1,140 @@
+
+	/* DROPDOWN SECTOR TITLES*/
+
+#listwrapper{		position:absolute; 	
+			top:42em; 
+			}
+
+.showlist-button{	position:absolute; 	
+			top:0em;
+			left:1.5em;
+			width:20em;
+			padding:1em;
+			font:80% arial, sans-serif;
+			color:#fff;
+			cursor:pointer;
+			}
+
+.showlist-button:hover{color:#ff0000;}
+
+.showlist{	height:auto; 		 
+		border:1px solid #303030; 
+		padding-bottom:1em;
+		}
+
+.hidelist{	height:0; 
+		border:none;
+		}
+
+#hidelist-button{	position:absolute;
+			margin:0.2em 0.5em;
+			text-decoration:none;
+			color:#fff;
+			cursor:pointer;
+			z-index:4;
+			}
+
+#hidelist-button:hover{color:#ff0000;}
+
+#listrep{	position:relative; 
+		width:auto;		
+		overflow-y:hidden;
+		top:2em; 
+		left:2em;	
+		background-color:rgba(0, 0, 0, 0.8);		
+		-webkit-transition:height 0.8s;
+   		-moz-transition: all 0.8s;
+   		-ms-transition: all 0.8s;
+   		-o-transition: all 0.8s;
+    		transition:height 0.7s; 
+		}
+
+.listrep-buttons{	position:relative;
+			font:70% arial;
+			color: #808080;
+			letter-spacing:0.1em;			
+			background-color:rgba(0, 0, 0, 0.8);			
+			width:12em;
+			padding:0 1em 0.6em 2em;
+			cursor:pointer;
+			text-transform:uppercase;
+			}
+
+.listrep-buttons:hover{color:#ff0000;}
+
+
+	/* CATEGORY TABLES*/
+
+
+
+.showtable{	height:auto; 
+		border:1px solid #303030;
+		}
+
+.hidetable{	height:0; 
+		border:none;
+		}
+
+#hidetable-button{	position:absolute;
+			margin:-0.6em 0.8em;
+			text-decoration:none;
+			color:#fff;
+			cursor:pointer;
+			z-index:4;
+			}
+
+#hidetable-button:hover{color:#ff0000;}
+
+#tablewrapper{		position:absolute;
+			overflow-y:hidden;
+			margin:2.7em 1em 2em 12em;
+			padding:0em;
+			width:auto; 
+			max-width:95%;
+			background-color:rgba(0, 0, 0, 0.5);
+			}
+
+table#catTable	{	position:relative; 
+			display:block; 
+			margin:1em;
+			padding-bottom:2em; 
+			height:auto; 
+			width:auto;
+			background-color:rgba(0, 0, 0, 0.8);					 		border-collapse:collapse;
+			}
+
+table#catTable caption{margin:1em 0;
+			font:95% arial;
+			color:#b3b3b3;
+			text-align:center;
+			letter-spacing:0.1em;
+			text-decoration:underline;
+			text-transform:uppercase;
+			}		
+		
+table#catTable th{	font:85% arial;
+			color:#fff;
+			padding:0.7em 1.5em;
+			border-top:none; 
+			text-align:left;
+			}
+
+table#catTable tr{	width:auto; 
+			border-bottom:1px dotted #303030;
+			}
+
+table#catTable td{	font:80% arial;
+			text-transform:capitalize; 
+			width:auto;
+			height:auto;
+			padding:0.6em 1.5em;
+			border-bottom:none;
+			}
+
+table#catTable td.limeGreen		{color:#008f00;}
+table#catTable td.yellowGreen		{color:#0fff00;}
+table#catTable td.lemonYellow		{color:#ffff00;}
+table#catTable td.cadmiumYellow	{color:#ffc000;}
+table#catTable td.orange		{color:#fa8000;}
+table#catTable td.red			{color:#ff0000;}
+table#catTable td.blue			{color:#0000ff;}

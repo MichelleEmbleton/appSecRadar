@@ -2,7 +2,7 @@
 Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
 Built with SVG and JavaScript.<br /><br />
 ## Example
-![Example Radar](https://user-images.githubusercontent.com/13433538/27764799-86ec735a-5e9a-11e7-8599-9d11c1120025.png)
+![radar-screenshot](https://user-images.githubusercontent.com/29818223/28239678-c02c0e08-6969-11e7-8f44-493e746b1087.png)
 
 
 ## Contents
@@ -28,7 +28,21 @@ Legend added:<br />
         Or you can add a scrollbar:<br />
 	        change #legend - overflow-y:auto;<br />
 	        but then it doesn't look as neat - depends on your colour scheme. It's still not easy to change scrollbars          across all the browsers...(was in IE6!).<br />
-    IE9 doesn't have the transition effect.<br />
+    IE9 doesn't have the transition effect.<br /><br />
+    
+7-7-2017 <br />
+Added list representation tables for sectors.<br />
+Added a table, on the right, for anomalies in the input data - to catch unallocated category/sectors and unallocated statii (? status's) - which can not appear on the radar with this info missing:<br />
+A way to check errors in the input data and also add technologies to be assigned later.<br />
+Tidied up and consolidated code a bit.<br />
+Renamed a few files to better reflect their contents.<br />
+Created some 'anomalies' in the test input data to show how it works.<br />
+
+15-7-2017 <br />
+Added functionality to add / remove / rename sectors. <br />
+Sectors will be created dynamically on whatever category fields are entered into the input data source. Sectors are recalculated equally, the List Representation dropdown menu and tables are also updated. <br />
+As before, the dots do jump out of their sectors into the neighbouring sector by a small margin - this needs to be fixed!!<br />
+Because the dropdown category menu can't be a fixed height now, it's lost it's glide movement, and so will just appear when clicked on - can't seem to keep this property without having a fixed height.<br />
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />

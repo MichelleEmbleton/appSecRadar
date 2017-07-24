@@ -1,61 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+	svg xmlns="http://www.w3.org/2000/svg>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="stylesheet" type="text/css" href="css/sec_rad.css" />
 <link rel="stylesheet" type="text/css" href="css/legend.css" />
 <link rel="stylesheet" type="text/css" href="css/details_box.css" />
+<link rel="stylesheet" type="text/css" href="css/list_tables.css" />
+<link rel="stylesheet" type="text/css" href="css/anomaly_table.css" />
 </head>
 <body>
 
+<!------------------------RADAR SVG------------------------>
+
+
+
 <div id="radar">
-<svg height="630" width="630" id="svgRadar">
-  <g>
-  <circle id="circ6" cx="300" cy="300" r="300" stroke="#fff" stroke-width="1" fill="#000" />
-  <circle id="circ5" cx="300" cy="300" r="250" stroke="#fff" stroke-width="1" fill="#000" />
-  <circle id="circ4" cx="300" cy="300" r="200" stroke="#fff" stroke-width="1" fill="#000" />
-  <circle id="circ3" cx="300" cy="300" r="150" stroke="#fff" stroke-width="1" fill="#000" />
-  <circle id="circ2" cx="300" cy="300" r="100" stroke="#fff" stroke-width="1" fill="#000" />
-  <circle id="circ1" cx="300" cy="300" r="50" stroke="#fff" stroke-width="1" fill="#000" />
+<svg height="660" width="660" id="svgRadar">
+ 
+  <g stroke="#fff" stroke-width="1" fill="#000">
+  <circle id="circ6" cx="330" cy="330" r="300" />
+  <circle id="circ5" cx="330" cy="330" r="250" />
+  <circle id="circ4" cx="330" cy="330" r="200" />
+  <circle id="circ3" cx="330" cy="330" r="150" />
+  <circle id="circ2" cx="330" cy="330" r="100" />
+  <circle id="circ1" cx="330" cy="330" r="50" />
   </g>
-
-  <g stroke="#fff" stroke-width="1">
-   <path stroke-dasharray="10,10" d="M300 0 300 300"  />
-   <path stroke-dasharray="10,10" d="M300 300 30 430"  />
-   <path stroke-dasharray="10,10" d="M300 300 570 430"  />
-  </g>
-   
+ 
   <g font-size="10" font-family="sans-serif" text-anchor="middle">
-    <text x="330" y="15" dx="-30" fill="#ff0000">PLAN FOR REMOVAL</text>
-    <text x="330" y="60" dx="-30" fill="#fa8000">NO NEW USE</text>
-    <text x="330" y="110" dx="-30" fill="#ffc000">EVALUATE</text>
-    <text x="330" y="160" dx="-30" fill="#ffff00">TRIAL</text>
-    <text x="330" y="210" dx="-30" fill="#0fff00">ADOPT</text>
-    <text x="330" y="260" dx="-30" fill="#008f00">HOLD</text>
+    <text x="330" y="45" fill="#ff0000">PLAN FOR REMOVAL</text>
+    <text x="330" y="90" fill="#fa8000">NO NEW USE</text>
+    <text x="330" y="140" fill="#ffc000">EVALUATE</text>
+    <text x="330" y="190" fill="#ffff00">TRIAL</text>
+    <text x="330" y="240" fill="#0fff00">ADOPT</text>
+    <text x="330" y="290" fill="#008f00">HOLD</text>
   </g>
 
-  <g font-size="12" font-family="sans-serif" text-anchor="middle">
-    <text x="0" y="120" dx="25" fill="#005fff" transform="rotate(-63, 60, 140)">SERVICES</text>
-    <text x="300" y="615" dx="0" fill="#005fff">PLATFORMS</text>
-    <text x="610" y="120" dx="-25" fill="#005fff" transform="rotate(63, 540, 140)">APPLICATIONS</text>
-  </g>
 </svg>
 </div>
 
+<!--------------------------POP-UP DETAILS----------------------->
+       
 <div id="detailsPos"></div>
 
-
-<script src="js/input_data.js"></script>
-<script src="js/color_coded_dots.js"></script>
-<script src="js/legend.js"></script>
-
+<!-------------------------------LEGEND-------------------------->
 
 <div id="legend-wrapper">
-<div class="legend-button" onClick="showLegend()"> + LEGEND </div>
+<div class="legend-button" onClick="showModule('legend', 'showlegend')"> + LEGEND </div>
 
-<div id="legend" class="hide-legend">
-<div id="hide-button" onClick="hideLegend()">x</div>
+<div id="legend" class="hidelegend">
+<div id="hide-button" onClick="hideModule('legend', 'hidelegend')">x</div>
 
 <p class='legend-text'>
 
@@ -83,5 +79,41 @@ Technology that is nearing End of Life (EoL) or is soon to be deprecated. AppSec
 </p>
 </div>
 </div>
+
+<!------------------------ANOMALY CHART--------------------->
+
+
+ <div id="anomalyTablePos"></div> 
+
+
+<!-------------------------TABLE LISTS---------------------->
+
+<div id="listwrapper">
+<div class="showlist-button" onClick="showModule('listrep', 'showlist')"> + List Representation By Sector</div>
+<div id="listrep" class="hidelist">
+<div id="hidelist-button" onClick="hideModule('listrep', 'hidelist')">x</div><br />	
+	<div id="tableMenu"></div>
+	</div>
+	</div>
+		<div id="tablewrapper" class="hidetable">
+		<div id="catTable" >
+		<div id="hidetable-button" onClick="hideModule('tablewrapper', 'hidetable')">x</div>
+
+		<div id="tablesPos"></div>
+		</div>
+		</div>
+
+<!------------------------------------------------------------------->
+
+<div id="test"></div>
+
+<!---------------------------SCRIPTS--------------------------------->
+
+
+<script src="js/input_data.js"></script>
+<script src="js/radar.js"></script>
+<script src="js/show_hide_module.js"></script>
+<script src="js/list_tables.js"></script>
+
 </body>
 </html>
