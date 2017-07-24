@@ -2,7 +2,7 @@
 Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
 Built with SVG and JavaScript.<br /><br />
 ## Example
-![radar-screenshot](https://user-images.githubusercontent.com/29818223/28239678-c02c0e08-6969-11e7-8f44-493e746b1087.png)
+![radar_6](https://user-images.githubusercontent.com/29818223/28502636-541fada6-6fee-11e7-9baf-16c0decabdb7.png)
 
 
 ## Contents
@@ -44,6 +44,13 @@ Sectors will be created dynamically on whatever category fields are entered into
 As before, the dots do jump out of their sectors into the neighbouring sector by a small margin - this needs to be fixed!!<br />
 Because the dropdown category menu can't be a fixed height now, it's lost it's glide movement, and so will just appear when clicked on - can't seem to keep this property without having a fixed height.<br />
 
+23-7-17 <br />
+Added tables for Status, similar to the Sector tables.<br />
+Changes to the Anomaly table to hide it when not needed.<br />
+Changes to scripts and data input layouts. Separate file (status_config.js) added for easy configuration of titles, radiuses and legend text:<br />
+Status names can now be easily added, deleted or changed - and the radiuses of each group can be easily changed. The titles, dots, tables, legend etc. automatically update with any changes.<br /><br />
+
+
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
     Safari 10.1.1<br />
@@ -54,4 +61,3 @@ Fixed text box style for IE 9+ : Added display:inline-block - as was mis-aligned
 Haven't tested 10, but 9 & 11 are fine.<br />
     IE8 has nothing - is anybody still using IE8?!<br />
     
-
