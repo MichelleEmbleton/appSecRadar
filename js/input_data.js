@@ -1,9 +1,4 @@
-
-//JSON FILE PATH GOES HERE
-//'data.json' in the main directory works(same dir as 
-//'security-radar.html')..otherwise full path is needed.
-
-var inputFile = "data.json";
+var inputFile = "data.json";		//JSON FILE PATH GOES HERE
 
 var request = new XMLHttpRequest();
 request.open("GET", inputFile, false);
