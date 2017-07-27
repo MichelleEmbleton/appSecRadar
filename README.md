@@ -58,6 +58,13 @@ To accept a file in another location and/or of different name - the file path at
 There is a neat little JSON validator here:<br />
 https://jsonlint.com  <br />
 
+27-7-17 <br />
+A few adjustments so that features can be just deleted from the main html page if not wanted: <br />
+for anomaly chart, <br />
+pop-up details box, <br />
+sector table, <br />
+status table. <br />
+
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
