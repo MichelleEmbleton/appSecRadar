@@ -143,7 +143,9 @@ function randomAngle(minA, maxA){
 function radarCircles(radius){
 	var radarCircle = document.createElementNS(ns, 'circle');
 	radarCircle.setAttribute("class", "radar-circles");	
-	radarCircle.setAttribute("r", radius);	 		
+	radarCircle.setAttribute("r", radius);
+	radarCircle.setAttribute("cx", "330");	
+	radarCircle.setAttribute("cy", "330"); 		
 	svg.appendChild(radarCircle);	
 	}
 
@@ -162,7 +164,11 @@ function statusTitles(title, titleClass, y){
 function createDots(status, dotClass, minR, maxR, angle){ 
 	var dot = document.createElementNS(ns, 'circle');
 	dotClass = "dot-" + dotClass;	
-	dot.setAttribute("class", dotClass);	 		
+	dot.setAttribute("class", dotClass);	
+	dot.setAttribute("cx", "330");
+	dot.setAttribute("cy", "330"); 
+	dot.setAttribute("r", "6");
+	dot.setAttribute("stroke", "#000");		
 	svg.appendChild(dot);		
 	var x, y;					
 	x = Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR);	
@@ -179,8 +185,10 @@ function createDots(status, dotClass, minR, maxR, angle){
 			+ "</span><br />Detail: &nbsp;<span class='col'>" 
 			+  techDetail
 			+ "</p>";
-	dot.setAttribute('id', (popUpText));	
-	dot.setAttribute("onmouseover", "showText(this)");	
+	if(document.getElementById("detailsPos") !== null){
+		dot.setAttribute('id', (popUpText));	
+		dot.setAttribute("onmouseover", "showText(this)");	
+		}
 	}	
 function showText(obj){
 	var targetDot = obj.id;	
@@ -188,7 +196,7 @@ function showText(obj){
 	}
   
 
-(function createAnomalyTable(){
+function createAnomalyTable(){
 	var anomalyTable = "<table id='anomalyTable'>" 
 			+ "<caption>Anomalies</caption>"
 			+ "<tr><th>Name</th><th>Anomaly</th></tr>";
@@ -216,7 +224,7 @@ function showText(obj){
 	var x = document.getElementById('anomalyTablePos')
 	x.innerHTML = anomalyTable + "</table>";
 	
-})();
+}
 
 
 
