@@ -136,7 +136,9 @@ function sectors(){
 }
 
 function randomAngle(minA, maxA){
-	angle = Math.random(maxA - minA) + minA;
+	minA = (minA + 0.09);
+	maxA = (maxA - 0.09);
+	angle = ((Math.random() * (maxA - minA)) + minA);
 	return angle; 
 	}
 
