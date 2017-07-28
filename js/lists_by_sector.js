@@ -1,3 +1,4 @@
+if(document.getElementById("sector_table_menu") !== null){
 var i;
 var len = techList.length;
 var catList = [];
@@ -15,11 +16,12 @@ var sectorDropList = "";
 for(i = 0; i < catLen; i++){ 
 	catMenu = catList[i]; 
 	sectorDropList += "<div class='sector_list_buttons' "
-		+ "onClick='showModule(`sector_table_wrapper`, `show_sector_table`);" 				+ "createSectorTable(event)'>" 
+		+ "onClick='showModule(\"sector_table_wrapper\", \"show_sector_table\");" 				+ "createSectorTable(event)'>" 
 		+ catMenu
 		+ "</div>";	
 		}
-document.getElementById("sector_table_menu").innerHTML += sectorDropList;			
+document.getElementById("sector_table_menu").innerHTML += sectorDropList;		
+}	
 
 function createSectorTable(event){	
     	var category = (event.target.innerHTML);

@@ -1,3 +1,4 @@
+if(document.getElementById("status_table_menu") !== null){
 var i;
 var len = techList.length;
 var statLen = statusList.length;
@@ -12,11 +13,13 @@ for(i = 0; i < statLen; i++){
 			+ statusMenu 
 			+ "</span>";
 	statusDropList += "<div class='status_list_buttons' "
-		+ "onClick='showModule(`status_table_wrapper`, `show_status_table`);" 		+ "createStatusTable(event)'>" 
+		+ "onClick='showModule(\"status_table_wrapper\", \"show_status_table\");" 		+ "createStatusTable(event)'>" 
 		+ statusMenuLi    
 		+ "</div>";	
 		}
-document.getElementById("status_table_menu").innerHTML += statusDropList;		
+document.getElementById("status_table_menu").innerHTML += statusDropList;	
+}
+	
 function createStatusTable(event){	
     	var status = (event.target.innerHTML);
 	var table = "<table id='status_table'><caption>" 

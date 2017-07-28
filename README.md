@@ -50,6 +50,24 @@ Changes to the Anomaly table to hide it when not needed.<br />
 Changes to scripts and data input layouts. Separate file (status_config.js) added for easy configuration of titles, radiuses and legend text:<br />
 Status names can now be easily added, deleted or changed - and the radiuses of each group can be easily changed. The titles, dots, tables, legend etc. automatically update with any changes.<br /><br />
 
+26-7-17 <br />
+Accepts a JSON file as input data.<br />
+The test JSON file - 'data.json' - is in the main directory, and simply needs to be replaced with your own data - and named 'data.json'.<br />
+To accept a file in another location and/or of different name - the file path at the top of 'js/input_data.js' will need to be edited.<br />
+
+There is a neat little JSON validator here:<br />
+https://jsonlint.com  <br />
+
+27-7-17 <br />
+A few adjustments so that features can be just deleted from the main html page if not wanted: <br />
+for anomaly chart, <br />
+pop-up details box, <br />
+sector table, <br />
+status table. <br />
+
+28-7-17 <br />
+Fixed the maths for the sector angles. <br />
+
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />

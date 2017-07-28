@@ -1,51 +1,18 @@
+var inputFile = "data.json";		//JSON FILE PATH GOES HERE
 
-		//FOR TEST - REPLACE WITH IMPORTED CSV & CONFIGURE TO USE WITH CSV
-		//LISTINGS ARE PLACEHOLDERS FOR DEMO PURPOSES & DONT REFLECT THE BRANDS USED
-var techList = [
-		{TECH:"Java", CAT:"a category", STATUS:"plan FOR REMOVAL", DATE:"14-6-2015", DETAILS:"Coding - stable, useful"},
-		{TECH:"Ruby", CAT:"app", STATUS:"EVALUATE", DATE:"2-7-2016", DETAILS:"Coding - new use"},
-		{TECH:"Swift", CAT:"another cat", STATUS:"", DATE:"2-8-2014", DETAILS:"Animation software - replacing with CCS3, SVG..., no new builds"},
-		{TECH:"ClickMeeting", CAT:"cat+1", STATUS:"other", DATE:"14-6-2017", DETAILS:"video conferencing - useful"},
-		{TECH:"Citrix Grasshopper", CAT:"another cat", STATUS:"TRIAL", DATE:"14-6-2017", DETAILS:"VoIP - trying out"},
-		{TECH:"GoogleMail", CAT:"service", STATUS:"EVALUATE", DATE:"2-7-2016", DETAILS:"use alot"},
-		{TECH:"snow leopard", CAT:"", STATUS:"NO NEW USE", DATE:"2-8-2011", DETAILS:"On older machines - phasing out"},
-		{TECH:"VirtualBox", CAT:"platform", STATUS:"hold", DATE:"14-6-2012", DETAILS:"VM - still using alot"},
-		{TECH:"WindowsXP", CAT:"", STATUS:"NO NEW USE", DATE:"2-7-2002", DETAILS:"OS - older machines - replacing"},
-		{TECH:"El Capitan", CAT:"platform", STATUS:"ADOPT", DATE:"2-8-2017", DETAILS:"OSX - newest in use at moment"},
-		{TECH:"Lua", CAT:"app", STATUS:"EVALUATE", DATE:"14-6-2017", DETAILS:"coding - experimenting"},
-		{TECH:"php", CAT:"app", STATUS:"NO NEW USE", DATE:"2-7-2016", DETAILS:"coding - replacing with other languages"},
-		{TECH:"asp.net", CAT:"platform", STATUS:"HOLD", DATE:"14-6-2017", DETAILS:"coding - still using alot"},
-		{TECH:"julia", CAT:"app", STATUS:"ADOPT", DATE:"2-7-2016", DETAILS:"coding - trying out"},
-		{TECH:"haskell", CAT:"app", STATUS:"EVALUATE", DATE:"2-8-2017", DETAILS:"coding - good potential"},
-		{TECH:"Red Hat", CAT:"platform", STATUS:"TRIAL", DATE:"14-6-2017", DETAILS:"Linux OS - trying out"},
-		{TECH:"mountain lion", CAT:"platform", STATUS:"NO NEW USE", DATE:"2-7-2016", DETAILS:"OSX - still using on some older machines"},
-		{TECH:"BT cloud", CAT:"service", STATUS:"EVALUATE", DATE:"2-8-2017", DETAILS:"cloud storage - trying out"},
-		{TECH:"VLC", CAT:"app", STATUS:"HOLD", DATE:"14-6-2017", DETAILS:"media player - good for viewing camera footage"},
-		{TECH:"MeshLab", CAT:"app", STATUS:"TRIAL", DATE:"14-6-2017", DETAILS:"CAD and STL software - trying out"},
-		{TECH:"Google+", CAT:"service", STATUS:"HOLD", DATE:"2-7-2016", DETAILS:"keep for now"},
-		{TECH:"Python", CAT:"app", STATUS:"PLAN FOR REMOVAL", DATE:"2-8-2017", DETAILS:"Coding - phasing out"},
-		{TECH:"CentOS", CAT:"platform", STATUS:"HOLD", DATE:"14-6-2017", DETAILS:"Linux OS - still using"},
-		{TECH:"Windows95", CAT:"platform", STATUS:"", DATE:"2-7-2002", DETAILS:""},
-		{TECH:"Windows13", CAT:"platform", STATUS:"EVALUATE", DATE:"2-8-2017", DETAILS:"OS - new - try out.."},
-		{TECH:"flash", CAT:"app", STATUS:"PLAN FOR REMOVAL", DATE:"14-6-2017", DETAILS:"coding - replacing, no longer using"},
-		{TECH:"3Design", CAT:"app", STATUS:"PLAN FOR REMOVAL", DATE:"2-7-2016", DETAILS:"CAD software - no longer using"},
-		{TECH:"Photoshop", CAT:"app", STATUS:"HOLD", DATE:"14-6-2017", DETAILS:"image editing - always using"},
-		{TECH:"FileZilla", CAT:"service", STATUS:"HOLD", DATE:"2-7-2016", DETAILS:"FTP - stable, useful"},
-		{TECH:"ZAP", CAT:"app", STATUS:"ADOPT", DATE:"2-8-2017", DETAILS:"Proxy - useful tool"},
-		{TECH:"Parallels", CAT:"platform", STATUS:"EVALUATE", DATE:"2-8-2017", DETAILS:"VM - trying out"},
-		{TECH:"VMWare", CAT:"platform", STATUS:"NO NEW USE", DATE:"14-6-2017", DETAILS:"VM - not using as much"},
-		{TECH:"Windows Virtual PC", CAT:"platform", STATUS:"NO NEW USE", DATE:"14-6-2017", DETAILS:"not using"},
-		{TECH:"Opera", CAT:"service", STATUS:"PLAN FOR REMOVAL", DATE:"2-7-2016", DETAILS:"Browser - hardly use"},
-		{TECH:"Netscape", CAT:"service", STATUS:"PLAN FOR REMOVAL", DATE:"2-8-2017", DETAILS:"Browser - not needed"},
-		{TECH:"iTunes", CAT:"service", STATUS:"EVALUATE", DATE:"14-6-2017", DETAILS:"music and apps"},
-		{TECH:"Adobe Acrobat", CAT:"service", STATUS:"NO NEW USE", DATE:"2-7-2002", DETAILS:"file reader and editor"},
-		{TECH:"Wacom bamboo", CAT:"service", STATUS:"PLAN FOR REMOVAL", DATE:"2-8-2017", DETAILS:"graphic tablet software - not using much"},
-		{TECH:"lockLizard", CAT:"service", STATUS:"NO NEW USE", DATE:"14-6-2017", DETAILS:"file reader - haven't used for ages"},
-		{TECH:"Xcode", CAT:"platform", STATUS:"NO NEW USE", DATE:"2-7-2016", DETAILS:"for iPhone app building - no using"},
-		{TECH:"XAMPP", CAT:"platform", STATUS:"ADOPT", DATE:"14-6-2017", DETAILS:"virtual server - use alot"},
-		{TECH:"awk", CAT:"service", STATUS:"EVALUATE", DATE:"2-7-2016", DETAILS:"terminal scripting - put in service to make up the dots"},
-		{TECH:"sed", CAT:"platform", STATUS:"TRIAL", DATE:"2-8-2017", DETAILS:"terminal scripting - put in platform to make up the dots"},
-		{TECH:"nano", CAT:"service", STATUS:"TRIAL", DATE:"2-7-2016", DETAILS:"terminal file editor - easy to use"},
-		{TECH:"emacs", CAT:"platform", STATUS:"ADOPT", DATE:"2-8-2017", DETAILS:"terminal file editor - favourite editor"}
-	];
+var request = new XMLHttpRequest();
+request.open("GET", inputFile, false);
+
+request.onreadystatechange = function (){
+	if(request.readyState === 4){
+            	if(request.status === 200 || request.status == 0){
+			request.onload = function() {
+				var jsonText = request.response;
+				window.techList = JSON.parse(jsonText); 
+				}
+     			}
+  		}
+
+	}
+request.send(null);
 
