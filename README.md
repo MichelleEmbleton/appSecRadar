@@ -65,6 +65,9 @@ pop-up details box, <br />
 sector table, <br />
 status table. <br />
 
+28-7-17 <br />
+Fixed the maths for the sector angles. <br />
+
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
