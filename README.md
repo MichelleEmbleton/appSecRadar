@@ -68,6 +68,10 @@ status table. <br />
 28-7-17 <br />
 Fixed the maths for the sector angles. <br />
 
+31-7-17 <br />
+Changed design to go with a white background. <br />
+Changed code around to eliminate some globals. <br />
+
 
 ## Browser Compatibility
     FireFox 54.0.1 (latest version) & the previous version<br />
