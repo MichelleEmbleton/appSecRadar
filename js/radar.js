@@ -1,4 +1,4 @@
-
+function createRadar(techList){
 var 	ns = "http://www.w3.org/2000/svg",
 	xs = "http://www.w3.org/1999/xlink",
 	svg = document.getElementById('svgRadar'),
@@ -163,9 +163,9 @@ function statusTitles(title, titleClass, y){
 	svg.appendChild(statusTitle);	
 	}
 
-function createDots(status, dotClass, minR, maxR, angle){ 
+function createDots(status, dotId, minR, maxR, angle){ 
 	var dot = document.createElementNS(ns, 'circle');
-	dotClass = "dot-" + dotClass;	
+	var dotClass = "dot-" + dotId;	
 	dot.setAttribute("class", dotClass);	
 	dot.setAttribute("cx", "330");
 	dot.setAttribute("cy", "330"); 
@@ -176,15 +176,18 @@ function createDots(status, dotClass, minR, maxR, angle){
 	x = Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR);	
 	y =  Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR);
 	dot.setAttribute('transform','translate(' + x + ',' + y + ')'); 
-	var popUpText = "<p class='details-text'>Name: &nbsp;<span class='col'>"
+	var boxText = "details-" + dotId;
+	var popUpText = "<p class=" 
+			+ boxText 
+			+ ">Name: &nbsp;<span class='text'>"
 			+ techTech 
-			+ "</span><br />Category: &nbsp;<span class='col'>" 
+			+ "</span><br />Category: &nbsp;<span class='text'>" 
 			+ techCat.toLowerCase()
-			+ "</span><br />Date Added: &nbsp;<span class='col'>" 
+			+ "</span><br />Date Added: &nbsp;<span class='text'>" 
 			+ techAddDate
-			+ "</span><br />Status: &nbsp;<span class='col'>" 
+			+ "</span><br />Status: &nbsp;<span class='text'>" 
 			+  techStatus.toLowerCase() 
-			+ "</span><br />Detail: &nbsp;<span class='col'>" 
+			+ "</span><br />Detail: &nbsp;<span class='text'>" 
 			+  techDetail
 			+ "</p>";
 	if(document.getElementById("detailsPos") !== null){
@@ -192,42 +195,8 @@ function createDots(status, dotClass, minR, maxR, angle){
 		dot.setAttribute("onmouseover", "showText(this)");	
 		}
 	}	
-function showText(obj){
-	var targetDot = obj.id;	
-	document.getElementById("detailsPos").innerHTML = targetDot;
-	}
-  
-
-function createAnomalyTable(){
-	var anomalyTable = "<table id='anomalyTable'>" 
-			+ "<caption>Anomalies</caption>"
-			+ "<tr><th>Name</th><th>Anomaly</th></tr>";
-	var i;
-	var aLen = anomalyList.length;  
-
-	if (aLen == 0){ 
-		anomalyTable += "<tr class='no-entries'>"
-				+ "<td>No issues!</td>"
-				+ "</tr>";
-			} else { 
- 
-	for(i = 0; i < aLen; i++){
-		anomalyTable += "<tr class="
-			+ anomalyList[i].trClass
-			+ ">"
-			+ "<td>" 
-			+ anomalyList[i].tech  	
-			+ "</td>"
-			+ "<td>"
-			+ anomalyList[i].state
-			+ "</td></tr>";
-			} 
-		}
-	var x = document.getElementById('anomalyTablePos')
-	x.innerHTML = anomalyTable + "</table>";
-	
+createAnomalyTable(anomalyList);
 }
-
 
 
 	
