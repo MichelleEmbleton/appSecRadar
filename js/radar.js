@@ -13,7 +13,12 @@ for(s = 0; s < statuslen; s++){
 	var statusTitle = statusList[s].TITLE.toUpperCase(); 
 	var statusId = statusList[s].ID; 
 	var r = statusList[s].RADIUS;					
-	var y = (330 - r + 10);
+	if(statusTitle.length > 12){
+		var radarStatusText = 15;
+		} else {
+		radarStatusText = 11;
+		}				
+	var y = (330 - r + radarStatusText);
 
 	radarCircles(r),
 	statusTitles(statusTitle, statusId, y); 
