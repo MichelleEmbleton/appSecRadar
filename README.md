@@ -2,7 +2,7 @@
 Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
 Built with SVG and JavaScript.<br /><br />
 ## Example
-![radar-7 1](https://user-images.githubusercontent.com/29818223/28792777-a4df10b6-7628-11e7-9654-971ccee32e0d.png)
+![radar_7 21](https://user-images.githubusercontent.com/29818223/28841888-8f077bfe-76f3-11e7-9458-adc7fbae2d50.png)
 
 
 ## Contents
