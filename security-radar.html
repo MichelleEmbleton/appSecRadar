@@ -30,15 +30,13 @@
 <!-------------------------------LEGEND-------------------------->
 
 <div id="legend_wrapper">
-	<div class="legend_button" onClick="showModule('legend', 'show_legend')"> + LEGEND 
-	</div>
-
-	<div id="legend" class="hide_legend">
-		<div id="hide_legend_button" onClick="hideModule('legend', 'hide_legend')">x
-		</div>
-
-		<p id='legend_text'>
-		<span class='key-heading'>Technology States in the Radars</span><br /><br />
+	<div id="legend_button" onClick="showHide('legend', 'legend_button', 'show_legend', 'hide_legend')">
+	<span class="plus_minus"> + </span>
+		Show/Hide Legend 
+</div>
+<div id="legend" class="hide_legend">
+	<p id='legend_text'>
+	<span class='key-heading'>Technology States in the Radars</span><br /><br />
 The radar serves as a one-stop-shop for making appsec security decisions about technologies to use in your applications.
 		<br /><br />
 		</p>
@@ -48,17 +46,13 @@ The radar serves as a one-stop-shop for making appsec security decisions about t
 <!------------------------ANOMALY CHART--------------------->
 
 
-<div class="show_anomalies_button" onClick="createAnomalyTable(); showModule('anomalyTable', 'show_anomalies')"> + Anomaly Chart 
+<div id="show_anomalies_button" onClick="showHide('anomalyTable', 'show_anomalies_button', 'show_anomalies',  'hide_anomalies')">  
+	<span class="plus_minus"> + </span>
+		Anomaly Chart
 </div>
-
 <div id="anomaly_table_wrapper">
-
 	<div id="anomalyTable" class="hide_anomalies">
-		<div id="hide_anomalies_button" onClick="hideModule('anomalyTable', 'hide_anomalies')">x
-		</div>
-
 		<div id="anomalyTablePos"></div>
-
 	</div>
 </div>
 
@@ -67,20 +61,12 @@ The radar serves as a one-stop-shop for making appsec security decisions about t
 
 
 
-<div id="sector_list_wrapper">
-	<div class="show_sector_list_button" onClick="showModule('sector_list', 'show_sector_list')"> 
-	+ List Representation By Sector
+<div id="sector_table_wrapper">
+	<div id="show_sector_table_button" onClick="showHide('sector_table', 'show_sector_table_button', 'show_sector_table', 'hide_sector_table')"> 
+	<span class="plus_minus"> + </span>
+		List Representation By Sector
 	</div>
-	<div id="sector_list" class="hide_sector_list">
-		<div id="hide_sector_list_button" onClick="hideModule('sector_list', 'hide_sector_list')">x
-		</div><br />
-		<div id="sector_table_menu"></div>
-	</div>
-</div>
-<div id="sector_table_wrapper" class="hide_sector_table">
-	<div id="sector_table" >
-		<div id="hide_sector_table_button" onClick="hideModule('sector_table_wrapper', 'hide_sector_table')">x
-		</div>
+	<div id="sector_table" class="hide_sector_table">
 	<div id="sectorTablesPos"></div>
 	</div>
 </div>
@@ -91,36 +77,31 @@ The radar serves as a one-stop-shop for making appsec security decisions about t
 
 
 
-<div id="status_list_wrapper">
-	<div class="show_status_list_button" onClick="showModule('status_list', 'show_status_list')"> 
-	+ List Representation By Status
+<div id="status_table_wrapper">
+	<div id="show_status_table_button" onClick="showHide('status_table', 'show_status_table_button', 'show_status_table', 'hide_status_table')"> 
+	<span class="plus_minus"> + </span>
+		List Representation By Status
 	</div>
-	<div id="status_list" class="hide_status_list">
-		<div id="hide_status_list_button" onClick="hideModule('status_list', 'hide_status_list')">x
-		</div><br />	
-		<div id="status_table_menu"></div>
-	</div>
-</div>
-<div id="status_table_wrapper" class="hide_status_table">
-	<div id="status_table" >
-		<div id="hide_status_table_button" onClick="hideModule('status_table_wrapper', 'hide_status_table')">x
-		</div>
+	<div id="status_table" class="hide_status_table">
 	<div id="statusTablesPos"></div>
 	</div>
 </div>
+
 
 <!------------------------------------------------------------------->
 
 <!---------------------------SCRIPTS--------------------------------->
 
 
-<script src="js/input_data.js"></script>
-<script src="js/status_config.js"></script>
-<script src="js/legend.js"></script>
-<script src="js/radar.js"></script>
-<script src="js/show_hide_module.js"></script>
 <script src="js/lists_by_sector.js"></script>
 <script src="js/lists_by_status.js"></script>
+<script src="js/status_config.js"></script>
+<script src="js/radar.js"></script>
+<script src="js/anomaly_table.js"></script>
+<script src="js/input_data.js"></script>
+<script src="js/dot_text.js"></script>
+<script src="js/legend.js"></script>
+<script src="js/show_hide_module.js"></script>
 
 </body>
 </html>

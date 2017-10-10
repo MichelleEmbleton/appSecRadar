@@ -2,7 +2,7 @@ body{	max-height:100%;
 	margin:0;
 	padding:0;
 	border-top:1px solid #888;
-	background-color:#000;  		     
+	background-color:#fff;  		     
  	font:100% arial, sans-serif;
 	overflow:auto; 
 	}
@@ -16,22 +16,13 @@ body{	max-height:100%;
 		left:2em;	
 		}
 
-.radar-circles{cx:330px;
-		cy:330px;
-		fill:#000;
+.radar-circles{fill:#000;
 		stroke:#fff;
 		}
 
 #sectorNames{	font:75% arial, sans-serif;
 		fill:#005fff;
 		text-transform:uppercase;
-		}
-
-.dot-c1, .dot-c2, .dot-c3, .dot-c4, .dot-c5, .dot-c6
-	{	stroke:#000; 
-		cx:330px; 
-		cy:330px;
-		r:6px;
 		}
 
 .dot-c1	{fill:#008f00;}
