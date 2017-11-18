@@ -6,12 +6,6 @@ Built with SVG and JavaScript.<br /><br />
 
 
 ## Contents
-Updated 3-7-17:<br />
-Main container file renamed to .html from .shtml - so it can render properly without the need for a virtual server offline. This file contains the content components: The SVG radar, the legend etc.<br />
-The css and js files are still separate from the main content.<br /> <br />
-
-Updated 2-7-17:<br />
-Files split into folders for css, js and other, mainly txt includes. So the main .shtml file is the vehicle to contain everything else.<br />
 
 ## Roadmap
 Initially, a test object array is hard-coded into a file, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
@@ -29,6 +23,14 @@ Legend added:<br />
 	        change #legend - overflow-y:auto;<br />
 	        but then it doesn't look as neat - depends on your colour scheme. It's still not easy to change scrollbars          across all the browsers...(was in IE6!).<br />
     IE9 doesn't have the transition effect.<br /><br />
+    
+    
+Updated 3-7-17:<br />
+Main container file renamed to .html from .shtml - so it can render properly without the need for a virtual server offline. This file contains the content components: The SVG radar, the legend etc.<br />
+The css and js files are still separate from the main content.<br /> <br />
+
+Updated 2-7-17:<br />
+Files split into folders for css, js and other, mainly txt includes. So the main .shtml file is the vehicle to contain everything else.<br />
     
 7-7-2017 <br />
 Added list representation tables for sectors.<br />
@@ -72,16 +74,64 @@ Fixed the maths for the sector angles. <br />
 Changed design to go with a white background. <br />
 Changed code around to eliminate some globals. <br />
 
+18-11-17 <br />
+New features added: <br />
+
+1. Subcategories : <br />
+	Added new column SUBCAT next to CAT. on JSON input data file. <br />
+	On the test data file there are 3 subcategories:   <br />
+	   Mobile, Cloud, Client-Side - but I've allowed for up to 6.  <br />
+	If no subcat is entered the dots don't show in subcat view.   <br />
+	The names can be changed/added to/deleted via the subcat_config file.  <br />
+	If the subcats aren't recorded on the subcat_config file, they appear in the anomaly list as 'Unallocated Subcategory'.   <br />
+	(The test data has one listed as 'X' and one as blank to show this.)  <br />
+	The view mode can be changed via a new drop-down menu - Radar View Mode.   <br />
+	New subcats entered on the subcat_config file will also show up on this menu.	I've chosen the colors to contrast with the classic colors. They can be changed on the radar.css file (.dot-sub1 etc) - color names instead of hex values are fine.  <br />
+
+2. Dots now have directional arrows:  <br />
+  Added column DIRECTION next to the STATUS column, in which the values can be entered manually when status is manually changed.  <br />
+		Arrow length = velocity: <br />
+		Values -n to +n: <br />
+		-n for outgoing techs.  <br />
+		+n for incoming techs.  <br />
+		Any values accepted (values expected are -6 to +6).  <br />
+		Use larger values for longer arrows.  <br />
+		Can also leave blank.  <br />
+		Leaving blank or 0 = no arrow, just dot.  <br />
+
+3. List tables are now draggable.  <br />
+	Onclick/double-click - to bring to front:  <br />
+	The layer position is based on z-index (click = +1)  <br />
+	The new subcategories are on all 3 tables.  <br />
+
+Notes on persisting data between file loads/screen refreshes:  <br />
+There doesn't seem to be a way to write to a file with JS - so I think the best ways to persist data are:  <br />
+1. One or two more simple changes when the input data is altered by the user - as implemented in this version.  <br />
+2. Local storage  <br />
+Is there a better solution I'm not seeing?  <br />
+
+Use of 'Local Storage': <br />
+
+Pros:  <br />
+1. Subcats can be changed/deleted/added dynamically just by changing the subcat on the data input file - removing the need for the subcat_config file.  <br />
+2. Directional arrows can also dynamically update - removing the need for the DIRECTION column in the data input file. <br />
+
+Cons:  <br />
+1. This will take control away from the user and the program.  <br />
+2. Portability is lost - browsers might be changed, caches might be cleared - it is no longer self-contained.  <br />
+
+The subcat_config file is likely to be only needed on first set-up (to change Mobile, Cloud and Desktop to different names or add/delete subcats) - and to make the odd changes.  <br />
+
+The subcats did work very well without the subcat_config file, using dynamic keys linked to the subcat names - except that when new data gets added to the list the color keys change around depending on the order of the subcats on the input data. Asking the user to add the subcats in the same order every time doesn't seem acceptable - unless they group their data in this way anyway, then it will work. <br />
 
 ## Browser Compatibility
-    FireFox 54.0.1 (latest version) & the previous version<br />
-    Safari 10.1.1<br />
-    Chrome 59.0.3071.115 (latest version)<br />
-    IE 9
+    18-11-17
+    Tested latest changes in: <br />
+    FireFox <br />
+    Safari <br />
+    Chrome <br />
+    Opera <br />
+    Not yet tested in: <br />
     IE 11
-Fixed text box style for IE 9+ : Added display:inline-block - as was mis-aligned.<br />
-Haven't tested 10, but 9 & 11 are fine.<br />
-    IE8 has nothing - is anybody still using IE8?!<br />
-    I found that IE will not accept \` as an alternative to \" or \' whilst the other browsers do.<br />
-       Also, that IE and FF won't accept the svg circle params cx, cy and r on the external css files.
-    
+
+
