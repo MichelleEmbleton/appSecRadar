@@ -1,45 +1,451 @@
-[{"TECH":"Java", "CAT":"a category", "STATUS":"plan FOR REMOVAL", "DATE":"14-6-2015", "DETAILS":"Coding - stable useful"},
-{"TECH":"Ruby", "CAT":"app", "STATUS":"EVALUATE", "DATE":"2-7-2016", "DETAILS":"Coding - new use"},
-{"TECH":"Swift", "CAT":"another cat", "STATUS":"", "DATE":"2-8-2014", "DETAILS":"Animation software - replacing with CCS3, SVG..., no new builds"},
-{"TECH":"ClickMeeting", "CAT":"cat+1", "STATUS":"other", "DATE":"14-6-2017", "DETAILS":"video conferencing - useful"},
-{"TECH":"Citrix Grasshopper", "CAT":"another cat", "STATUS":"TRIAL", "DATE":"14-6-2017", "DETAILS":"VoIP - trying out"},
-{"TECH":"GoogleMail", "CAT":"service", "STATUS":"EVALUATE", "DATE":"2-7-2016", "DETAILS":"use alot"},
-{"TECH":"snow leopard", "CAT":"", "STATUS":"NO NEW USE", "DATE":"2-8-2011", "DETAILS":"On older machines - phasing out"},
-{"TECH":"VirtualBox", "CAT":"platform", "STATUS":"hold", "DATE":"14-6-2012", "DETAILS":"VM - still using alot"},
-{"TECH":"WindowsXP", "CAT":"", "STATUS":"NO NEW USE", "DATE":"2-7-2002", "DETAILS":"OS - older machines - replacing"},
-{"TECH":"El Capitan", "CAT":"platform", "STATUS":"ADOPT", "DATE":"2-8-2017", "DETAILS":"OSX - newest in use at moment"},
-{"TECH":"Lua", "CAT":"app", "STATUS":"EVALUATE", "DATE":"14-6-2017", "DETAILS":"coding - experimenting"},
-{"TECH":"php", "CAT":"app", "STATUS":"NO NEW USE", "DATE":"2-7-2016", "DETAILS":"coding - replacing with other languages"},
-{"TECH":"asp.net", "CAT":"platform", "STATUS":"HOLD", "DATE":"14-6-2017", "DETAILS":"coding - still using alot"},
-{"TECH":"julia", "CAT":"app", "STATUS":"ADOPT", "DATE":"2-7-2016", "DETAILS":"coding - trying out"},
-{"TECH":"haskell", "CAT":"app", "STATUS":"EVALUATE", "DATE":"2-8-2017", "DETAILS":"coding - good potential"},
-{"TECH":"Red Hat", "CAT":"platform", "STATUS":"TRIAL", "DATE":"14-6-2017", "DETAILS":"Linux OS - trying out"},
-{"TECH":"mountain lion", "CAT":"platform", "STATUS":"NO NEW USE", "DATE":"2-7-2016", "DETAILS":"OSX - still using on some older machines"},
-{"TECH":"BT cloud", "CAT":"service", "STATUS":"EVALUATE", "DATE":"2-8-2017", "DETAILS":"cloud storage - trying out"},
-{"TECH":"VLC", "CAT":"app", "STATUS":"HOLD", "DATE":"14-6-2017", "DETAILS":"media player - good for viewing camera footage"},
-{"TECH":"MeshLab", "CAT":"app", "STATUS":"TRIAL", "DATE":"14-6-2017", "DETAILS":"CAD and STL software - trying out"},
-{"TECH":"Google+", "CAT":"service", "STATUS":"HOLD", "DATE":"2-7-2016", "DETAILS":"keep for now"},
-{"TECH":"Python", "CAT":"app", "STATUS":"PLAN FOR REMOVAL", "DATE":"2-8-2017", "DETAILS":"Coding - phasing out"},
-{"TECH":"CentOS", "CAT":"platform", "STATUS":"HOLD", "DATE":"14-6-2017", "DETAILS":"Linux OS - still using"},
-{"TECH":"Windows95", "CAT":"platform", "STATUS":"", "DATE":"2-7-2002", "DETAILS":""},
-{"TECH":"Windows13", "CAT":"platform", "STATUS":"EVALUATE", "DATE":"2-8-2017", "DETAILS":"OS - new - try out.."},
-{"TECH":"flash", "CAT":"app", "STATUS":"PLAN FOR REMOVAL", "DATE":"14-6-2017", "DETAILS":"coding - replacing, no longer using"},
-{"TECH":"3Design", "CAT":"app", "STATUS":"PLAN FOR REMOVAL", "DATE":"2-7-2016", "DETAILS":"CAD software - no longer using"},
-{"TECH":"Photoshop", "CAT":"app", "STATUS":"HOLD", "DATE":"14-6-2017", "DETAILS":"image editing - always using"},
-{"TECH":"FileZilla", "CAT":"service", "STATUS":"HOLD", "DATE":"2-7-2016", "DETAILS":"FTP - stable, useful"},
-{"TECH":"ZAP", "CAT":"app", "STATUS":"ADOPT", "DATE":"2-8-2017", "DETAILS":"Proxy - useful tool"},
-{"TECH":"Parallels", "CAT":"platform", "STATUS":"EVALUATE", "DATE":"2-8-2017", "DETAILS":"VM - trying out"},
-{"TECH":"VMWare", "CAT":"platform", "STATUS":"NO NEW USE", "DATE":"14-6-2017", "DETAILS":"VM - not using as much"},
-{"TECH":"Windows Virtual PC", "CAT":"platform", "STATUS":"NO NEW USE", "DATE":"14-6-2017", "DETAILS":"not using"},
-{"TECH":"Opera", "CAT":"service", "STATUS":"PLAN FOR REMOVAL", "DATE":"2-7-2016", "DETAILS":"Browser - hardly use"},
-{"TECH":"Netscape", "CAT":"service", "STATUS":"PLAN FOR REMOVAL", "DATE":"2-8-2017", "DETAILS":"Browser - not needed"},
-{"TECH":"iTunes", "CAT":"service", "STATUS":"EVALUATE", "DATE":"14-6-2017", "DETAILS":"music and apps"},
-{"TECH":"Adobe Acrobat", "CAT":"service", "STATUS":"NO NEW USE", "DATE":"2-7-2002", "DETAILS":"file reader and editor"},
-{"TECH":"Wacom bamboo", "CAT":"service", "STATUS":"PLAN FOR REMOVAL", "DATE":"2-8-2017", "DETAILS":"graphic tablet software - not using much"},
-{"TECH":"lockLizard", "CAT":"service", "STATUS":"NO NEW USE", "DATE":"14-6-2017", "DETAILS":"file reader - haven't used for ages"},
-{"TECH":"Xcode", "CAT":"platform", "STATUS":"NO NEW USE", "DATE":"2-7-2016", "DETAILS":"for iPhone app building - no using"},
-{"TECH":"XAMPP", "CAT":"platform", "STATUS":"ADOPT", "DATE":"14-6-2017", "DETAILS":"virtual server - use alot"},
-{"TECH":"awk", "CAT":"service", "STATUS":"EVALUATE", "DATE":"2-7-2016", "DETAILS":"terminal scripting - put in service to make up the dots"},
-{"TECH":"sed", "CAT":"platform", "STATUS":"TRIAL", "DATE":"2-8-2017", "DETAILS":"terminal scripting - put in platform to make up the dots"},
-{"TECH":"nano", "CAT":"service", "STATUS":"TRIAL", "DATE":"2-7-2016", "DETAILS":"terminal file editor - easy to use"},
-{"TECH":"emacs", "CAT":"platform", "STATUS":"ADOPT", "DATE":"2-8-2017", "DETAILS":"terminal file editor - favourite editor"}]
+[
+ 	{
+	"TECH":"Java SE 5", 
+	"CAT":"platform", 
+	"SUBCAT":"", 
+	"STATUS":"plan FOR REMOVAL", 
+	"DIRECTION":"-1", 
+	"DATE":"14-6-2015", 
+	"DETAILS":"Deprecated in favour of v6"
+	},
+
+	{
+	"TECH":"Ruby", 
+	"CAT":"app", 
+	"SUBCAT":"client-side", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"+3", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"Coding - new use"
+	},
+	
+	{
+	"TECH":"Swift", 
+	"CAT":"app", 
+	"SUBCAT":"cloud", 
+	"STATUS":"", 
+	"DIRECTION":"+1", 
+	"DATE":"2-8-2014", 
+	"DETAILS":"Animation software - replacing, no new builds"
+	},
+
+	{
+	"TECH":"ClickMeeting", 
+	"CAT":"service", 
+	"SUBCAT":"cloud", 
+	"STATUS":"adopt", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"video conferencing - new use"
+	},
+
+	{
+	"TECH":"Citrix Grasshopper", 
+	"CAT":"service", 
+	"SUBCAT":"cloud", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"VoIP - try out"
+	},
+
+	{
+	"TECH":"GoogleMail v5", 
+	"CAT":"service", 
+	"SUBCAT":"cloud", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"+3", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"replaced v4"
+	},
+
+	{
+	"TECH":"snow leopard", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"-4", 
+	"DATE":"2-8-2011", 
+	"DETAILS":"On older machines - replacing with newer version"
+	},
+
+	{
+	"TECH":"VirtualBox v4.8", 
+	"CAT":"platform", 
+	"SUBCAT":"client-side", 
+	"STATUS":"hold", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2012", 
+	"DETAILS":"VM - replaced previous version"
+	},
+
+	{
+	"TECH":"WindowsXP", 
+	"CAT":"", 
+	"SUBCAT":"mobile", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2002", 
+	"DETAILS":"OS - older machines - replace"
+	},
+
+	{
+	"TECH":"El Capitan", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"ADOPT", 
+	"DIRECTION":"+5", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"OSX - newest version"
+	},
+
+	{
+	"TECH":"Lua", 
+	"CAT":"app", 
+	"SUBCAT":"cloud", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"coding - replaced previous version"
+	},
+
+	{
+	"TECH":"php 5.8", 
+	"CAT":"app", 
+	"SUBCAT":"cloud", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"-4", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"coding - replaced with newer version"
+	},
+
+	{
+	"TECH":"asp.net v25", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"coding - in use"
+	},
+
+	{
+	"TECH":"julia", 
+	"CAT":"app", 
+	"SUBCAT":"cloud", 
+	"STATUS":"ADOPT", 
+	"DIRECTION":"+2", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"coding - replaced something else"
+	},
+
+	{
+	"TECH":"haskell", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"coding - try out to replace other thing"
+	},
+
+	{
+	"TECH":"Red Hat", 
+	"CAT":"platform", 
+	"SUBCAT":"cloud", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"Linux OS - new use"
+	},
+
+	{
+	"TECH":"mountain lion", 
+	"CAT":"platform", 
+	"SUBCAT":"cloud", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"-4", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"OSX - still in use on older machines"
+	},
+
+	{
+	"TECH":"BT cloud", 
+	"CAT":"service", 
+	"SUBCAT":"mobile", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"-5", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"replace"
+	},
+
+	{
+	"TECH":"VLC", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"media player - use for playback"
+	},
+
+	{
+	"TECH":"MeshLab", 
+	"CAT":"app", 
+	"SUBCAT":"client-side", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"CAD and STL software - try out"
+	},
+
+	{
+	"TECH":"Google+", 
+	"CAT":"service", 
+	"SUBCAT":"cloud", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"keep for now"
+	},
+
+	{
+	"TECH":"Python v41", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"-1", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"Phasing out - replaced by v42"
+	},
+
+	{
+	"TECH":"CentOS", 
+	"CAT":"platform", 
+	"SUBCAT":"cloud", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"Linux OS - in use"
+	},
+
+	{
+	"TECH":"Windows95", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2002", 
+	"DETAILS":"Deprecated in favour of other OS"
+	},
+
+	{
+	"TECH":"Windows35", 
+	"CAT":"platform", 
+	"SUBCAT":"cloud", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"OS - new - try out"
+	},
+
+	{
+	"TECH":"flash", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"-1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"Replace with other things"
+	},
+
+	{
+	"TECH":"3Design v7", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"-5", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"CAD software - replaced with v8"
+	},
+
+	{
+	"TECH":"Photoshop", 
+	"CAT":"app", 
+	"SUBCAT":"mobile", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"image editing - in use"
+	},
+
+	{
+	"TECH":"FileZilla v123.4", 
+	"CAT":"service", 
+	"SUBCAT":"client-side", 
+	"STATUS":"HOLD", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"FTP - current version"
+	},
+
+	{
+	"TECH":"ZAP v2.6", 
+	"CAT":"app", 
+	"SUBCAT":"client-side", 
+	"STATUS":"ADOPT", 
+	"DIRECTION":"+1", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"Proxy - replaced v2.5"
+	},
+
+	{
+	"TECH":"Parallels", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"VM - try out"
+	},
+
+	{
+	"TECH":"VMWare v1.11", 
+	"CAT":"platform", 
+	"SUBCAT":"client-side", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"-4", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"VM - replaced with newer version"
+	},
+
+	{
+	"TECH":"Windows Virtual PC", 
+	"CAT":"platform", 
+	"SUBCAT":"mobile", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"replaced with other"
+	},
+
+	{
+	"TECH":"Opera", 
+	"CAT":"service", 
+	"SUBCAT":"mobile", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"+2", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"Browser - try out"
+	},
+
+	{
+	"TECH":"Netscape",
+	"CAT":"service", 
+	"SUBCAT":"mobile", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"Browser - not in use"
+	},
+
+	{
+	"TECH":"iTunes v86", 
+	"CAT":"service", 
+	"SUBCAT":"client-side", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"replaced v85"
+	},
+
+	{
+	"TECH":"Adobe Acrobat v3", 
+	"CAT":"service", 
+	"SUBCAT":"mobile", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"-2", 
+	"DATE":"2-7-2002", 
+	"DETAILS":"file reader - replaced with v4"
+	},
+
+	{
+	"TECH":"Wacom bamboo 10", 
+	"CAT":"service", 
+	"SUBCAT":"client-side", 
+	"STATUS":"PLAN FOR REMOVAL", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"graphic tablet software - replaced with v11"
+	},
+
+	{
+	"TECH":"lockLizard v3", 
+	"CAT":"service", 
+	"SUBCAT":"mobile", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"file reader - replaced with v4"
+	},
+
+	{
+	"TECH":"Xcode v3", 
+	"CAT":"platform", 
+	"SUBCAT":"cloud", 
+	"STATUS":"NO NEW USE", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"replaced with v4"
+	},
+
+	{
+	"TECH":"XAMPP v12.3", 
+	"CAT":"platform", 
+	"SUBCAT":"client-side", 
+	"STATUS":"ADOPT", 
+	"DIRECTION":"+1", 
+	"DATE":"14-6-2017", 
+	"DETAILS":"replaced v12.2"
+	},
+
+	{
+	"TECH":"awk v5", 
+	"CAT":"service", 
+	"SUBCAT":"client-side", 
+	"STATUS":"EVALUATE", 
+	"DIRECTION":"+1", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"terminal scripting - replaced v4"
+	},
+
+	{
+	"TECH":"sed v6", 
+	"CAT":"platform", 
+	"SUBCAT":"client-side", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"terminal scripting - replacing v5"
+	},
+
+	{
+	"TECH":"nano v4", 
+	"CAT":"service", 
+	"SUBCAT":"X", 
+	"STATUS":"TRIAL", 
+	"DIRECTION":"", 
+	"DATE":"2-7-2016", 
+	"DETAILS":"terminal file editor - replaced v3"
+	},
+
+	{
+	"TECH":"emacs v5", 
+	"CAT":"platform", 
+	"SUBCAT":"client-side", 
+	"STATUS":"ADOPT", 
+	"DIRECTION":"", 
+	"DATE":"2-8-2017", 
+	"DETAILS":"terminal file editor - replaced v4"
+	}
+]
