@@ -1,11 +1,11 @@
 #anomaly_table_wrapper{	position:absolute; 
-				top:15em;	
+				top:27em;	
 				right:1.2em;    
 				height:auto;
 				}
 
 #show_anomalies_button{	position:absolute; 	
-				top:17em;
+				top:32em;
 				right:2em;
 				width:10em;
 				padding:1em;
@@ -19,8 +19,7 @@
 .show_anomalies{	height:auto; 
 			width:auto;
 			border:1px solid #f1f1f1;
-			border-radius:0.7em;
-			
+			border-radius:0.7em;			
 			}
 
 .hide_anomalies{	height:0; 
@@ -30,7 +29,7 @@
 #anomalyTable{	position:relative; 
 		overflow-y:hidden;
 		top:0em; 
-		margin:1em 1.5em;
+		margin:0.7em 1.5em;
 		background-color:rgba(255, 255, 255, 0.6);						border-collapse:collapse;		
 		}
 
@@ -54,8 +53,9 @@
 			border-bottom:1px dotted #e2e2e2;
 			}
 
-#anomalyTable tr.nostatus 	{color:#0000ff;}
-#anomalyTable tr.nocatsec	{color:#00afff;}
+#anomalyTable tr.nostatus 	{color:#0000cc;}
+#anomalyTable tr.nocatsec	{color:#5555ff;}
+#anomalyTable tr.nosubcat	{color:#aaaaff;}
 #anomalyTable tr.no-entries	{color:#fff;}
 
 #anomalyTable td{	font:70% arial;

@@ -1,0 +1,57 @@
+#radar_mode_wrapper{	position:absolute;     
+			top:14.5em;	
+			right:1.8em;
+			width:12em;
+			height:auto;			
+			}
+
+#radar_mode_button{	position:absolute; 	
+			top:0em;
+			right:0em;
+			width:11em;  
+			padding:0.5em 0.7em;
+			font:80% arial, sans-serif;
+			color:#000;
+			cursor:pointer;
+			}
+
+#radar_mode_button:hover{color:#c3c3c3;}
+
+#radar_mode{ position:relative; 
+		width:100%;		
+		overflow-y:hidden; 
+		top:1.6em; 
+		float:right;	
+		margin-right:1em;
+		z-index:2;	
+		background-color:rgba(255, 255, 255, 0.8);		
+		}
+
+.show_radar_mode{	height:auto; 
+			width:auto;
+			border:1px solid #f1f1f1;
+			border-radius:0.7em;			
+			}
+
+.hide_radar_mode{	height:0; 
+			border:none;
+			}
+
+.radar_mode_switch{	display:block; 
+			padding:0 1em; 
+			font:0.8em/0.8em arial, sans-serif;
+			color:#000;
+			}
+
+.radar_mode_switch:hover{	color:#c3c3c3;
+				cursor:pointer;
+				}
+
+.subcat-list{	margin-top:-0.2em;}
+
+.subcat-list li{	font:0.8em/1.4em arial, sans-serif;
+			color:#777;
+			list-style-type:none;			
+			text-transform:capitalize;
+			}
+
