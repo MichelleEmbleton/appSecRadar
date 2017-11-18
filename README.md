@@ -126,12 +126,12 @@ The subcats did work very well without the subcat_config file, using dynamic key
 
 ## Browser Compatibility
     18-11-17
-    Tested latest changes in: <br />
-    FireFox <br />
-    Safari <br />
-    Chrome <br />
-    Opera <br />
-    Not yet tested in: <br />
+    Tested latest changes in: 
+    FireFox 
+    Safari 
+    Chrome 
+    Opera 
+    Not yet tested in: 
     IE 11
 
 
