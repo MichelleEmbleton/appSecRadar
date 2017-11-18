@@ -17,6 +17,7 @@ function createSectorTables(techList){
 		+ category 
 		+ "</caption><tr>"
 		+ "<th>Name</th>"
+		+ "<th>Subcategory</th>"
 		+ "<th>Status</th>"
 		+ "<th>Detail</th></tr>";
 			
@@ -27,23 +28,32 @@ function createSectorTables(techList){
 			} else if(techCat == category){
 				var techId = techList[i].ID;	
 				var techTech = techList[i].TECH.toUpperCase();
+				var techSubcat = techList[i].SUBCAT;
+				var techSubcatId = techList[i].SUBCATID;
 				var techStat = techList[i].STATUS.toLowerCase();
 				var techDet = techList[i].DETAILS;
-				var tr = "<tr>";
 				if(techId){
-					var td = "<td class = " + techId + ">";
-					} else {
-   				techStat = "Unallocated"; td = "<td class = 'blue'>"
+					var tdcol = techId;
+				} else {
+   					techStat = "Unallocated"; 
+					tdcol = "nostatus";
+				}
+				if(!techSubcatId){
+					techSubcat = "Unallocated";
+					tdcol = "nosubcat";
 				}
 			if(techDet == ''){techDet = 'No Details'}		
-			table += tr 
-				+ td 
+			table += "<tr>" 
+				+ "<td class='td1 " + tdcol + "'>"
 				+ techTech 
 				+ "</td>" 
-				+ td 
+				+ "<td class='td2 " + tdcol + "'>"
+				+ techSubcat 
+				+ "</td>" 
+				+ "<td class='td3 " + tdcol + "'>"
 				+ techStat 
 				+ "</td>" 
-				+ td 
+				+ "<td class='td4 " + tdcol + "'>"
 				+ techDet 
 				+ "</td></tr>";	
 				}

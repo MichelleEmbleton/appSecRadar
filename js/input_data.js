@@ -1,7 +1,7 @@
 var inputFile = "data.json";    	//JSON FILE PATH GOES HERE
 
 var request = new XMLHttpRequest();
-request.open("GET", inputFile, false);
+request.open("GET", inputFile, true);
 
 request.onreadystatechange = function (){
 	if(request.readyState === 4){
@@ -13,6 +13,8 @@ request.onreadystatechange = function (){
 				createRadar(techList);
 				createSectorTables(techList);
 				createStatusTables(techList);
+				createSubcatTables(techList);
+				
 				}
      			}
   		}
