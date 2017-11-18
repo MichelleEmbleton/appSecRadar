@@ -9,7 +9,6 @@ Built with SVG and JavaScript.<br /><br />
 
 ## Roadmap
 Initially, a test object array is hard-coded into a file, but will need to be able to import a csv, json or text file to be of any use.<br /><br />
-I've also created a radar in photoshop - and png dots - if preferable to SVGs.<br /><br />
 
 Refresh browser window to re-align dots - until a non-overlapping system is deployed. The 1px black stroke helps identify partially hidden dots and all of them are able to display their information when hovered over.<br /><br />
 
