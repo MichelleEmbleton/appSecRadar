@@ -4,6 +4,8 @@ Built with SVG and JavaScript.<br /><br />
 ## Examples
 ![radar-7 6-1](https://user-images.githubusercontent.com/29818223/32985377-60ff6faa-ccb1-11e7-89f6-9ccaac5140fe.png)
 ![radar-7 6-2](https://user-images.githubusercontent.com/29818223/32985378-6119e9a2-ccb1-11e7-93a0-81ebd1423b80.png)
+![radar-7 7](https://user-images.githubusercontent.com/29818223/33027891-41ceecb2-ce0c-11e7-857d-a2436b9fe29b.png)
+Radii can easily be adjusted to accomodate data.
 
 ## Contents
 
