@@ -130,7 +130,6 @@ The subcats did work very well without the subcat_config file, using dynamic key
     Safari 
     Chrome 
     Opera 
-    Not yet tested in: 
     IE 11
 
 
