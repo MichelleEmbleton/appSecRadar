@@ -19,7 +19,8 @@
 .show_anomalies{	height:auto; 
 			width:auto;
 			border:1px solid #f1f1f1;
-			border-radius:0.7em;			
+			border-radius:0.7em;
+			z-index:2;
 			}
 
 .hide_anomalies{	height:0; 
