@@ -46,17 +46,17 @@ function createRadar(techList){
 		if(techStatus == statusTitle){					
 			techList[i].ID = statusList[s].ID; 
 			techList[i].RADIUS = statusList[s].RADIUS; 
-			techList[i].MIN_R = statusList[s].MIN_R; 							} 	
-  	}
-	
+			techList[i].MIN_R = statusList[s].MIN_R; 							
+		} 	
+  	}	
 	var techId = techList[i].ID;	
 	var techSubcat = techList[i].SUBCAT;
 
 	for(sc = 0; sc < subcatlen; sc++){ 
 		if(techSubcat == subcatList[sc].SUBCAT){					
-			techList[i].SUBCATID = subcatList[sc].ID;							} 	
-  	}
-			
+			techList[i].SUBCATID = subcatList[sc].ID;							
+		} 	
+  	}			
 	var techSubcatId = techList[i].SUBCATID;		
 	var techDir = techList[i].DIRECTION;
 	var radius = (techList[i].RADIUS);		
@@ -70,7 +70,8 @@ function createRadar(techList){
 				tech:techTech, 
 				state:"Unallocated Category Sector", 
 				trClass:"nocatsec"
-				});											} 
+				});											
+		} 
 	 	if(!techId){
 			anomalyList.push({	
 				tech:techTech, 
@@ -215,7 +216,8 @@ function createRadar(techList){
 	dot.addEventListener("mousedown", selectElement, false);
 
 	function selectElement(event){ 
-	   var moveX = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));		   var moveY = Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR))	      
+	   var moveX = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));		   
+	   var moveY = Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));	      
 	   mousedown = true;	
 	   dot.addEventListener("mousemove", moveElement);
 	     function moveElement() {      
