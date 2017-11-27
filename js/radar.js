@@ -20,7 +20,7 @@ function createRadar(techList){
 		radarStatusText = 11;
 		}				
 	var y = (330 - r + radarStatusText);
-	radarCircles(r),
+	radarCircles(r);
 	statusTitles(statusTitle, statusId, y); 
   }
 
@@ -51,6 +51,7 @@ function createRadar(techList){
 	
 	var techId = techList[i].ID;	
 	var techSubcat = techList[i].SUBCAT;
+
 	for(sc = 0; sc < subcatlen; sc++){ 
 		if(techSubcat == subcatList[sc].SUBCAT){					
 			techList[i].SUBCATID = subcatList[sc].ID;							} 	
@@ -60,8 +61,7 @@ function createRadar(techList){
 	var techDir = techList[i].DIRECTION;
 	var radius = (techList[i].RADIUS);		
 	var minR = (techList[i].MIN_R) - -6;			
-	var maxR = radius - 6; 	
-			
+	var maxR = radius - 6; 			
 	if(techAddDate == '')	{techAddDate = 'Date not entered'}
 	if(techDetail == '')	{techDetail = 'No Details'}
 	if((techCat == '') || (!techId)){
@@ -116,15 +116,14 @@ function createRadar(techList){
 		sectorBorder.setAttribute("stroke-dasharray", "10,10");
 		radA = (sectorAng * a) * (Math.PI / 180); 	
 		radAB = (sectorAng * (a+1)) * (Math.PI / 180);
-		x = 330 + Math.round(r * Math.cos(radA));
-		y = 330 + Math.round(r * Math.sin(radA));
+		x = 330 + Math.round(r * Math.cos(radA));	
+		y = 330 + Math.round(r * Math.sin(radA));	
 		xa = 330 + Math.round((r+3) * Math.cos(radA));
 		ya = 330 + Math.round((r+3) * Math.sin(radA));
 		xb = 330 + Math.round((r+3) * (Math.cos(radAB)));
 		yb = 330 + Math.round((r+3) * (Math.sin(radAB)));
 		sectorBorder.setAttribute("d", "M330 330 L" + x + "," + y );	
 		svg.appendChild(sectorBorder);
-
 		sectorNamePath = document.createElementNS(ns, "path");
 		sectorNamePath.setAttributeNS(null, "id", sectorTitle[a]);
 		sectorNamePath.setAttribute("fill", "none");
@@ -161,7 +160,7 @@ function createRadar(techList){
 	return angle; 
   }
 
-  function radarCircles(radius){
+  function radarCircles(radius){	
 	var radarCircle = document.createElementNS(ns, 'circle');
 	radarCircle.setAttribute("class", "radar-circles");	
 	radarCircle.setAttribute("r", radius);
@@ -208,11 +207,25 @@ function createRadar(techList){
 		dotClass = dot.setAttribute("class", "dot-sub" + techSubcatId);    
 		dotClass = arrow.setAttribute("class", "dot-sub" + techSubcatId);	
 	   }	
-	}		
-	var x, y;					
-	x = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));		
+	}
+	var x, y;		  				
+	x = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));	
 	y =  Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));
 	dot.setAttribute('transform','translate(' + x + ',' + y + ')');
+	dot.addEventListener("mousedown", selectElement, false);
+
+	function selectElement(event){ 
+	   var moveX = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));		   var moveY = Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR))	      
+	   mousedown = true;	
+	   dot.addEventListener("mousemove", moveElement);
+	     function moveElement() {      
+		if(mousedown){
+		   dot.setAttribute("transform", "translate(" + moveX + "," + moveY + ")");
+		   arrow.setAttribute("transform", "translate(" + moveX + "," + moveY + ")" 
+					+ "rotate("+ techDirection +",330,330)"); 
+		}
+	     }
+	}
 	if(techDir != "" && techDir != "0"){
 		var techDirection;
 		var digits = techDir.replace(/\+/, "");		
@@ -286,7 +299,6 @@ function createRadar(techList){
 	document.getElementById('mode_list').innerHTML += text;
 	
   })();
+}
 
-}  
 
-	
