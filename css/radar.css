@@ -39,6 +39,13 @@ body{	max-height:100%;
 .dot-sub5	{fill:#f1f1f1; background-color:#f1f1f1;}
 .dot-sub6	{fill:#b1a1ff; background-color:#b1a1ff;}
 
+.dot-c1,
+.dot-c2,
+.dot-c3,
+.dot-c4,
+.dot-c5,
+.dot-c6		{cursor:pointer;}
+
 .hidesubcat	{visibility:hidden;}
 
 #sub-dot-code{	position:absolute;
