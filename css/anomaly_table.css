@@ -41,7 +41,8 @@
 		overflow-y:hidden;
 		top:0em; 
 		margin:1em 1.5em;
-		background-color:rgba(0, 0, 0, 0.6);							border-collapse:collapse;
+		background-color:rgba(0, 0, 0, 0.6);							
+		border-collapse:collapse;
 		}
 
 #anomalyTable caption{	margin:0.7em 0;
@@ -64,7 +65,7 @@
 
 #anomalyTable tr.nostatus 	{color:#0000ff;}
 #anomalyTable tr.nocatsec	{color:#00afff;}
-#anomalyTable tr.no-entries	{color:#fff;}
+#anomalyTable tr.no-entries	{color:#0000ff;}
 
 #anomalyTable td{	font:70% arial;
 			text-transform:capitalize; 
