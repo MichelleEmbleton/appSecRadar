@@ -1,5 +1,5 @@
 function createRadar(techList){
-var 	ns = "http://www.w3.org/2000/svg",
+  var 	ns = "http://www.w3.org/2000/svg",
 	xs = "http://www.w3.org/1999/xlink",
 	svg = document.getElementById('svgRadar'),
 	svgDiv = document.getElementById('radar'),	
@@ -7,9 +7,10 @@ var 	ns = "http://www.w3.org/2000/svg",
 	s,
 	anomalyList = [],
 	len = techList.length,
-	statuslen = statusList.length;
+	statuslen = statusList.length,
+	subcatlen = subcatList.length;
 
-for(s = 0; s < statuslen; s++){ 
+ for(s = 0; s < statuslen; s++){ 
 	var statusTitle = statusList[s].TITLE.toUpperCase(); 
 	var statusId = statusList[s].ID; 
 	var r = statusList[s].RADIUS;					
@@ -19,21 +20,20 @@ for(s = 0; s < statuslen; s++){
 		radarStatusText = 11;
 		}				
 	var y = (330 - r + radarStatusText);
-
-	radarCircles(r),
+	radarCircles(r);
 	statusTitles(statusTitle, statusId, y); 
-	}
+  }
 
-for(s = 1; s < statuslen; s++){ 
+  for(s = 1; s < statuslen; s++){ 
 	statusList[s-1].MIN_R = statusList[s].RADIUS;
 	if(statusList[s].MIN_R  == undefined){
 		statusList[s].MIN_R = '10';
 		}
-	}
+  }
 
-sectors();
+  sectors();
 
-for(i = 0; i < len; i++){			
+  for(i = 0; i < len; i++){			
 	var techTech = techList[i].TECH.toUpperCase(); 		
 	var techAddDate = techList[i].DATE;
 	var techDetail = techList[i].DETAILS;
@@ -46,14 +46,22 @@ for(i = 0; i < len; i++){
 		if(techStatus == statusTitle){					
 			techList[i].ID = statusList[s].ID; 
 			techList[i].RADIUS = statusList[s].RADIUS; 
-			techList[i].MIN_R = statusList[s].MIN_R; 					
-			} 	
-		}
-		var techId = techList[i].ID;		
-		var radius = (techList[i].RADIUS);		
-		var minR = (techList[i].MIN_R) - -6;			
-		var maxR = radius - 6;
-		
+			techList[i].MIN_R = statusList[s].MIN_R; 							
+		} 	
+  	}	
+	var techId = techList[i].ID;	
+	var techSubcat = techList[i].SUBCAT;
+
+	for(sc = 0; sc < subcatlen; sc++){ 
+		if(techSubcat == subcatList[sc].SUBCAT){					
+			techList[i].SUBCATID = subcatList[sc].ID;							
+		} 	
+  	}			
+	var techSubcatId = techList[i].SUBCATID;		
+	var techDir = techList[i].DIRECTION;
+	var radius = (techList[i].RADIUS);		
+	var minR = (techList[i].MIN_R) - -6;			
+	var maxR = radius - 6; 			
 	if(techAddDate == '')	{techAddDate = 'Date not entered'}
 	if(techDetail == '')	{techDetail = 'No Details'}
 	if((techCat == '') || (!techId)){
@@ -62,8 +70,8 @@ for(i = 0; i < len; i++){
 				tech:techTech, 
 				state:"Unallocated Category Sector", 
 				trClass:"nocatsec"
-				});								
-			} 
+				});											
+		} 
 	 	if(!techId){
 			anomalyList.push({	
 				tech:techTech, 
@@ -72,16 +80,23 @@ for(i = 0; i < len; i++){
 				});
 			}
 		} else {
-		createDots(techStatus, techId, minR, maxR, sectorAngle);
-		} 		
-}
+		createDots(techStatus, techId, techSubcat, techSubcatId, minR, maxR, sectorAngle);
+  	} 
+	if((techSubcat == '') || (techSubcatId == undefined)){
+		anomalyList.push({	
+				tech:techTech, 
+				state:"Unallocated Subcategory", 
+				trClass:"nosubcat"
+				});
+	}	
+  }
 
-function sectors(){
+  function sectors(){
 	var sectorTitle = [];			
 	for(i = 0; i < len; i++){ 
 		var techCat = techList[i].CAT;
 		if((sectorTitle.indexOf(techCat) == -1) && (techCat !=='')){
-		sectorTitle.push(techCat);				
+			sectorTitle.push(techCat);				
 		}	 			
    	}
 	var sectorNum = sectorTitle.length; 
@@ -102,15 +117,14 @@ function sectors(){
 		sectorBorder.setAttribute("stroke-dasharray", "10,10");
 		radA = (sectorAng * a) * (Math.PI / 180); 	
 		radAB = (sectorAng * (a+1)) * (Math.PI / 180);
-		x = 330 + Math.round(r * Math.cos(radA));
-		y = 330 + Math.round(r * Math.sin(radA));
+		x = 330 + Math.round(r * Math.cos(radA));	
+		y = 330 + Math.round(r * Math.sin(radA));	
 		xa = 330 + Math.round((r+3) * Math.cos(radA));
 		ya = 330 + Math.round((r+3) * Math.sin(radA));
 		xb = 330 + Math.round((r+3) * (Math.cos(radAB)));
 		yb = 330 + Math.round((r+3) * (Math.sin(radAB)));
 		sectorBorder.setAttribute("d", "M330 330 L" + x + "," + y );	
 		svg.appendChild(sectorBorder);
-
 		sectorNamePath = document.createElementNS(ns, "path");
 		sectorNamePath.setAttributeNS(null, "id", sectorTitle[a]);
 		sectorNamePath.setAttribute("fill", "none");
@@ -135,28 +149,28 @@ function sectors(){
 				techList[i].MAXA = sector[2];
 				randomAngle(techList[i].MINA, techList[i].MAXA);
 				techList[i].ANGLE = angle;	
-				}
 			}
 		}
-}
+	}
+  }
 
-function randomAngle(minA, maxA){
+  function randomAngle(minA, maxA){
 	minA = (minA + 0.09);
 	maxA = (maxA - 0.09);
 	angle = ((Math.random() * (maxA - minA)) + minA);
 	return angle; 
-	}
+  }
 
-function radarCircles(radius){
+  function radarCircles(radius){	
 	var radarCircle = document.createElementNS(ns, 'circle');
 	radarCircle.setAttribute("class", "radar-circles");	
 	radarCircle.setAttribute("r", radius);
 	radarCircle.setAttribute("cx", "330");	
 	radarCircle.setAttribute("cy", "330"); 		
 	svg.appendChild(radarCircle);	
-	}
+  }
 
-function statusTitles(title, titleClass, y){
+  function statusTitles(title, titleClass, y){
 	var statusTitle = document.createElementNS(ns, 'text');
 	titleClass = "title-" + titleClass;
 	statusTitle.setAttribute("class", titleClass);
@@ -166,28 +180,87 @@ function statusTitles(title, titleClass, y){
 	var text = document.createTextNode(title);
 	statusTitle.appendChild(text);
 	svg.appendChild(statusTitle);	
-	}
+  }
 
-function createDots(status, dotId, minR, maxR, angle){ 
-	var dot = document.createElementNS(ns, 'circle');
-	var dotClass = "dot-" + dotId;	
+
+  function createDots(status, techId, techSubcat, techSubcatId, minR, maxR, angle){ 
+	var dot = document.createElementNS(ns, 'circle'); 
+	var arrow = document.createElementNS(ns, 'polygon');
+	var dotClass = "dot-" + techId;
 	dot.setAttribute("class", dotClass);	
 	dot.setAttribute("cx", "330");
 	dot.setAttribute("cy", "330"); 
-	dot.setAttribute("r", "6");
-	dot.setAttribute("stroke", "#000");		
-	svg.appendChild(dot);		
-	var x, y;					
-	x = Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR);	
-	y =  Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR);
-	dot.setAttribute('transform','translate(' + x + ',' + y + ')'); 
-	var boxText = "details-" + dotId;
+	dot.setAttribute("r", "6"); 
+	dot.setAttribute("stroke", "#000");	
+	var stat = document.getElementById("status_mode")
+	stat.addEventListener("click", statClass, false);
+	var subc = document.getElementById("subcat_mode")
+	subc.addEventListener("click", subcClass, false);	
+	function statClass(){
+		dotClass = dot.setAttribute("class", "dot-" + techId); 		
+		dotClass = arrow.setAttribute("class", "dot-" + techId);
+	} 
+	function subcClass(){
+	   if((techSubcat == 'none') || (techSubcatId == undefined)){
+		dotClass = dot.setAttribute("class", "hidesubcat");
+		dotClass = arrow.setAttribute("class", "hidesubcat");
+	   } else {
+		dotClass = dot.setAttribute("class", "dot-sub" + techSubcatId);    
+		dotClass = arrow.setAttribute("class", "dot-sub" + techSubcatId);	
+	   }	
+	}
+	var x, y;		  				
+	x = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));	
+	y =  Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));
+	dot.setAttribute('transform','translate(' + x + ',' + y + ')');
+	dot.addEventListener("mousedown", selectElement, false);
+
+	function selectElement(event){ 
+	   var moveX = Math.round(Math.cos(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));		   
+	   var moveY = Math.round(Math.sin(angle)*(Math.floor(Math.random() * (maxR - minR)) + minR));	      
+	   mousedown = true;	
+	   dot.addEventListener("mousemove", moveElement);
+	     function moveElement() {      
+		if(mousedown){
+		   dot.setAttribute("transform", "translate(" + moveX + "," + moveY + ")");
+		   arrow.setAttribute("transform", "translate(" + moveX + "," + moveY + ")" 
+					+ "rotate("+ techDirection +",330,330)"); 
+		}
+	     }
+	}
+	if(techDir != "" && techDir != "0"){
+		var techDirection;
+		var digits = techDir.replace(/\+/, "");		
+		var d;
+		var dlen = digits.length;
+		for(d = 0; d <= dlen; d++){
+			var vel = techDir.replace(/\D/g, "");				
+			var tip = 324 - (parseInt(vel)*3+7);			
+		}
+		var points = "330," + tip + " 323.8,330 336.2,330";
+		arrow.setAttribute("points", points);	
+		arrow.setAttribute("x", "330");	
+		arrow.setAttribute("y", "330");
+		arrow.setAttribute("class", dotClass);
+		svg.appendChild(arrow);		
+		var arrowIn = ((angle * 180/Math.PI)-90);
+		var arrowOut = (90+(angle * 180/Math.PI));
+		digits > 0 ? 		
+			techDirection = arrowIn : 
+			techDirection = arrowOut;		
+		arrow.setAttribute('transform','translate(' + x + ',' + y + ')' 
+			+ 'rotate('+techDirection+',330,330)');    
+	}
+	svg.appendChild(dot);
+	var boxText = "details-" + techId;
 	var popUpText = "<p class=" 
 			+ boxText 
 			+ ">Name: &nbsp;<span class='text'>"
 			+ techTech 
 			+ "</span><br />Category: &nbsp;<span class='text'>" 
 			+ techCat.toLowerCase()
+			+ "</span><br />Sub-category: &nbsp;<span class='text'>" 
+			+ techSubcat.toLowerCase()
 			+ "</span><br />Date Added: &nbsp;<span class='text'>" 
 			+ techAddDate
 			+ "</span><br />Status: &nbsp;<span class='text'>" 
@@ -198,11 +271,36 @@ function createDots(status, dotId, minR, maxR, angle){
 	if(document.getElementById("detailsPos") !== null){
 		dot.setAttribute('id', (popUpText));	
 		dot.setAttribute("onmouseover", "showText(this)");	
-		}
+	}
+  }
+	
+  createAnomalyTable(anomalyList);
+
+  (function radar_mode(){
+	for(s = 0; s < statuslen; s++){
+		var statusCode = "<div id='stat-dot-code' class='dot-"
+				   + statusList[s].ID
+				   + "'></div>";
+		document.getElementById('status_color_code').innerHTML += statusCode;
 	}	
-createAnomalyTable(anomalyList);
+	var text = "<ul class='subcat-list'>";
+	
+	var j;
+	for(j = 0; j < subcatlen; j++){
+	    if(subcatList[j].SUBCAT != "none"){
+		var colorCode = "<div id='sub-dot-code' class='dot-sub"
+				   + subcatList[j].ID     
+				   + "'></div>";
+		text += "<li>" + subcatList[j].SUBCAT
+				+ ": " 
+				+ colorCode 
+				+ "</li>";
+	    }		
+	}
+	text += "</ul>";		
+	document.getElementById('mode_list').innerHTML += text;
+	
+  })();
 }
 
-
-	
 

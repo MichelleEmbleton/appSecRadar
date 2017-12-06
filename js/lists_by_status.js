@@ -6,11 +6,12 @@ function createStatusTables(techList){
 	for(s = 0; s < statLen; s++){ 
 		var statusId = statusList[s].ID;
 		var statusTitle = statusList[s].TITLE.toUpperCase();
-		var table = "<table id='status_table'><caption>" 
+		var table = "<table id='statusTable'><caption>" 
 		+ statusTitle 
 		+ "</caption><tr>"
 		+ "<th>Name</th>"
 		+ "<th>Category</th>"
+		+ "<th>Subcategory</th>"
 		+ "<th>Detail</th></tr>";
 			
 			for(i = 0; i < len; i++){ 
@@ -20,24 +21,33 @@ function createStatusTables(techList){
 			} else if(techStatus == statusTitle){
 				var techId = techList[i].ID;	
 				var techTech = techList[i].TECH.toUpperCase();
+				var techSubcat = techList[i].SUBCAT;
+				var techSubcatId = techList[i].SUBCATID;
 				var techCat = techList[i].CAT;
 				var techDetails = techList[i].DETAILS;
-				var tr = "<tr>";
 				if(techCat == ""){
 					techCat = "Unallocated"; 
-					var td = "<td class = 'lightblue'>";		
+					var tdcol = "nocat";		
 				} else if(techId){
-					var td = "<td class = " + techId + ">";
-					}  			
+					var tdcol = techId;
+				}  
+				if(!techSubcatId){
+					techSubcat = "Unallocated";
+					tdcol = "nosubcat";
+				}
+			
 				if(techDetails == ''){techDetails = 'No Details'}		
-					table += tr 
-						+ td 
+					table += "<tr>" 
+						+ "<td class='td1 " + tdcol + "'>"
 						+ techTech 
 						+ "</td>" 
-						+ td 
+						+ "<td class='td2 " + tdcol + "'>"
 						+ techCat 
+						+ "</td>"
+						+ "<td class='td3 " + tdcol + "'>"
+						+ techSubcat 
 						+ "</td>" 
-						+ td 
+						+ "<td class='td4 " + tdcol + "'>"
 						+ techDetails 
 						+ "</td></tr>";	
 						}
