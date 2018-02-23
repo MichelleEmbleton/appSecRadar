@@ -1,14 +1,24 @@
-var inputFile = "data.json";    	//JSON FILE PATH GOES HERE
+'use strict';
 
-var request = new XMLHttpRequest();
-request.open("GET", inputFile, true);
+if (typeof techList !== 'undefined'){
+	createRadar(techList);
+	createSectorTables(techList);
+	createStatusTables(techList);
+	createSubcatTables(techList);
+
+} else {
+
+const inputFile = "data.json";  	  //JSON FILE PATH GOES HERE
+	
+const request = new XMLHttpRequest();
+if(request.open("GET", inputFile, true) !== false){
 
 request.onreadystatechange = function (){
 	if(request.readyState === 4){
             	if(request.status === 200 || request.status == 0){
 			request.onload = function() {
-				var jsonText = request.response;
-				var techList = JSON.parse(jsonText); 
+				const jsonText = request.response;
+				const techList = JSON.parse(jsonText); 
 
 				createRadar(techList);
 				createSectorTables(techList);
@@ -18,7 +28,8 @@ request.onreadystatechange = function (){
 				}
      			}
   		}
-
 	}
-request.send(null);
+  request.send(null);
+  } 
+}
 

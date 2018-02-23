@@ -1,20 +1,18 @@
 (function legend(){
-var i;
-var sLen = statusList.length;
+'use strict';
+const sLen = statusList.length;
 
-for(i = 0; i < sLen; i++){
-	var title = statusList[i].TITLE.toUpperCase();  
-	var id = ('legend-' + statusList[i].ID);
-	var description = statusList[i].TEXT;		
-	
-	var text = "<span class='" 
-		+ id 
-		+ "'>" 
-		+ title 
-		+ "</span><br />" 
-		+ description 
-		+ "<br /><br />";
-
-	document.getElementById('legend_text').innerHTML += text;
+for(let i = 0; i < sLen; i++){
+	const title = statusList[i].TITLE.toUpperCase();  
+	const id = ('legend-' + statusList[i].ID);
+	const description = statusList[i].TEXT;	
+	const legendTitle = document.createElement('p');	
+	legendTitle.setAttribute("id", id);
+	legendTitle.innerHTML = title;
+	const legendText = document.createElement('p');
+	legendText.setAttribute("class", "legend-text");
+	legendText.innerHTML = description;	
+	document.getElementById('legend_text').appendChild(legendTitle);
+	document.getElementById('legend_text').appendChild(legendText);
 	}
 })();

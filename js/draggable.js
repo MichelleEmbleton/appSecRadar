@@ -1,5 +1,5 @@
 function dragElements(ev, element){ 
-
+  'use strict';
   document.getElementById(element).onclick = function() {
 	this.style.zIndex = (this.style.zIndex + 1);
   }
@@ -21,8 +21,8 @@ function dragElements(ev, element){
 	this.prevY = ev.clientY;
 	
   }
-
   document.getElementById(element).onmouseup = function() {
 	this.mouseDown = false;
   }
 }
+
