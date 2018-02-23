@@ -1,4 +1,4 @@
-var statusList = [
+const statusList = [
 
 	{	
 	TITLE:"Plan for removal", 	
@@ -38,7 +38,7 @@ var statusList = [
 	{	
 	TITLE:"hold", 			
 	ID:"c1", 
-	RADIUS:"85", 		
+	RADIUS:"95", 		
 	TEXT:"Stable AppSec Technology that is currently not planned to be phased out, and recommended for continued use."
 	}
 ];

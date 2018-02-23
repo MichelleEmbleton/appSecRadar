@@ -1,4 +1,4 @@
-var subcatList = [
+const subcatList = [
 	
 	{
 	ID:"1",
