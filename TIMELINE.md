@@ -157,7 +157,7 @@ or:
 
 Solution2:  <br />
 
-Convert/copy the data.json file to a js object file - use the data.js already there - and add: <br /> 
+Convert/copy the data.json file to a js object file - data.js - and add: <br /> 
   const techList =  <br />
 before the first opening bracket \[... <br />
 data.json will be used if the data isn't in data.js.
