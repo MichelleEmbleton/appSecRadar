@@ -135,32 +135,30 @@ Updated some code.
 JSON import fixes:
 ------------------
 ------------------
-If the radar doesn't appear in the browser and/or you get a console warning similar to:
-json.parse error when accessed in browser via the file system
-XMLHttpRequest cannot load  file:///...Cross origin requests are only supported for HTTP.
-(FireFox lets it still work (with a console error warning) - but not the other browsers.)
-
+If the radar doesn't appear in the browser and/or you get a console warning similar to: <br />
+    XMLHttpRequest cannot load  file:///...Cross origin requests are only supported for HTTP
+(FireFox lets it still work (with a console error warning) - but not the other browsers.) <br />
+Try:
 Solution1:
 ---------
-(Mac OSX):
-Use one of the simple servers that's probably already built in:
-Open a terminal and cd to the directory containing your radar.html
-Type: python -m SimpleHTTPServer
-or:
-Type: php -S localhost:8000 (or 8001, or another port not in use)
-In the browser address bar type: http://localhost:8000/radar.html (or whatever port was specified).
-Then it should work fine.
-(Ctrl C exits the server.)
-or a Node or Apache server etc.
+(Mac OSX):  <br />
+Use one of the simple servers that's probably already built in: <br />
+Open a terminal and cd to the directory containing your radar.html <br />
+Type: python -m SimpleHTTPServer <br />
+or: <br />
+Type: php -S localhost:8000 (or 8001, or another port not in use) <br />
+In the browser address bar type: http://localhost:8000/radar.html (or whatever port was specified). <br />
+Then it should work fine. <br />
+(Ctrl C exits the server.) <br />
+or a Node or Apache server etc. <br />
 
-A similar solution may available with Windows.
-
+A similar solution may available with Windows. <br />
 or:
 
 Solution2:
 ---------
-Convert/copy the data.json file to a js object file - use the data.js already there - and add 
-  const techList =  before the first opening bracket [...
+Convert/copy the data.json file to a js object file - use the data.js already there - and add: <br /> 
+  const techList =  <br />
+before the first opening bracket \[... <br />
 data.json will be used if the data isn't in data.js.
-
 
