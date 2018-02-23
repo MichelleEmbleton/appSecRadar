@@ -130,17 +130,17 @@ More code changes.
 
 23-2-18 <br />
 Renamed security-radar to: radar.html <br />
-Updated some code.
+Updated some code.  <br />
 
-JSON import fixes:
-------------------
-------------------
+JSON import fixes:  <br />
+
 If the radar doesn't appear in the browser and/or you get a console warning similar to: <br />
     XMLHttpRequest cannot load  file:///...Cross origin requests are only supported for HTTP
 (FireFox lets it still work (with a console error warning) - but not the other browsers.) <br />
 Try:
-Solution1:
----------
+
+Solution1:  <br />
+
 (Mac OSX):  <br />
 Use one of the simple servers that's probably already built in: <br />
 Open a terminal and cd to the directory containing your radar.html <br />
@@ -155,8 +155,8 @@ or a Node or Apache server etc. <br />
 A similar solution may available with Windows. <br />
 or:
 
-Solution2:
----------
+Solution2:  <br />
+
 Convert/copy the data.json file to a js object file - use the data.js already there - and add: <br /> 
   const techList =  <br />
 before the first opening bracket \[... <br />
