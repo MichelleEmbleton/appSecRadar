@@ -129,7 +129,7 @@ Condensed the 3 x list table css files into one file.
 More code changes.
 
 23-2-18 <br />
-Renamed security-radar to: radar.html
+Renamed security-radar to: radar.html <br />
 Updated some code.
 
 JSON import fixes:
@@ -141,7 +141,7 @@ XMLHttpRequest cannot load  file:///...Cross origin requests are only supported 
 (FireFox lets it still work (with a console error warning) - but not the other browsers.)
 
 Solution1:
-----------
+---------
 (Mac OSX):
 Use one of the simple servers that's probably already built in:
 Open a terminal and cd to the directory containing your radar.html
