@@ -9,6 +9,28 @@ Can move dots without reloading or refreshing screen - on click and move they wi
 ![radar_7 7-3](https://user-images.githubusercontent.com/29818223/33029376-5925e9c0-ce10-11e7-9e31-79d7e9f44903.png)
 Radii can easily be adjusted to accommodate data.<br />
 Sectors will auto add/delete depending on data.
+## Set Up
+The best way to use the radar with the input in JSON format is with a local server. <br />
+There's likely to be a simple server built into your operating system. <br />
+Here's how to access it from the command line on a mac OSX: <br />
+
+cd to the directory containing your radar.html <br />
+Type: <br />
+python -m SimpleHTTPServer 8000 <br />
+or type: <br />
+php -S localhost:8000 <br />
+(doesn't have to be port 8000 -  ie. 8001, 8002... 8888, 3000, 3001 etc. are fine if they're not in use) <br />
+
+In the browser address bar type: http://localhost:8000/radar.html (or whatever port was specified). <br />
+Then it should work fine. <br />
+(Ctrl C exits the server.)  <br />
+
+Or another way to use the radar is: <br />
+
+Convert/copy the data.json file to a js object file - data.js - and add: <br />
+const techList = <br />
+before the first opening bracket \[ ... <br />
+data.json will be used if the data isn't in data.js. <br />
 
 ## Browser Compatibility
     18-11-17
