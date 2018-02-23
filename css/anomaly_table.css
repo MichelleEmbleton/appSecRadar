@@ -19,8 +19,8 @@
 .show_anomalies{	height:auto; 
 			width:auto;
 			border:1px solid #f1f1f1;
-			border-radius:0.7em;
-			z-index:2;
+			border-radius:0.7em;	
+			z-index:2;		
 			}
 
 .hide_anomalies{	height:0; 
@@ -31,8 +31,7 @@
 		overflow-y:hidden;
 		top:0em; 
 		margin:0.7em 1.5em;
-		background-color:rgba(255, 255, 255, 0.6);						
-		border-collapse:collapse;		
+		background-color:rgba(255, 255, 255, 0.6);						border-collapse:collapse;		
 		}
 
 #anomalyTable caption{	margin:0.3em 0;

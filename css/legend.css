@@ -47,24 +47,23 @@
 		border:none;
 		}
 
-#legend_text{	display:inline-block; 
-		padding:1em; 
-		font:80% arial, sans-serif;
+#legend_text{	padding:1em 1.5em; 
+		font:80%/1.3em arial, sans-serif;
 		color:#000;
-		line-height:1.3em;
 		z-index:2;
 		}
 
-.key-heading	{	font:130% arial; 
-			color:#000; 
-			font-weight:bold;
-			}
+h2 {	font:bold 130% arial; 
+	color:#000; 
+	}
 
-.legend-c1	{font:90% arial; color:#008f00;}
-.legend-c2	{font:90% arial; color:#0fff00;}
-.legend-c3	{font:90% arial; color:#ffff00;}
-.legend-c4	{font:90% arial; color:#ffc000;}
-.legend-c5	{font:90% arial; color:#fa8000;}
-.legend-c6	{font:90% arial; color:#dd0000;}
+.legend-text{ margin:-0.8em 0 1.2em 0;}
+
+#legend-c1	{font:90% arial; color:#008f00;}
+#legend-c2	{font:90% arial; color:#0fff00;}
+#legend-c3	{font:90% arial; color:#ffff00;}
+#legend-c4	{font:90% arial; color:#ffc000;}
+#legend-c5	{font:90% arial; color:#fa8000;}
+#legend-c6	{font:90% arial; color:#dd0000;}
 
 
