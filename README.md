@@ -1,5 +1,7 @@
-# appSecRadar
-Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
+# AppSec Technology Radar
+The AppSec Technology Radar is a set of technologies and best practices inspired by ThoughtWorks's Technology radar.
+The objective is to provide developers with new trends in security technologies, design patterns, and tools.<br />
+
 Built with SVG and JavaScript.<br /><br />
 ## Examples
 ![radar-7 6-1](https://user-images.githubusercontent.com/29818223/32985377-60ff6faa-ccb1-11e7-89f6-9ccaac5140fe.png)
