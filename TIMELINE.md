@@ -162,3 +162,7 @@ Convert/copy the data.json file to a js object file - data.js - and add: <br />
 before the first opening bracket \[... <br />
 data.json will be used if the data isn't in data.js.
 
+19-5-19 <br />
+Code rewrite. <br />
+More ES6. <br />
+Improved transitions - the mode and anomaly tables are draggable now as well. <br />
