@@ -1,0 +1,96 @@
+
+#radar {	
+	position: relative;     
+	width: 66rem;
+	height: 66rem;
+	top: 3rem;
+	left: 2rem;	
+}
+
+/* RADII CIRCLES */
+
+.radar-circles {
+	fill: #000;
+	stroke: #fff; 
+}
+/* NAMES AROUND CIRCUMFERENCE */
+
+.sector-names {	
+	font-size: 1.3rem;
+	text-transform: uppercase;
+}
+
+/* RADAR DOTS */
+
+.dot { 
+	position: absolute;
+	cursor: pointer; 
+	z-index: 10;
+	transition: all .5s;
+}
+
+.dot-c1	{
+	fill: var(--dark-green); 
+	background-color: var(--dark-green);
+}
+.dot-c2	{
+	fill: var(--mid-green); 
+	background-color: var(--mid-green);
+}
+.dot-c3	{
+	fill: var(--yellow); 
+	background-color: var(--yellow);
+}
+.dot-c4	{
+	fill: var(--gold); 
+	background-color: var(--gold);
+}
+.dot-c5	{
+	fill: var(--orange);
+	background-color: var(--orange);
+}
+.dot-c6	{
+	fill: var(--red); 
+	background-color: var(--red);
+}
+
+.dot-sub1	{
+	fill: var(--mid-blue); 
+	background-color: var(--mid-blue);
+}
+.dot-sub2	{
+	fill: var(--maroon); 
+	background-color: var(--maroon);
+}
+.dot-sub3	{
+	fill: var(--aqua); 
+	background-color: var(--aqua);
+}
+.dot-sub4	{
+	fill: var(--salmon); 
+	background-color: var(--salmon);
+}
+.dot-sub5	{
+	fill: var(--off-white); 
+	background-color: var(--off-white);
+}
+.dot-sub6	{
+	fill: var(--lilac); 
+	background-color: var(--lilac);
+}
+	
+.no-subcat {
+	fill: var(--ghost); 
+	background-color: var(--ghost);
+}
+
+/* RADII TITLES */
+
+.title-c1	{ fill: var(--dark-green); font-weight: bold; }
+.title-c2	{ fill: var(--mid-green); }
+.title-c3	{ fill: var(--yellow); }
+.title-c4	{ fill: var(--gold); }
+.title-c5	{ fill: var(--orange); }
+.title-c6	{ fill: var(--red); }
+
+

@@ -1,0 +1,109 @@
+
+.list-view-buttons {        
+	position: relative;
+	width: 23rem;
+	min-height: 5rem;
+	height: auto;
+	margin: 2rem;
+	margin-top: 3rem;
+	margin-bottom: 0;
+}
+
+.list-view-buttons .button {     
+	position: relative; 
+	display: block; 
+	padding: .5rem;
+	font-size: 1.2rem;
+	cursor: pointer; 
+	transition: all .3s;
+}
+
+.list-view-buttons .button:hover {
+	color: var(--button-hover-color);
+}
+
+#list_views {     
+	position: relative;
+	min-height: 30rem;
+}
+
+.sector,
+.status,
+.subcat {	
+	position: absolute;
+	opacity: 0;
+	height: auto; 
+	top: 0;	
+	margin: 1rem 1.5rem;
+	padding: 1rem 1rem 2rem; 
+	max-width: 100%;
+	width: auto;
+	border: 2px solid #fafafa;
+	border-radius: 0.7em;
+	font-size: 1.4rem;	
+	background-color :rgba(255,255,255,.85);
+	overflow-y: hidden;
+	-webkit-touch-callout:none;
+	-webkit-user-select: none; 
+	-moz-user-select: none;   
+	-ms-user-select: none;	
+}
+
+.sector { left: 0; }
+.status { left: 30rem; }
+.subcat { left: 60rem; }
+
+.sector-show,
+.status-show,
+.subcat-show {	
+	opacity: 1;
+}
+
+.list_table:hover { cursor: move; }
+
+
+.list_table caption {	
+	margin: 3rem 0 2rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-align: center;
+	text-transform: uppercase;
+	text-decoration: underline;
+}
+
+.list_table th {		
+	font-size: 1.3rem;
+	font-weight: bold;
+	padding: 0.7rem 1.5rem;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.list_table tr	{ width: auto; }
+
+.list_table tr:nth-child(2) td:first-child  { border-top-left-radius: 0.7rem; }
+.list_table tr:nth-child(2) td:last-child   { border-top-right-radius: 0.7rem; }
+.list_table tr:last-child td:first-child    { border-bottom-left-radius: 0.7rem; }
+.list_table tr:last-child td:last-child     { border-bottom-right-radius: 0.7rem; }
+
+.list_table td {		
+	font-size: 1.2rem;
+	text-transform: capitalize; 			
+	padding: 1.5rem;			
+}
+
+.list_table td:not(last-child) { width: 10rem; }
+.list_table td:last-child { width: 20rem; }
+
+.list_table td.c1		{ background-color: rgba(0, 250, 0, 0.2); }
+.list_table td.c2		{ background-color: rgba(150, 250, 0, 0.2); }
+.list_table td.c3		{ background-color: rgba(245, 250, 0, 0.2); }
+.list_table td.c4		{ background-color: rgba(250, 200, 0, 0.2); }
+.list_table td.c5		{ background-color: rgba(250, 150, 0, 0.2); }
+.list_table td.c6		{ background-color: rgba(250, 0, 0, 0.2); }
+.list_table td.nostatus	{ background-color: rgba(0, 0, 255, 0.3); }
+.list_table td.nosubcat	{ background-color: rgba(20, 20, 255, 0.1); }
+.list_table td.nocat	{ background-color: rgba(100, 100, 255, 0.2); }
+
+		
+		
