@@ -1,6 +1,5 @@
-const statusList = [
-
-	{	
+export const config = [
+	{	     
 	TITLE:"Plan for removal", 	
 	ID:"c6", 
 	RADIUS:"300", 		
@@ -42,5 +41,6 @@ const statusList = [
 	TEXT:"Stable AppSec Technology that is currently not planned to be phased out, and recommended for continued use."
 	}
 ];
+
 
 

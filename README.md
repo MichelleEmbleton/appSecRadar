@@ -1,39 +1,62 @@
-# appSecRadar
-Sherif Mansour's (@kerberosmansour) idea and design of a colour-coded radar chart to keep track of technologies in use, whether they are being evaluated, adopted or phased out.<br /><br />
+# AppSec Technology Radar
+The AppSec Technology Radar is a set of technologies and best practices inspired by ThoughtWorks's Technology radar.
+The objective is to provide developers with new trends in security technologies, design patterns, and tools.<br />
+
 Built with SVG and JavaScript.<br /><br />
 ## Examples
 ![radar-7 6-1](https://user-images.githubusercontent.com/29818223/32985377-60ff6faa-ccb1-11e7-89f6-9ccaac5140fe.png)
-![radar-7 6-2](https://user-images.githubusercontent.com/29818223/32985378-6119e9a2-ccb1-11e7-93a0-81ebd1423b80.png)
-![radar-dots](https://user-images.githubusercontent.com/29818223/33262168-48e36e00-d35d-11e7-9c76-db25f7be92ab.png)
-Can move dots without reloading or refreshing screen - on click and move they will find a new random position within their boundary.
 ![radar_7 7-3](https://user-images.githubusercontent.com/29818223/33029376-5925e9c0-ce10-11e7-9e31-79d7e9f44903.png)
-Radii can easily be adjusted to accommodate data.<br />
-Sectors will auto add/delete depending on data.
+
 ## Set Up
-The best way to use the radar with the input in JSON format is with a local server. <br />
-There's likely to be a simple server built into your operating system. <br />
-Here's how to access it from the command line on a mac OSX: <br />
+The file structure: <br />
+```
+directory - ie. AppSecRadar/
+    dist/ ---  data.json
+    src/ ----  index.html
+               css/ --- the 7 css files
+               js/ ---  the 7 js files 
+                        elements/ ---  the 12 js files in elements
+    .babelrc
+    package.json
+    webpack.config.js
+```
+Assuming you have **npm** and **node** already installed on your machine: <br />
+In the console - cd to the directory that contains your appSecRadar and type: <br />
+```
+npm install
+```
+to get the dependencies from package.json
 
-cd to the directory containing your radar.html <br />
-Type: <br />
-python -m SimpleHTTPServer 8000 <br />
-or type: <br />
-php -S localhost:8000 <br />
-(doesn't have to be port 8000 -  ie. 8001, 8002... 8888, 3000, 3001 etc. are fine if they're not in use) <br />
+to run in dev mode:     
+```
+npm start
+```
+This will open a page in your Google Chrome browser by default: localhost:8080   <br />
+If you want it to auto open in a different browser - you can change this in package.json:
+```
+"start": "webpack-dev-server --mode development --open 'google chrome'"
+```
+Use the **data.json** file in **dist/** to play around with the example data and to use as a template for your own data. <br />
+The 7 fields should all be present, but can be empty. <br />
 
-In the browser address bar type: http://localhost:8000/radar.html (or whatever port was specified). <br />
-Then it should work fine. <br />
-(Ctrl C exits the server.)  <br />
+To run in production mode:  
+```
+npm run build
+```
+**index.html, style.css** and **main.js** should automagically appear in **/dist** with the links added to **index.html** <br />
+then the **dist** can be used on it's own. <br />   
 
-Or another way to use the radar is: <br />
-
-Convert/copy the data.json file to a js object file - data.js - and add: <br />
-const techList = <br />
-before the first opening bracket \[ ... <br />
-data.json will be used if the data isn't in data.js. <br />
+## Configure
+To change your data path - you can change the path in **LoadData.js**. **Axios** is used as the http client. <br />
+The default path is **localhost:8080** which points to the **data.json** in **dist/**.  <br />
+To change the radii to fit the data better - change **RADIUS** in **statusConfig.js**.  <br />
+To change the status titles on the radar - also change in **statusConfig.js** - they will be reflected everywhere else. <br />
+To change the sector names - just use different ones in the **CAT** field of your input data. Can add more or remove sectors. <br />
+To change or add subcat names - in **subcatConfig.js**. <br />
+You can move individual dots by clicking on them - they will find a new random position within their boundary. Sometimes they get trapped in a very narrow range so you might have to be persistent - and sometimes the green dots in the center circle jump borders - but eventually go back!
 
 ## Browser Compatibility
-    18-11-17
+    19th May 2019
     Tested latest changes in: 
     FireFox 
     Safari 

@@ -2,9 +2,9 @@
  	{
 	"TECH":"Java SE 5", 
 	"CAT":"platform", 
-	"SUBCAT":"", 
+	"SUBCAT":"client-side", 
 	"STATUS":"plan FOR REMOVAL", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2015", 
 	"DETAILS":"Deprecated in favour of v6"
 	},
@@ -12,9 +12,9 @@
 	{
 	"TECH":"Ruby", 
 	"CAT":"app", 
-	"SUBCAT":"client-side", 
-	"STATUS":"EVALUATE", 
-	"DIRECTION":"+3", 
+	"SUBCAT":"mobile", 
+	"STATUS":"xxx", 
+	"CHANGE_SPEED":"3", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Coding - new use"
 	},
@@ -24,7 +24,7 @@
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-8-2014", 
 	"DETAILS":"Animation software - replacing, no new builds"
 	},
@@ -34,7 +34,7 @@
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"adopt", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"video conferencing - new use"
 	},
@@ -44,7 +44,7 @@
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VoIP - try out"
 	},
@@ -54,7 +54,7 @@
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"+3", 
+	"CHANGE_SPEED":"+3", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced v4"
 	},
@@ -64,7 +64,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-8-2011", 
 	"DETAILS":"On older machines - replacing with newer version"
 	},
@@ -74,7 +74,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"hold", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2012", 
 	"DETAILS":"VM - replaced previous version"
 	},
@@ -84,7 +84,7 @@
 	"CAT":"", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"OS - older machines - replace"
 	},
@@ -94,17 +94,17 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+5", 
+	"CHANGE_SPEED":"+5", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OSX - newest version"
 	},
 
 	{
-	"TECH":"Lua", 
+	"TECH":"Lua v3.5", 
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - replaced previous version"
 	},
@@ -114,7 +114,7 @@
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced with newer version"
 	},
@@ -124,7 +124,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - in use"
 	},
@@ -134,7 +134,7 @@
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+2", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced something else"
 	},
@@ -144,7 +144,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"coding - try out to replace other thing"
 	},
@@ -154,7 +154,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - new use"
 	},
@@ -164,7 +164,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"OSX - still in use on older machines"
 	},
@@ -174,7 +174,7 @@
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-5", 
+	"CHANGE_SPEED":"-5", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"replace"
 	},
@@ -184,7 +184,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"media player - use for playback"
 	},
@@ -194,7 +194,7 @@
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"CAD and STL software - try out"
 	},
@@ -204,7 +204,7 @@
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"+4", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"keep for now"
 	},
@@ -214,7 +214,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Phasing out - replaced by v42"
 	},
@@ -224,7 +224,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"+5", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - in use"
 	},
@@ -234,7 +234,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"Deprecated in favour of other OS"
 	},
@@ -244,7 +244,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OS - new - try out"
 	},
@@ -254,7 +254,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-5", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Replace with other things"
 	},
@@ -264,7 +264,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-5", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"CAD software - replaced with v8"
 	},
@@ -274,7 +274,7 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"image editing - in use"
 	},
@@ -284,7 +284,7 @@
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"FTP - current version"
 	},
@@ -294,7 +294,7 @@
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Proxy - replaced v2.5"
 	},
@@ -304,7 +304,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"+3", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"VM - try out"
 	},
@@ -314,7 +314,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VM - replaced with newer version"
 	},
@@ -324,7 +324,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced with other"
 	},
@@ -334,7 +334,7 @@
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+2", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Browser - try out"
 	},
@@ -344,7 +344,7 @@
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Browser - not in use"
 	},
@@ -354,7 +354,7 @@
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v85"
 	},
@@ -364,7 +364,7 @@
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"file reader - replaced with v4"
 	},
@@ -394,7 +394,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"DIRECTION":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced with v4"
 	},
@@ -424,7 +424,7 @@
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"", 
+	"DIRECTION":"+5", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal scripting - replacing v5"
 	},
@@ -434,7 +434,7 @@
 	"CAT":"service", 
 	"SUBCAT":"X", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"", 
+	"DIRECTION":"+3", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal file editor - replaced v3"
 	},
@@ -449,7 +449,7 @@
 	"DETAILS":"terminal file editor - replaced v4"
 	},
 
-{
+	{
 	"TECH":"Java SE 7", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
@@ -554,7 +554,7 @@
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"DIRECTION":"+3", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - replaced previous version"
 	},
@@ -899,7 +899,7 @@
 	"DETAILS":"terminal file editor - replaced v5"
 	},
 
-{
+	{
 	"TECH":"Java SE 7", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
@@ -1300,7 +1300,7 @@
 	},
 
 	{
-	"TECH":"XAMPP v12.3", 
+	"TECH":"XAMPP v13.5", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
@@ -1344,7 +1344,7 @@
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal file editor - replaced v2.2"
 	}

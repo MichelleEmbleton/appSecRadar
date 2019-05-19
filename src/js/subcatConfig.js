@@ -1,4 +1,4 @@
-const subcatList = [
+export const subcatConfig = [
 	
 	{
 	ID:"1",
@@ -17,17 +17,17 @@ const subcatList = [
 
 	{
 	ID:"4",
-	SUBCAT:"none"
+	SUBCAT:""
 	},
 
 	{
 	ID:"5",
-	SUBCAT:"none"
+	SUBCAT:""
 	},
 
 	{
 	ID:"6",
-	SUBCAT:"none"
+	SUBCAT:""
 	}
 ];
 	

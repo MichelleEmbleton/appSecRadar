@@ -1,0 +1,89 @@
+
+#anomalies_wrapper {	      
+	position: absolute; 
+	top: 42rem;	
+	right: 3.5rem;    
+	height: auto;
+}
+
+.anomalies-button {	      
+	position: relative;
+	height: 3rem;
+	margin: 1rem 0;
+	text-align: right;
+}
+
+#anomaly_table {
+	position: absolute;  
+	cursor: move;
+	right: 0rem;
+	width: 32rem;
+}
+
+.anomalies {	
+	margin-top: -1rem; 
+	height: 0;  
+	max-height: 0;
+	opacity: 0;	
+	padding: 2rem;	
+	background-color: rgba(255, 255, 255, 0.6);						
+	border-collapse: collapse;	
+	transition: max-height .5s;	
+}
+
+.anomalies-show {
+	opacity: 1;
+	height: auto; 
+	max-height: 50rem;
+	width: auto;
+	border: 1px solid #f1f1f1;
+	border-radius: 0.7em;				
+	z-index: 20;	
+	overflow-y: auto;	
+}
+
+.anomalies::-webkit-scrollbar {
+	width: 1rem;
+	background-color: #fff;
+}
+.anomalies::-webkit-scrollbar-thumb {
+	background-color: #fff;
+	border: 2px solid #f1f1f1;
+	border-radius: 1.5rem;
+}
+
+#anomalytable caption {	
+	margin: 1rem;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: center;
+	letter-spacing: 0.05rem;
+}		
+		
+#anomalytable th {	
+	font-size: 1.2rem;
+	padding: 1rem;
+	text-align: left;
+}
+
+#anomalytable tr {	
+	width: auto; 
+	border-bottom: 1px dotted #e2e2e2;
+}
+
+#anomalytable tr.nostatus 	{ color: var(--dark-blue); }
+#anomalytable tr.nocatsec	{ color: var(--mid-blue); }
+#anomalytable tr.nosubcat	{ color: var(--lilac); }
+
+#anomalytable .no-entries { color: var(--green); }
+
+#anomalytable td {	
+	font-size: 1.2rem;
+	text-transform: capitalize; 
+	width: auto; 
+	height: auto;
+	padding: 0.5rem 1rem;
+}
+
+

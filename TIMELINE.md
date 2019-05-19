@@ -16,14 +16,14 @@ Legend added:<br />
     IE9 doesn't have the transition effect.<br /><br />
     
     
-Updated 3-7-17:<br />
+### Updated 3-7-17:<br />
 Main container file renamed to .html from .shtml - so it can render properly without the need for a virtual server offline. This file contains the content components: The SVG radar, the legend etc.<br />
 The css and js files are still separate from the main content.<br /> <br />
 
-Updated 2-7-17:<br />
+### Updated 2-7-17:<br />
 Files split into folders for css, js and other, mainly txt includes. So the main .shtml file is the vehicle to contain everything else.<br />
     
-7-7-2017 <br />
+### 7-7-2017 <br />
 Added list representation tables for sectors.<br />
 Added a table, on the right, for anomalies in the input data - to catch unallocated category/sectors and unallocated statii (? status's) - which can not appear on the radar with this info missing:<br />
 A way to check errors in the input data and also add technologies to be assigned later.<br />
@@ -31,19 +31,19 @@ Tidied up and consolidated code a bit.<br />
 Renamed a few files to better reflect their contents.<br />
 Created some 'anomalies' in the test input data to show how it works.<br />
 
-15-7-2017 <br />
+### 15-7-2017 <br />
 Added functionality to add / remove / rename sectors. <br />
 Sectors will be created dynamically on whatever category fields are entered into the input data source. Sectors are recalculated equally, the List Representation dropdown menu and tables are also updated. <br />
 As before, the dots do jump out of their sectors into the neighbouring sector by a small margin - this needs to be fixed!!<br />
 Because the dropdown category menu can't be a fixed height now, it's lost it's glide movement, and so will just appear when clicked on - can't seem to keep this property without having a fixed height.<br />
 
-23-7-17 <br />
+### 23-7-17 <br />
 Added tables for Status, similar to the Sector tables.<br />
 Changes to the Anomaly table to hide it when not needed.<br />
 Changes to scripts and data input layouts. Separate file (status_config.js) added for easy configuration of titles, radiuses and legend text:<br />
 Status names can now be easily added, deleted or changed - and the radiuses of each group can be easily changed. The titles, dots, tables, legend etc. automatically update with any changes.<br /><br />
 
-26-7-17 <br />
+### 26-7-17 <br />
 Accepts a JSON file as input data.<br />
 The test JSON file - 'data.json' - is in the main directory, and simply needs to be replaced with your own data - and named 'data.json'.<br />
 To accept a file in another location and/or of different name - the file path at the top of 'js/input_data.js' will need to be edited.<br />
@@ -51,21 +51,21 @@ To accept a file in another location and/or of different name - the file path at
 There is a neat little JSON validator here:<br />
 https://jsonlint.com  <br />
 
-27-7-17 <br />
+### 27-7-17 <br />
 A few adjustments so that features can be just deleted from the main html page if not wanted: <br />
 for anomaly chart, <br />
 pop-up details box, <br />
 sector table, <br />
 status table. <br />
 
-28-7-17 <br />
+### 28-7-17 <br />
 Fixed the maths for the sector angles. <br />
 
-31-7-17 <br />
+### 31-7-17 <br />
 Changed design to go with a white background. <br />
 Changed code around to eliminate some globals. <br />
 
-18-11-17 <br />
+### 18-11-17 <br />
 New features added: <br />
 
 1. Subcategories : <br />
@@ -115,20 +115,20 @@ The subcat_config file is likely to be only needed on first set-up (to change Mo
 
 The subcats did work very well without the subcat_config file, using dynamic keys linked to the subcat names - except that when new data gets added to the list the color keys change around depending on the order of the subcats on the input data. Asking the user to add the subcats in the same order every time doesn't seem acceptable - unless they group their data in this way anyway, then it will work. <br />
 
-11-1-18 <br />
+### 11-1-18 <br />
 
 Eliminated detached DOM objects
 Fixed some memory leaks
 Fixed Console warnings
 Put in strict mode
 
-12-1-18 <br />
+### 12-1-18 <br />
 Condensed the 3 x list table css files into one file.
 
-14-1-18 <br />
+### 14-1-18 <br />
 More code changes.
 
-23-2-18 <br />
+### 23-2-18 <br />
 Renamed security-radar to: radar.html <br />
 Updated some code.  <br />
 
@@ -162,3 +162,8 @@ Convert/copy the data.json file to a js object file - data.js - and add: <br />
 before the first opening bracket \[... <br />
 data.json will be used if the data isn't in data.js.
 
+### 19-5-19 <br />
+Code rewrite. <br />
+More ES6. <br />
+Used npm, webpack and babel - axios to get the data - cssnano to minify and autoprefixer to add vendor prefixes to the dist css<br />
+Improved transitions - the mode and anomaly tables are draggable now as well. <br />
