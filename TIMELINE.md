@@ -165,4 +165,5 @@ data.json will be used if the data isn't in data.js.
 19-5-19 <br />
 Code rewrite. <br />
 More ES6. <br />
+Used npm, webpack and babel - axios to get the data - cssnano to minify and autoprefixer to add vendor prefixes to the dist css<br />
 Improved transitions - the mode and anomaly tables are draggable now as well. <br />
