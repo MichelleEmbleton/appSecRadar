@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">  	
+    <title>AppSec Radar</title>
+</head>
+<body>
+    
+    <!------------------------RADAR SVG------------------------>
+
+
+<div id="radar">
+	<svg height="660" width="660" id="svgRadar"></svg>
+</div>
+
+
+<!--------------------------POP-UP DETAILS----------------------->
+       
+<div id="details_box" class="item-details">&nbsp;</div>
+
+<!-------------------------------LEGEND-------------------------->
+
+<div id="legend_wrapper">
+	<div id="legend" class="legend-button btn display-btn">	
+		<span class="sign"> + </span>
+		Show/Hide Legend 
+	</div>
+
+  	<div id="legend_chart" class="legend">
+		<div id="legend_text" class="legend_text">
+	  		<h2>Radar Technology States</h2>
+	  		<p class="desc">
+				The radar serves as a one-stop-shop for making appsec security decisions about technologies to use in your applications.
+			</p>
+			<div id="legend_content"></div>
+		</div>
+  	</div>
+
+</div>
+
+<!------------------------ANOMALY CHART--------------------->
+
+<div id="anomalies_wrapper">
+	<div id="anomalies" class="anomalies-button btn display-btn">  
+		<span class="sign"> + </span>
+		Anomalies
+	</div>
+	<div id="anomaly_table" class="anomalies"></div>
+</div>
+
+
+<!--------------------------RADAR VIEW CHANGE----------------------->
+       
+<div id="radar_mode_wrapper">
+	<div id="radar_mode" class="mode-button btn display-btn">
+		<span class="sign"> + </span>
+		Radar View Mode 
+	</div>
+	<div id="mode_chart" class="radar_mode"></div>
+</div>
+
+
+<!---------------------------LIST VIEWS------------------------->
+
+<div class="list-view-buttons">
+	
+	<div id="sector" class="btn display-btn"> 
+		<span class="sign"> + </span>
+		List Representation By Sector
+	</div>
+	
+	<div id="status" class="btn display-btn"> 
+		<span class="sign"> + </span>
+		List Representation By Status
+	</div>
+	
+	<div id="subcat" class="btn display-btn"> 
+		<span class="sign"> + </span>
+		List Representation By Subcategory
+	</div>
+
+</div>
+<div id="list_views">
+	<div id="sector_list" class="sector"></div>
+	<div id="status_list" class="status"></div>
+	<div id="subcat_list" class="subcat"></div>
+</div>
+
+<!---------------------------------ERROR----------------------------->
+
+<div class="load-error"></div>
+
+<!------------------------------------------------------------------->
+
+<div class="footer"></div>
+
+</body>
+</html>
