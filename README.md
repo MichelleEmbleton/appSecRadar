@@ -21,7 +21,7 @@ directory - ie. AppSecRadar/
     webpack.config.js
 ```
 Assuming you have **npm** and **node** already installed on your machine: <br />
-In the console - CD to the directory that contains your appSecRadar and type: <br />
+In the console - cd to the directory that contains your appSecRadar and type: <br />
 ```
 npm install
 ```
