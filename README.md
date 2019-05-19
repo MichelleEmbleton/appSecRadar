@@ -8,7 +8,7 @@ Built with SVG and JavaScript.<br /><br />
 ![radar_7 7-3](https://user-images.githubusercontent.com/29818223/33029376-5925e9c0-ce10-11e7-9e31-79d7e9f44903.png)
 
 ## Set Up
-The file structure should be: <br />
+The file structure: <br />
 ```
 directory - ie. AppSecRadar/
     dist/ ---  data.json
