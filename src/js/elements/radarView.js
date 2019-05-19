@@ -84,15 +84,6 @@ export const renderPositions = props => {
 		doms.svg.appendChild(props.arrow);
 	}
 	props.dot.setAttribute('transform',`translate(${props.x}, ${props.y})`);
-	props.dot.addEventListener('mousemove', e => {
-		document.addEventListener('mousemove', ev => {
-			const xv = ev.clientX;
-
-			e.target.style.transform = `translate(10, 10)` ;
-		//console.log(document.clientX);
-		})
-		
-	})
 	doms.svg.appendChild(props.dot);
 };
 
