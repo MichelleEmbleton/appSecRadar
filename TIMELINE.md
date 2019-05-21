@@ -167,3 +167,9 @@ Code rewrite. <br />
 More ES6. <br />
 Used npm, webpack and babel - axios to get the data - cssnano to minify and autoprefixer to add vendor prefixes to the dist css<br />
 Improved transitions - the mode and anomaly tables are draggable now as well. <br />
+
+### 21-5-19 <br />
+a few small code improvements: <br />
+	changed line 30 of index.js to a simple map()  <br />
+	removed unneeded function and simplified line 7 from **formatData.js**  <br />
+	no changes to functionality <br />
