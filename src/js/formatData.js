@@ -4,19 +4,11 @@ export const toLower = el => el = el.toLowerCase();
 export const getUniqCats = data => { 
     const sectors = [];       
     data.forEach(el => {
-        if((sectors.indexOf(el.CAT) === -1) && (el.CAT !== '')){
+        if(el.CAT && sectors.indexOf(el.CAT) === -1){
             sectors.push(el.CAT);				
         }
     });
     return sectors;
-};
-
-export const getUniqStates = config => {   
-    const states = [];
-    for(let i = 0; i < config.length; i++){
-        states.push(config[i].TITLE);
-    };
-    return states;
 };
 
 export const getUniqSubcats = subcatConfig => {
