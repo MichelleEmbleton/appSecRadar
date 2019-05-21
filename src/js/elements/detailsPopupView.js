@@ -1,4 +1,5 @@
 import { doms } from '../base';
+import { fadeIn } from '../transitions';
 import '../../css/details_box.css';
                            
 export const renderDetailsPopup = el => {    
@@ -19,5 +20,6 @@ export const renderDetailsPopup = el => {
         </p>`;
         
     doms.detailsBox.innerHTML = content;
+    fadeIn(doms.detailsBox);
 };
 
