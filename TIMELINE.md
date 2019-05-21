@@ -177,3 +177,6 @@ A few small code improvements: <br />
  - removed unneeded function and simplified line 7 from **formatData.js**.  <br />
  - big improvement on repositioning dots when clicked on - changes to **index.js, radar.js and radarView.js**. <br />
  - changes to error message appearance in **main.css**. <br />
+ - streamlined code for the svg eventListeners at the bottom of **index.js**. - No need for **detailsPopup.js** - using ```find()``` to go direct to render page. <br />
+ ```find()``` works well here. To compare, ```filter()``` worked out well for the eventListener above. <br />
+ ```console.log``` them to see the difference. <br />
