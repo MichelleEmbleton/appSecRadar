@@ -27,7 +27,7 @@ const dataControl = async () => {
         config.forEach(el => el.TITLE = format.toLower(el.TITLE)); 
         subcatConfig.forEach(el => el.SUBCAT = format.toLower(el.SUBCAT));    
         state.sectors = format.getUniqCats(state.data);        
-        state.states = format.getUniqStates(config);     
+        state.states = config.map(el => el.TITLE);     
         state.subcats = format.getUniqSubcats(subcatConfig);   
         radarControl.calcRadiiLimit(config); 
         format.configData(state.data, config, subcatConfig);
