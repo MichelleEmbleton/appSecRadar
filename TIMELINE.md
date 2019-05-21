@@ -175,4 +175,5 @@ A max-height of 500px and scrollbar have been added to the anomaly table - not s
 A few small code improvements: <br />
  - changed line 30 of **index.js** to a simple map() fn.  <br />
  - removed unneeded function and simplified line 7 from **formatData.js**.  <br />
-No changes to functionality. <br />
+ - big improvement on repositioning dots when clicked on - changes to **index.js, radar.js and radarView.js**. <br />
+ - changes to error message appearance in **main.css**. <br />
