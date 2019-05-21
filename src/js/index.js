@@ -23,11 +23,11 @@ const dataControl = async () => {
             el.CAT = format.toLower(el.CAT);
             el.SUBCAT = format.toLower(el.SUBCAT);
             el.STATUS = format.toLower(el.STATUS);
-        }); 
+        });                    
         config.forEach(el => el.TITLE = format.toLower(el.TITLE)); 
         subcatConfig.forEach(el => el.SUBCAT = format.toLower(el.SUBCAT));    
         state.sectors = format.getUniqCats(state.data);        
-        state.states = config.map(el => el.TITLE);     
+        state.states = config.map(el => el.TITLE); 
         state.subcats = format.getUniqSubcats(subcatConfig);   
         radarControl.calcRadiiLimit(config); 
         format.configData(state.data, config, subcatConfig);
@@ -75,8 +75,9 @@ elementList.forEach(el => {
 
 doms.svg.addEventListener('click', e => {
     if(e.target.closest('.dot')) {
-        const id = e.target.closest('.dot').id;
-        radarControl.repositionElement(state.data, id);       
+        const id = e.target.closest('.dot').id; 
+        const selected = state.data.filter(el => el.TECH === id);   
+        radarControl.positionElements(selected, false);       
     }
 });
 
