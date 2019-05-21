@@ -170,6 +170,6 @@ Improved transitions - the mode and anomaly tables are draggable now as well. <b
 
 ### 21-5-19 <br />
 a few small code improvements: <br />
-	changed line 30 of index.js to a simple map()  <br />
-	removed unneeded function and simplified line 7 from **formatData.js**  <br />
-	no changes to functionality <br />
+ - changed line 30 of **index.js** to a simple map() fn  <br />
+ - removed unneeded function and simplified line 7 from **formatData.js**  <br />
+no changes to functionality <br />
