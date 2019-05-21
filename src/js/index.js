@@ -9,7 +9,7 @@ import { legendControl } from './elements/legend';
 import { anomalyControl } from './elements/AnomalyTable';
 import * as modes from './elements/modeTable';
 import * as listTables from './elements/listTables';
-import { detailsPopupControl } from './elements/detailsPopup';
+import { renderDetailsPopup } from './elements/detailsPopupView';
 import '../css/main.css';
 
 const state = [];
@@ -84,7 +84,8 @@ doms.svg.addEventListener('click', e => {
 doms.svg.addEventListener('mouseover', e => {  
     if(e.target.closest('.dot')) {
         const id = e.target.closest('.dot').id;
-        detailsPopupControl(id, state.data);
+        const selected = state.data.find(el => el.TECH === id);
+        renderDetailsPopup(selected);
     }  
 });
 
