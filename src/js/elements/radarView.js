@@ -77,14 +77,9 @@ export const createArrows = (id, statusId) => {
 	return arrow;
 };
 
-export const renderPositions = props => {	
-	if(props.arrow && !isNaN(props.direction)){
-		props.arrow.setAttribute('transform', `translate(${props.x}, ${props.y})` 
-	              		+ `rotate(${props.direction}, 330,330)`);  
-		doms.svg.appendChild(props.arrow);
-	}
-	props.dot.setAttribute('transform',`translate(${props.x}, ${props.y})`);
-	doms.svg.appendChild(props.dot);
+export const renderPositions = ({dot, arrow}) => {
+	arrow && doms.svg.appendChild(arrow);
+	doms.svg.appendChild(dot);
 };
 
 export const changeColor = ({id, dot, arrow}) => {    
