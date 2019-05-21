@@ -167,9 +167,12 @@ Code rewrite. <br />
 More ES6. <br />
 Used npm, webpack and babel - axios to get the data - cssnano to minify and autoprefixer to add vendor prefixes to the dist css<br />
 Improved transitions - the mode and anomaly tables are draggable now as well. <br />
+A max-height of 500px and scrollbar have been added to the anomaly table - not sure if this is preferred, so I've only added it to this table. It can be changed in:
+**anomaly_table.css** :
+```.anomalies-show {max-height: 50rem;} ``` (1rem = 10px here).
 
 ### 21-5-19 <br />
 a few small code improvements: <br />
- - changed line 30 of **index.js** to a simple map() fn  <br />
- - removed unneeded function and simplified line 7 from **formatData.js**  <br />
-no changes to functionality <br />
+ - changed line 30 of **index.js** to a simple map() fn.  <br />
+ - removed unneeded function and simplified line 7 from **formatData.js**.  <br />
+no changes to functionality. <br />
