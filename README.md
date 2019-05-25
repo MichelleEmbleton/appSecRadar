@@ -15,7 +15,7 @@ directory - ie. AppSecRadar/
     src/ ----  index.html
                css/ --- the 7 css files
                js/ ---  the 7 js files 
-                        elements/ ---  the 12 js files in elements
+                        elements/ ---  the 11 js files in elements
     .babelrc
     package.json
     webpack.config.js
@@ -53,15 +53,16 @@ To change the radii to fit the data better - change **RADIUS** in **statusConfig
 To change the status titles on the radar - also change in **statusConfig.js** - they will be reflected everywhere else. <br />
 To change the sector names - just use different ones in the **CAT** field of your input data. Can add more or remove sectors. <br />
 To change or add subcat names - in **subcatConfig.js**. <br />
-You can move individual dots by clicking on them - they will find a new random position within their boundary. Sometimes they get trapped in a very narrow range so you might have to be persistent - and sometimes the green dots in the center circle jump borders - but eventually go back!
+You can move individual dots by clicking on them - they will find a new random position within their boundary.<br />
+Sectors can be switched between all equal or in proportion to the data in the **Radar View Mode** chart. The dots will find their new positions. The buttons can also be used to just rearrange the dots, without having to refresh the browser. The transitions works nice in Chrome and Opera.
 
 ## Browser Compatibility
-    19th May 2019
+    25th May 2019
     Tested latest changes in: 
-    FireFox 
-    Safari 
-    Chrome 
-    Opera 
-    IE 11
+    FireFox - new transitions on radar not working
+    Safari - new transitions on radar not working
+    Chrome - all tranitions good
+    Opera - all transitions good
+    IE 11 - not tested in IE yet
 
 
