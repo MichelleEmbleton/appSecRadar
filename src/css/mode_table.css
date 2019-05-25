@@ -1,6 +1,6 @@
 #radar_mode_wrapper {	 
 	position: absolute;     
-	top: 21rem;	
+	top: 20rem;	
 	right: 3.5rem;
 	width: auto;
 	height: auto;			
@@ -8,9 +8,9 @@
 
 .mode-button {	
 	position: relative;
-	width: 18rem;
+	width: 20rem;
 	height: 3rem;
-	margin: 1rem 0;
+	margin: 1rem 0 0;
 	text-align: right;
 }
 
@@ -18,11 +18,11 @@
 	position: absolute;  
 	cursor: move;
 	right: 0rem;  
-	width: 18rem;	
+	width: 20rem;	
 }
 
 .radar_mode {     
-	margin-top: -1rem;
+	margin-top: -.7rem;
 	height: 0;
 	max-height: 0;
 	padding: 1rem 2rem;	
@@ -35,11 +35,49 @@
 .radar_mode-show {	
 	opacity: 1;
 	height: auto; 
-	max-height: 24rem;
+	max-height: 32rem;
 	width: auto;
-	overflow-y: auto; 
+	overflow-y: hidden; 
 	border: 1px solid #f1f1f1;
 	border-radius: 0.7em;			
+}
+
+.sector_switch {     
+	margin: .8rem;  
+	font-size: 1.2rem;
+}
+
+.sector_switch-label { 
+	display: inline-block;   
+	margin: .5rem 1rem;
+	cursor: pointer;
+	transition: all .3s;
+}
+
+.sector_switch-label:hover {
+	color: var(--button-hover-color);
+}
+
+.sector_switch-input {     
+	padding: 1rem;
+	visibility: hidden;	
+}
+
+.sector_switch-btn {	
+	position: absolute;
+	width: 1.4rem;
+	height: 1.4rem;
+	left: 2rem;
+	margin: .5rem 1rem;
+	border: 1px solid #999;
+	border-radius: 50%;
+	background-color: #fff; 
+	transition: all .3s;
+}
+
+.sector_switch-input:checked + .sector_switch-btn {  
+	background-color: #00cc00;
+	border: 4px solid #00ff00;
 }
 
 .mode_switch {	 
@@ -79,3 +117,5 @@
 	padding: .4rem 1.4rem;			
 	text-transform: capitalize;
 }
+
+

@@ -18,6 +18,12 @@
 .sector-names {	
 	font-size: 1.3rem;
 	text-transform: uppercase;
+	transition: all .5s;
+}
+
+.sector-border,
+.text-path { 
+	transition: all .5s;
 }
 
 /* RADAR DOTS */
