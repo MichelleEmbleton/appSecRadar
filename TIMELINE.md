@@ -180,3 +180,15 @@ A few small code improvements: <br />
  - streamlined code for the svg eventListeners at the bottom of **index.js**. - No need for **detailsPopup.js** - using ```find()``` to go direct to render page. <br />
  ```find()``` works well here. To compare, ```filter()``` worked out well for the eventListener above. <br />
  ```console.log``` them (```console.log(selected);```) to see the difference. <br />
+ 
+ ### 25-5-19 <br />
+ Added the ability to change sector sizes - all equal or weighted to data - buttons in the **Rada View Mode** chart. <br />
+  - Clicking on the same button also rearranges the dots without having to refresh the screen. <br />
+  - The transitions aren't good in Safari or FF - poss. because initial positions aren't set in the css - not sure...will look into.. <br />
+Renamed some variables in radar and radarView to make them clearer. <br />
+Made randomPosition calc clearer and fixed the issue with the center circle dots going out of their range. <br />
+
+  
+ 
+ 
+ 
