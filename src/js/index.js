@@ -42,6 +42,7 @@ const dataControl = async () => {
             you need to change it to where your json data is coming from if not here.`;
         doms.errorMessage.classList.add('error-show');
         doms.errorMessage.innerHTML = dataError;   
+        console.log(err);
     }
 };
 
@@ -90,7 +91,14 @@ doms.svg.addEventListener('mouseover', e => {
 });
 
 doms.modeChart.addEventListener('click', e => {
-    modes.modeControl(e.target.id, state.data)
+    const id = e.target.id;
+    const val = e.target.value;       
+    if(val){
+        let equal = val === 'equal' ? true : false;
+        radarControl.calcSectors(state.sectors, state.data, equal, false);
+        radarControl.positionElements(state.data, false);
+    }
+    id.includes('mode') && modes.modeControl(id, state.data);       
 });
 
 window.addEventListener('load', dataControl);
