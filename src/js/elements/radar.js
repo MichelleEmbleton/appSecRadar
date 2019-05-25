@@ -106,12 +106,12 @@ export const calcRadiiLimit = config => {
 };
 
 const calcRandomPosition = props => {  
-    const minA = (props.minA + 0.06);
+    	const minA = (props.minA + 0.06);
 	const maxA = (props.maxA - 0.06);
-    const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
+    	const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
 	const minR = props.minRadius + 6;			
-    const maxR = props.radius - 6; 	
-    const randomR = ~~((Math.random() * (maxR - minR)) + minR);	 				
+    	const maxR = props.radius - 6; 	
+    	const randomR = ~~((Math.random() * (maxR - minR)) + minR);	 				
 	const x = Math.round(Math.cos(angle) * randomR);      
 	const y =  Math.round(Math.sin(angle) * randomR);    
 	return [x, y, angle];
