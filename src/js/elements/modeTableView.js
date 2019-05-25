@@ -33,3 +33,6 @@ export const renderModeTable = props => {
 
     doms.modeChart.insertAdjacentHTML('beforeend', modeList);      
 };
+  
+	   
+	

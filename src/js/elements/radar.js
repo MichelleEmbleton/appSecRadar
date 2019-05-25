@@ -39,34 +39,53 @@ export const positionElements = (data, init=true) => {
     });
 };
 
-const calcSectors = (sectors, data) => {
-	const textOffset = parseFloat((952 / sectors.length).toFixed(4));
-	const sectorAngle = (360 / sectors.length);
-	const r = 300;
+export const calcSectors = (sectors, data, equal=true, init=true) => {     
+    const counts = []; 
+    const sectorDataArr = []; 
+    if(!equal){       
+        sectors.forEach(el => counts.push({sector: el, count: 0}));    
+        data.forEach(el => {
+            counts.forEach(e => el.CAT === e.sector && e.count ++);        
+        });
+    }     
+    const r = 300;
+    const equalAngles = (360 / sectors.length);
 	for(let i = 0; i < sectors.length; i++){
-		 const radA = parseFloat(((sectorAngle * i) * (Math.PI / 180)).toFixed(4)); 	
-		 const radAB = parseFloat(((sectorAngle * (i + 1)) * (Math.PI / 180)).toFixed(4));
-		 const x = 330 + Math.round(r * Math.cos(radA));	
-		 const y = 330 + Math.round(r * Math.sin(radA));	
-		 const xa = 330 + Math.round((r + 3) * Math.cos(radA));
-		 const ya = 330 + Math.round((r + 3) * Math.sin(radA));
-		 const xb = 330 + Math.round((r + 3) * Math.cos(radAB));
-		 const yb = 330 + Math.round((r + 3) * Math.sin(radAB));
-		 const sectorRadius = `M330 330 L ${x}, ${y}`;
-		 const sectorArc = `M ${xa}, ${ya} A300, 300, 0, 0, 1 ${xb}, ${yb}`;
-		 let sectorConfig = [sectors[i], radA, radAB];      
-         calcAngleLimit(sectorConfig, data);
-         const sectorData = {
+        if(!equal){
+            counts[i].angle = ~~((counts[i].count / data.length) * 360);
+            counts[i].min = (i-1) > -1 ? (counts[i-1].angle) + (counts[i-1].min) : 0;
+            counts[i].max = counts[i].angle + counts[i].min;           
+        }
+        let textOffset = equal ? 
+            Number((952 / sectors.length).toFixed(4)) : 
+            Number(((counts[i].count / data.length) * 952).toFixed(4));
+        let minA = equal ? equalAngles * i : counts[i].min;
+        let maxA = equal ? equalAngles * (i + 1) : counts[i].max;
+        const radA = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
+		const radAB = Number(((maxA) * (Math.PI / 180)).toFixed(4));
+		const x = 330 + Math.round(r * Math.cos(radA));	
+		const y = 330 + Math.round(r * Math.sin(radA));	
+		const xa = 330 + Math.round((r+3) * Math.cos(radA));
+		const ya = 330 + Math.round((r+3) * Math.sin(radA));
+		const xb = 330 + Math.round((r+3) * Math.cos(radAB));
+		const yb = 330 + Math.round((r+3) * Math.sin(radAB));
+		const sectorLine = `M330 330 L ${x}, ${y}`;
+		const sectorArc = `M ${xa}, ${ya} A300, 300, 0, 0, 1 ${xb}, ${yb}`;
+		let sectorConfig = [sectors[i], radA, radAB];    
+        setAngleLimits(sectorConfig, data);
+        const sectorData = {
             sector: sectors[i],
             textOffset,
-            sectorRadius,
+            sectorLine,
             sectorArc
-         }
-		 radarView.renderSectors(sectorData);	
-	};
+        } 
+        if(init) radarView.renderSectors(sectorData);
+        else sectorDataArr.push(sectorData);	
+    };
+    !init && radarView.alignSectors(sectorDataArr);
 };
 
-const calcAngleLimit = (sectorConfig, data) => {  
+const setAngleLimits = (sectorConfig, data) => {  
 	data.forEach(el => {  
 		for(let i = 0; i < sectorConfig.length; i++){
 			if(el.CAT === sectorConfig[0]){
@@ -86,18 +105,15 @@ export const calcRadiiLimit = config => {
     };
 };
 
-const calcRandomPosition = props => {
-    const minA = (props.minA + 0.04);
-	const maxA = (props.maxA - 0.04);
-    const angle = Number((((Math.random() * (maxA - minA)) + minA)).toFixed(4));
-	const minR = props.minRadius - -6;			
-	const maxR = props.radius - 6; 		  				
-	const x = Math.round(Math.cos(angle)
-			* (~~(Math.random() 
-			* (maxR - minR)) + minR));			
-	const y =  Math.round(Math.sin(angle)
-			* (~~(Math.random() 
-			* (maxR - minR)) + minR));     
+const calcRandomPosition = props => {  
+    const minA = (props.minA + 0.06);
+	const maxA = (props.maxA - 0.06);
+    const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
+	const minR = props.minRadius + 6;			
+    const maxR = props.radius - 6; 	
+    const randomR = ~~((Math.random() * (maxR - minR)) + minR);	 				
+	const x = Math.round(Math.cos(angle) * randomR);      
+	const y =  Math.round(Math.sin(angle) * randomR);    
 	return [x, y, angle];
 };
 

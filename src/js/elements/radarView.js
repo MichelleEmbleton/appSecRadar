@@ -1,19 +1,20 @@
 import { doms, svgs } from '../base';
 import '../../css/radar.css';
+import { fadeIn } from '../transitions';
 
 const renderTitles = ({radius, id, r, title}) => {   
 	title = title.toUpperCase();		 	
 	let yPos;
 	title.length > 12 ? yPos = 15 : yPos = 11;				
 	const position = (radius - r + yPos);
-	const svgTitle = document.createElementNS(svgs.ns, 'text');
-	svgTitle.setAttribute("class", `title-${id}`);
-	svgTitle.setAttribute("x", radius); 
-	svgTitle.setAttribute("y", position);
-	svgTitle.setAttribute("text-anchor","middle"); 	
+	const circleSpec = document.createElementNS(svgs.ns, 'text');
+	circleSpec.setAttribute("class", `title-${id}`);
+	circleSpec.setAttribute("x", radius); 
+	circleSpec.setAttribute("y", position);
+	circleSpec.setAttribute("text-anchor","middle"); 	
 	const text = document.createTextNode(title);
-	svgTitle.appendChild(text);
-	doms.svg.appendChild(svgTitle);
+	circleSpec.appendChild(text);
+	doms.svg.appendChild(circleSpec);
 };
 
 export const renderRadar = config => {	
@@ -34,28 +35,49 @@ export const renderRadar = config => {
 };	
 
 export const renderSectors = props => { 
-	const sectorBorder = document.createElementNS(svgs.ns, 'path');		
+	const sectorBorder = document.createElementNS(svgs.ns, 'path');	
+	sectorBorder.setAttribute("class", "sector-border");	
 	sectorBorder.setAttribute("stroke", "#fff");
 	sectorBorder.setAttribute("stroke-width", 1);
 	sectorBorder.setAttribute("stroke-dasharray", "10,10");
-	sectorBorder.setAttribute("d", props.sectorRadius);	
-	doms.svg.appendChild(sectorBorder);
-	const sectorNamePath = document.createElementNS(svgs.ns, "path");
-	sectorNamePath.setAttributeNS(null, "id", props.sector);
-	sectorNamePath.setAttribute("fill", "none");
-	sectorNamePath.setAttribute("d", props.sectorArc);
-	doms.svg.appendChild(sectorNamePath);
-	const sectorNames = document.createElementNS(svgs.ns, 'text');		
-	sectorNames.setAttribute("class", "sector-names");	
+	sectorBorder.setAttribute("d", props.sectorLine);		
+	const arc = document.createElementNS(svgs.ns, "path");
+	arc.setAttributeNS(null, "id", props.sector);
+	arc.setAttribute("class", "sector-arc");
+	arc.setAttribute("fill", "none");
+	arc.setAttribute("d", props.sectorArc);
+	const textElement = document.createElementNS(svgs.ns, 'text');		
+	textElement.setAttribute("class", "sector-names");	
 	const textpath = document.createElementNS(svgs.ns,"textPath");
-	textpath.setAttributeNS(svgs.xs, "xlink:href", `#${props.sector}`); 
+	textpath.setAttributeNS(svgs.xs, "xlink:href", `#${props.sector}`);
+	textpath.setAttribute("class", "text-path");
 	textpath.setAttribute("startOffset", props.textOffset); 
 	textpath.setAttribute("text-anchor", "middle");
-	const titleText = document.createTextNode(props.sector); 
-	textpath.appendChild(titleText);
-	sectorNames.appendChild(textpath);
-	doms.svg.appendChild(sectorNames);			  
+	const title = document.createTextNode(props.sector); 	
+	doms.svg.appendChild(sectorBorder);
+	doms.svg.appendChild(arc);
+	textpath.appendChild(title);
+	textElement.appendChild(textpath);
+	doms.svg.appendChild(textElement);			  
 };
+
+export const alignSectors = sectorData => {  
+	const sectorBorder = document.querySelectorAll(".sector-border");
+	const arc = document.querySelectorAll(".sector-arc");
+	const textPath = document.querySelectorAll(".text-path");
+	const borders = Array.from(sectorBorder);   
+	const arcs = Array.from(arc);
+	const text = Array.from(textPath);
+	for(let i = 0; i < sectorData.length; i++){
+		borders[i].getAttribute("d");
+		borders[i].setAttribute("d", sectorData[i].sectorLine);
+		arcs[i].getAttribute("d");
+		arcs[i].setAttribute("d", sectorData[i].sectorArc);
+		text[i].getAttribute("startOffset");    
+		text[i].setAttribute("startOffset", sectorData[i].textOffset);
+		fadeIn(text[i]);		
+	};
+}
 
 export const createDots = (status, id) => {   
 	const dot = document.createElementNS(svgs.ns, 'circle'); 
