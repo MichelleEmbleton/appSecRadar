@@ -50,7 +50,8 @@ then the **dist** can be used on it's own. <br />
 To change your data path - you can change the path in **LoadData.js**. **Axios** is used as the http client. <br />
 The default path is **localhost:8080** which points to the **data.json** in **dist/**.  <br />
 To change the radii to fit the data better - change **RADIUS** in **statusConfig.js**.  <br />
- - they can also be adjusted by clicking and dragging the circles when the edges light up blue. <br />
+ - They can also now be adjusted by clicking and dragging the circles when the edges light up blue. <br />
+ 
 To change the status titles on the radar - also change in **statusConfig.js** - they will be reflected everywhere else. <br />
 To change the sector names - just use different ones in the **CAT** field of your input data. Can add more or remove sectors. <br />
 To change or add subcat names - in **subcatConfig.js**. <br />
