@@ -1,6 +1,6 @@
 [
  	{
-	"TECH":"Java SE 5", 
+	"TECH":"Java SE v1", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"plan FOR REMOVAL", 
@@ -11,9 +11,9 @@
 
 	{
 	"TECH":"Ruby", 
-	"CAT":"app", 
+	"CAT":"app2", 
 	"SUBCAT":"mobile", 
-	"STATUS":"xxx", 
+	"STATUS":"adopt", 
 	"CHANGE_SPEED":"3", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Coding - new use"
@@ -21,7 +21,7 @@
 	
 	{
 	"TECH":"Swift", 
-	"CAT":"app", 
+	"CAT":"app2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"", 
 	"CHANGE_SPEED":"+1", 
@@ -31,7 +31,7 @@
 
 	{
 	"TECH":"ClickMeeting", 
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"adopt", 
 	"CHANGE_SPEED":"+1", 
@@ -41,7 +41,7 @@
 
 	{
 	"TECH":"Citrix Grasshopper", 
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"TRIAL", 
 	"CHANGE_SPEED":"+1", 
@@ -50,8 +50,8 @@
 	},
 
 	{
-	"TECH":"GoogleMail v5", 
-	"CAT":"service", 
+	"TECH":"GoogleMail v1.2", 
+	"CAT":"service2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
 	"CHANGE_SPEED":"+3", 
@@ -70,7 +70,7 @@
 	},
 
 	{
-	"TECH":"VirtualBox v4.8", 
+	"TECH":"VirtualBox v2.1", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"hold", 
@@ -81,7 +81,7 @@
 
 	{
 	"TECH":"WindowsXP", 
-	"CAT":"", 
+	"CAT":"app2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
 	"CHANGE_SPEED":"", 
@@ -100,8 +100,8 @@
 	},
 
 	{
-	"TECH":"Lua v3.5", 
-	"CAT":"app", 
+	"TECH":"Lua v2.2", 
+	"CAT":"app2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
 	"CHANGE_SPEED":"", 
@@ -110,8 +110,8 @@
 	},
 
 	{
-	"TECH":"php 5.8", 
-	"CAT":"app", 
+	"TECH":"php 2.3", 
+	"CAT":"app2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
 	"CHANGE_SPEED":"-2", 
@@ -120,7 +120,7 @@
 	},
 
 	{
-	"TECH":"asp.net v25", 
+	"TECH":"asp.net v2.4", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
@@ -131,7 +131,7 @@
 
 	{
 	"TECH":"julia", 
-	"CAT":"app", 
+	"CAT":"app2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"ADOPT", 
 	"CHANGE_SPEED":"+2", 
@@ -171,7 +171,7 @@
 
 	{
 	"TECH":"BT cloud", 
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
 	"CHANGE_SPEED":"-5", 
@@ -201,7 +201,7 @@
 
 	{
 	"TECH":"Google+", 
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"cloud", 
 	"STATUS":"HOLD", 
 	"CHANGE_SPEED":"+4", 
@@ -210,7 +210,7 @@
 	},
 
 	{
-	"TECH":"Python v41", 
+	"TECH":"Python v3.1", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
@@ -240,7 +240,7 @@
 	},
 
 	{
-	"TECH":"Windows35", 
+	"TECH":"Windows v3.3", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
@@ -260,7 +260,7 @@
 	},
 
 	{
-	"TECH":"3Design v7", 
+	"TECH":"3Design v3.4", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
@@ -280,8 +280,8 @@
 	},
 
 	{
-	"TECH":"FileZilla v123.4", 
-	"CAT":"service", 
+	"TECH":"FileZilla v3.5", 
+	"CAT":"service2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"HOLD", 
 	"CHANGE_SPEED":"", 
@@ -310,7 +310,7 @@
 	},
 
 	{
-	"TECH":"VMWare v1.11", 
+	"TECH":"VMWare v3.6", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"NO NEW USE", 
@@ -331,7 +331,7 @@
 
 	{
 	"TECH":"Opera", 
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"TRIAL", 
 	"CHANGE_SPEED":"+2", 
@@ -341,7 +341,7 @@
 
 	{
 	"TECH":"Netscape",
-	"CAT":"service", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
 	"CHANGE_SPEED":"", 
@@ -350,8 +350,8 @@
 	},
 
 	{
-	"TECH":"iTunes v86", 
-	"CAT":"service", 
+	"TECH":"iTunes v3.7", 
+	"CAT":"service2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
 	"CHANGE_SPEED":"", 
@@ -360,8 +360,8 @@
 	},
 
 	{
-	"TECH":"Adobe Acrobat v3", 
-	"CAT":"service", 
+	"TECH":"Adobe Acrobat v3.8", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
 	"CHANGE_SPEED":"-2", 
@@ -370,341 +370,341 @@
 	},
 
 	{
-	"TECH":"Wacom bamboo 10", 
-	"CAT":"service", 
+	"TECH":"Wacom bamboo v3.9", 
+	"CAT":"service2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"graphic tablet software - replaced with v11"
 	},
 
 	{
-	"TECH":"lockLizard v3", 
-	"CAT":"service", 
+	"TECH":"lockLizard v4", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"file reader - replaced with v4"
 	},
 
 	{
-	"TECH":"Xcode v3", 
+	"TECH":"Xcode v4.1", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced with v4"
 	},
 
 	{
-	"TECH":"XAMPP v12.3", 
+	"TECH":"XAMPP v4.2", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v12.2"
 	},
 
 	{
-	"TECH":"awk v5", 
-	"CAT":"service", 
+	"TECH":"awk v4.3", 
+	"CAT":"service2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal scripting - replaced v4"
 	},
 
 	{
-	"TECH":"sed v6", 
+	"TECH":"sed v4.4", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+5", 
+	"CHANGE_SPEED":"+5", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal scripting - replacing v5"
 	},
 
 	{
-	"TECH":"nano v4", 
-	"CAT":"service", 
+	"TECH":"nano v4.5", 
+	"CAT":"service2", 
 	"SUBCAT":"X", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+3", 
+	"CHANGE_SPEED":"+3", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal file editor - replaced v3"
 	},
 
 	{
-	"TECH":"emacs v5", 
-	"CAT":"platform", 
+	"TECH":"emacs v4.6", 
+	"CAT":"platform2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal file editor - replaced v4"
 	},
 
 	{
-	"TECH":"Java SE 7", 
-	"CAT":"service", 
+	"TECH":"Java SE 4.7", 
+	"CAT":"service2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"evaluate", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2015", 
 	"DETAILS":"Deprecated in favour of v8"
 	},
 
 	{
-	"TECH":"Ruby on rails", 
-	"CAT":"platform", 
+	"TECH":"Ruby on rails v4.8", 
+	"CAT":"platform2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"hold", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Coding - new use"
 	},
 	
 	{
-	"TECH":"PHP 5.4", 
+	"TECH":"PHP 4.9", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-8-2014", 
 	"DETAILS":"Animation software - replacing, no new builds"
 	},
 
 	{
-	"TECH":"Cloud Services", 
+	"TECH":"Cloud Services v6", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"video conferencing - new use"
 	},
 
 	{
-	"TECH":"Citrix", 
+	"TECH":"Citrix v 6.1", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"no new use", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VoIP - try out"
 	},
 
 	{
-	"TECH":"GoogleMail v7", 
+	"TECH":"GoogleMail v6.2", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"hold", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced v6"
 	},
 
 	{
-	"TECH":"mountain liond", 
-	"CAT":"platform", 
+	"TECH":"mountain lion v 6.3", 
+	"CAT":"platform2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"plan for removal", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-8-2011", 
 	"DETAILS":"On older machines - replacing with newer version"
 	},
 
 	{
-	"TECH":"VirtualBox v4.9", 
-	"CAT":"platform", 
+	"TECH":"VirtualBox v6.4", 
+	"CAT":"platform2", 
 	"SUBCAT":"client-side", 
 	"STATUS":"hold", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2012", 
 	"DETAILS":"VM - replaced previous version"
 	},
 
 	{
-	"TECH":"Windows7", 
-	"CAT":"platform", 
+	"TECH":"Windows v6.5", 
+	"CAT":"platform2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"OS - older machines - replace"
 	},
 
 	{
-	"TECH":"El Capitan 5", 
-	"CAT":"platform", 
+	"TECH":"El Capitan v6.6", 
+	"CAT":"platform2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+2", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OSX - newest version"
 	},
 
 	{
-	"TECH":"Lua", 
+	"TECH":"Lua v6.7", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"+3", 
+	"CHANGE_SPEED":"+3", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - replaced previous version"
 	},
 
 	{
-	"TECH":"php 7.1", 
+	"TECH":"php v6.8", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"+4", 
+	"CHANGE_SPEED":"+4", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced with newer version"
 	},
 
 	{
-	"TECH":"asp.net v26", 
-	"CAT":"platform", 
+	"TECH":"asp.net v6.9", 
+	"CAT":"platform2", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - in use"
 	},
 
 	{
-	"TECH":"julia 3", 
+	"TECH":"julia v6.10", 
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced something else"
 	},
 
 	{
-	"TECH":"haskell 4", 
+	"TECH":"haskell v6.11", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"coding - try out to replace other thing"
 	},
 
 	{
-	"TECH":"Red Hat 10.3", 
+	"TECH":"Red Hat v6.12", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - new use"
 	},
 
 	{
-	"TECH":"lion 4", 
+	"TECH":"lion v7", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-4", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"OSX - still in use on older machines"
 	},
 
 	{
-	"TECH":"BT Services", 
+	"TECH":"BT Services v7.1", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-7", 
+	"CHANGE_SPEED":"-7", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"replace"
 	},
 
 	{
-	"TECH":"VLC 3.0", 
+	"TECH":"VLC v7.2", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"media player - use for playback"
 	},
 
 	{
-	"TECH":"MeshLab 7", 
+	"TECH":"MeshLab v7.3", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"evaluate", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"CAD and STL software - try out"
 	},
 
 	{
-	"TECH":"Google+ 8", 
+	"TECH":"Google+ v7.4", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"keep for now"
 	},
 
 	{
-	"TECH":"Python v43", 
+	"TECH":"Python v7.5", 
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"hold", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Phasing out - replaced by v42"
 	},
 
 	{
-	"TECH":"CentOS 3", 
+	"TECH":"CentOS v7.6", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"Trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - in use"
 	},
 
 	{
-	"TECH":"Windows98", 
+	"TECH":"Windows981", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"Deprecated in favour of other OS"
 	},
 
 	{
-	"TECH":"Windows38", 
+	"TECH":"Windows382", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"no new use", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OS - new - try out"
 	},
 
 	{
-	"TECH":"flash 3", 
+	"TECH":"flash v8", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Replace with other things"
 	},
@@ -714,633 +714,623 @@
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-5", 
+	"CHANGE_SPEED":"-5", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"CAD software - replaced with v8"
 	},
 
 	{
-	"TECH":"Photoshop CS", 
+	"TECH":"Photoshop CS v10.1", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"image editing - in use"
 	},
 
 	{
-	"TECH":"Yellow Duck v1.5", 
+	"TECH":"Yellow Duck v10.2", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"FTP - current version"
 	},
 
 	{
-	"TECH":"ZAP v2.4", 
+	"TECH":"ZAP v10.3", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"no new use", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Proxy - replaced with v2.5"
 	},
 
 	{
-	"TECH":"Parallels 2", 
+	"TECH":"Parallels v10.4", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"no new use", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"VM - try out"
 	},
 
 	{
-	"TECH":"VirtualBox v1.12", 
+	"TECH":"VirtualBox v10.5", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"plan for removal", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VM - replaced with newer version"
 	},
 
 	{
-	"TECH":"Windows 25", 
+	"TECH":"Windows v10.6", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced with other"
 	},
 
 	{
-	"TECH":"Opera 10", 
+	"TECH":"Opera 10.7", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Browser - try out"
 	},
 
 	{
-	"TECH":"Netscape 2.1",
+	"TECH":"Netscape 10.8",
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Browser - not in use"
 	},
 
 	{
-	"TECH":"iTunes v7", 
+	"TECH":"iTunes v10.9", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"plan for removal", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v85"
 	},
 
 	{
-	"TECH":"Adobe Acrobat v1", 
+	"TECH":"Adobe Acrobat v10.10", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-2", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"file reader - replaced with v4"
 	},
 
 	{
-	"TECH":"Wacom bamboo 100", 
+	"TECH":"Wacom bamboo v11.1", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"graphic tablet software - replaced with v11"
 	},
 
 	{
-	"TECH":"lockLizard v1", 
+	"TECH":"lockLizard v11.2", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"file reader - replaced with v4"
 	},
 
 	{
-	"TECH":"Xcode v1.345", 
+	"TECH":"Xcode v11.3", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced with v4"
 	},
 
 	{
-	"TECH":"XAMPP v12.9", 
+	"TECH":"XAMPP v11.4", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+2", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v12.3"
 	},
 
 	{
-	"TECH":"awk v5.5", 
+	"TECH":"awk v11.5", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal scripting - replaced v5"
 	},
 
 	{
-	"TECH":"sed v6.6", 
+	"TECH":"sed v11.6", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal scripting - replacing v6"
 	},
 
 	{
-	"TECH":"nano v4.5", 
+	"TECH":"nano v11.7", 
 	"CAT":"service", 
 	"SUBCAT":"", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal file editor - replaced v4"
 	},
 
 	{
-	"TECH":"emacs v5.8", 
+	"TECH":"emacs v11.8", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal file editor - replaced v5"
 	},
 
 	{
-	"TECH":"Java SE 7", 
-	"CAT":"service", 
-	"SUBCAT":"mobile", 
-	"STATUS":"plan FOR REMOVAL", 
-	"DIRECTION":"-1", 
-	"DATE":"14-6-2015", 
-	"DETAILS":"Deprecated in favour of v8"
-	},
-
-	{
-	"TECH":"Ruby v11.3", 
+	"TECH":"Ruby v11.9", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Coding - new use"
 	},
 	
 	{
-	"TECH":"iWork v4.3", 
+	"TECH":"iWork v12", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"evaluate", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2014", 
 	"DETAILS":"Office software - replacing, no new builds"
 	},
 
 	{
-	"TECH":"Adobe Acrobat v3.8", 
+	"TECH":"Adobe Acrobat v12.1", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"no new use", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"video conferencing - new use"
 	},
 
 	{
-	"TECH":"Grasshopper 3", 
+	"TECH":"Grasshopper 12.2", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"evaluate", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VoIP - try out"
 	},
 
 	{
-	"TECH":"GoogleMail v9", 
+	"TECH":"GoogleMail v12.3", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced v5"
 	},
 
 	{
-	"TECH":"leopard", 
+	"TECH":"leopard v12.4", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"2-8-2011", 
 	"DETAILS":"On older machines - replacing with newer version"
 	},
 
 	{
-	"TECH":"VirtualBox v6.8", 
+	"TECH":"VirtualBox v12.5", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"hold", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2012", 
 	"DETAILS":"VM - replaced previous version"
 	},
 
 	{
-	"TECH":"Windows96", 
+	"TECH":"Windows96 v12.6", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"OS - older machines - replace"
 	},
 
 	{
-	"TECH":"Adobe Reader v2.33", 
+	"TECH":"Adobe Reader v12.7", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OSX - new version"
 	},
 
 	{
-	"TECH":"Lua 8", 
+	"TECH":"Lua v12.8", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - replaced previous version"
 	},
 
 	{
-	"TECH":"php 5.1", 
+	"TECH":"php v12.9", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"-4", 
+	"CHANGE_SPEED":"-4", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced with newer version"
 	},
 
 	{
-	"TECH":"asp.net v31", 
+	"TECH":"asp.net v13", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"coding - in use"
 	},
 
 	{
-	"TECH":"laravel", 
+	"TECH":"laravel v13.1", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"coding - replaced something else"
 	},
 
 	{
-	"TECH":"angular JS", 
+	"TECH":"angular JS v13.2", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"no new use", 
-	"DIRECTION":"-3", 
+	"CHANGE_SPEED":"-3", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"coding - try out to replace other thing"
 	},
 
 	{
-	"TECH":"Angular2", 
+	"TECH":"Angular2 v13.3", 
 	"CAT":"app", 
 	"SUBCAT":"cloud", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - new use"
 	},
 
 	{
-	"TECH":"React 2", 
+	"TECH":"React v13.4", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"OSX - still in use on older machines"
 	},
 
 	{
-	"TECH":"PlusNet cloud", 
+	"TECH":"PlusNet cloud v13.5", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"replace"
 	},
 
 	{
-	"TECH":"O2 cloud", 
+	"TECH":"O2 cloud v13.6", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"media player - use for playback"
 	},
 
 	{
-	"TECH":"MeshLab 10.8", 
+	"TECH":"MeshLab 13.8", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"plan for removal", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"CAD and STL software - try out"
 	},
 
 	{
-	"TECH":"Adobe Reader 4.5", 
+	"TECH":"Adobe Reader 13.9", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"keep for now"
 	},
 
 	{
-	"TECH":"Python v49", 
+	"TECH":"Python v14.1", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"hold", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Phasing out - replaced by v42"
 	},
 
 	{
-	"TECH":"CentOS 4.3", 
+	"TECH":"CentOS 14.3", 
 	"CAT":"platform", 
 	"SUBCAT":"cloud", 
 	"STATUS":"no new use", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Linux OS - in use"
 	},
 
 	{
-	"TECH":"Windows11", 
+	"TECH":"Windows114.4", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"Deprecated in favour of other OS"
 	},
 
 	{
-	"TECH":"Windows8", 
+	"TECH":"Windows 14.5", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"OS - new - try out"
 	},
 
 	{
-	"TECH":"flash v27", 
+	"TECH":"flash v14.6", 
 	"CAT":"platform", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-1", 
+	"CHANGE_SPEED":"-1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"Replace with other things"
 	},
 
 	{
-	"TECH":"3Design v7", 
+	"TECH":"3Design v14.7", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"-5", 
+	"CHANGE_SPEED":"-5", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"CAD software - replaced with v8"
 	},
 
 	{
-	"TECH":"Photoshop Elements 12", 
+	"TECH":"Photoshop Elements 14.8", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"image editing - in use"
 	},
 
 	{
-	"TECH":"FileZilla v12", 
+	"TECH":"FileZilla v14.9", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"HOLD", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"FTP - current version"
 	},
 
 	{
-	"TECH":"Google Chrome v6", 
+	"TECH":"Google Chrome v15", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"hold", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Proxy - replaced v5.2"
 	},
 
 	{
-	"TECH":"Parallels 12", 
+	"TECH":"Parallels 15.1", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"VM - try out"
 	},
 
 	{
-	"TECH":"VMWare v1.13", 
+	"TECH":"VMWare v15.2", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"VM - replaced with newer version"
 	},
 
 	{
-	"TECH":"Windows Virtual PC 52", 
+	"TECH":"Windows Virtual PC 15.3", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"plan for removal", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced with other"
 	},
 
 	{
-	"TECH":"Opera 13", 
+	"TECH":"Opera 15.4", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"+2", 
+	"CHANGE_SPEED":"+2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"Browser - try out"
 	},
 
 	{
-	"TECH":"Netscape 23",
+	"TECH":"Netscape 15.5",
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"PLAN FOR REMOVAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"Browser - not in use"
 	},
 
 	{
-	"TECH":"iTunes v72", 
+	"TECH":"iTunes v15.6", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v85"
 	},
 
 	{
-	"TECH":"Adobe Acrobat v7", 
+	"TECH":"Adobe Acrobat v15.7", 
 	"CAT":"service", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2002", 
 	"DETAILS":"file reader - replaced with v4"
 	},
 
 	{
-	"TECH":"Wacom bamboo 44", 
+	"TECH":"Wacom bamboo 15.8", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"trial", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"graphic tablet software - replaced with v11"
 	},
 
 	{
-	"TECH":"lockLizard v2.2", 
+	"TECH":"lockLizard v15.9", 
 	"CAT":"app", 
 	"SUBCAT":"mobile", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"file reader - replaced with v4"
 	},
 
 	{
-	"TECH":"Xcode v5.43", 
+	"TECH":"Xcode v15.10", 
 	"CAT":"service", 
 	"SUBCAT":"cloud", 
 	"STATUS":"NO NEW USE", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"-2", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"replaced with v6"
 	},
 
 	{
-	"TECH":"XAMPP v13.5", 
+	"TECH":"XAMPP v16", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"14-6-2017", 
 	"DETAILS":"replaced v12.4"
 	},
 
 	{
-	"TECH":"awk v5.44", 
+	"TECH":"awk v16.44", 
 	"CAT":"app", 
 	"SUBCAT":"client-side", 
 	"STATUS":"EVALUATE", 
-	"DIRECTION":"+1", 
+	"CHANGE_SPEED":"+1", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal scripting - replaced v5"
 	},
 
 	{
-	"TECH":"sed v6.18", 
+	"TECH":"sed v16.45", 
 	"CAT":"platform", 
 	"SUBCAT":"client-side", 
 	"STATUS":"adopt", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-8-2017", 
 	"DETAILS":"terminal scripting - replacing v6.17"
 	},
 
 	{
-	"TECH":"nano v2.1", 
+	"TECH":"nano v16.6", 
 	"CAT":"app", 
 	"SUBCAT":"X", 
 	"STATUS":"TRIAL", 
-	"DIRECTION":"", 
+	"CHANGE_SPEED":"", 
 	"DATE":"2-7-2016", 
 	"DETAILS":"terminal file editor - replaced v1.2"
 	},
 
 	{
-	"TECH":"emacs v2.4", 
+	"TECH":"emacs v16.7", 
 	"CAT":"service", 
 	"SUBCAT":"client-side", 
 	"STATUS":"ADOPT", 
