@@ -13,6 +13,15 @@
 	fill: #000;
 	stroke: #fff; 
 }
+
+.radar-circles:hover {
+	stroke: rgb(158, 247, 247, 1);
+}
+
+.radar-circles:active {
+	cursor: grabbing;
+}
+
 /* NAMES AROUND CIRCUMFERENCE */
 
 .sector-names {	
