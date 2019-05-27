@@ -50,6 +50,7 @@ then the **dist** can be used on it's own. <br />
 To change your data path - you can change the path in **LoadData.js**. **Axios** is used as the http client. <br />
 The default path is **localhost:8080** which points to the **data.json** in **dist/**.  <br />
 To change the radii to fit the data better - change **RADIUS** in **statusConfig.js**.  <br />
+ - they can also be adjusted by clicking and dragging the circles when the edges light up blue. <br />
 To change the status titles on the radar - also change in **statusConfig.js** - they will be reflected everywhere else. <br />
 To change the sector names - just use different ones in the **CAT** field of your input data. Can add more or remove sectors. <br />
 To change or add subcat names - in **subcatConfig.js**. <br />
@@ -57,7 +58,7 @@ You can move individual dots by clicking on them - they will find a new random p
 Sectors can be switched between all equal or in proportion to the data in the **Radar View Mode** chart. The dots will find their new positions. The buttons can also be used to just rearrange the dots, without having to refresh the browser. The transitions works nice in Chrome and Opera.
 
 ## Browser Compatibility
-    25th May 2019
+    27th May 2019
     Tested latest changes in: 
     FireFox - new transitions on radar not working
     Safari - new transitions on radar not working
