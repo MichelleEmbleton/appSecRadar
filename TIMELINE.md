@@ -192,9 +192,10 @@ Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anom
   
  ### 27-5-19 <br />
  Added the ability to click and drag the radii. A cicle is resizable when it's outer edge lights up blue. <br />
- The dots will automatically reposition. <br />
- Maximum limits have been set so they don't overlap when resizing outwards - but not minimum limits, so use your new powers wisely! <br />
- The main changes are in **radar.js** and **radarView.js**. <br />
+  - The dots will automatically reposition. <br />
+  - Maximum limits have been set so they don't overlap when resizing outwards - but not minimum limits, so use your new powers wisely! <br />
+  - The main changes are in **radar.js**, **radarView.js** and **index.js**. <br />
+  
  Also tidied up the eventListeners on **index.js** and made small changes in **formatData.js** and **radar.css**. <br />
  
  
