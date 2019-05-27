@@ -14,7 +14,7 @@ export const getUniqCats = data => {
 export const getUniqSubcats = subcatConfig => {
     const subcats = [];
     subcatConfig.forEach(el => {
-        el.SUBCAT && subcats.push(el.SUBCAT);
+        el.SUBCAT && subcats.push(el.SUBCAT);    
     });
     return subcats;
 };
@@ -27,11 +27,13 @@ export const configData = (data, config, subcatConfig) => {
                 el.radius = Number(config[i].RADIUS); 
                 el.minRadius = Number(config[i].minRadius); 
             }
-        };                 
-        for(let i = 0; i < subcatConfig.length; i++){
-            if(el.SUBCAT && el.SUBCAT === subcatConfig[i].SUBCAT){
-                el.subcatId = subcatConfig[i].ID;
-            }	
-        };
+        }; 
+        if(subcatConfig){                
+            for(let i = 0; i < subcatConfig.length; i++){
+                if(el.SUBCAT && el.SUBCAT === subcatConfig[i].SUBCAT){
+                    el.subcatId = subcatConfig[i].ID;
+                }	
+            };
+        }
     });
 };

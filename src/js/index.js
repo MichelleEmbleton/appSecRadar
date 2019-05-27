@@ -46,51 +46,31 @@ const dataControl = async () => {
     }
 };
 
-const btnArr = Array.from(doms.btns);  	      
-btnArr.forEach(btn => btn.addEventListener('click', e => {
-    let btn = e.target;  	   
-    const btnId = btn.id;
-    const sign = displayModule(btn);  
-    const props = {
-        sign, 
-        data: state.data
-    }    
-    btnId === 'legend' && legendControl(sign, config); 
-    btnId === 'radar_mode' && modes.modeTableControl(sign, config, subcatConfig);
-    btnId === 'anomalies' && anomalyControl(props);
-    btnId === 'sector' && listTables.sectorTableControl(props, state.sectors);
-    btnId === 'status' && listTables.statusTableControl(props, state.states);
-    btnId === 'subcat' && listTables.subcatTableControl(props, state.subcats);
-}));
-
-const elementList = [
-    doms.sectorList, 
-    doms.statusList, 
-    doms.subcatList, 
-    doms.anomalyTable,
-    doms.modeChart
-]
-elementList.forEach(el => {
-    el.addEventListener('mousedown', e => dragElement(el, e));
-});
-
-doms.svg.addEventListener('click', e => {
+const dotPositionControl = e => {
     if(e.target.closest('.dot')) {
         const id = e.target.closest('.dot').id; 
         const selected = state.data.filter(el => el.TECH === id);   
         radarControl.positionElements(selected, false);       
     }
-});
+};
 
-doms.svg.addEventListener('mouseover', e => {  
+const radiusControl = e => {
+    if(e.target.closest('.radar-circles')) {
+        const circle = e.target.closest('.radar-circles');
+        const initX = e.clientX;       
+        radarControl.changeRadius(state.data, config, circle, initX);    
+    }
+};
+
+const detailsPopupControl = e => {
     if(e.target.closest('.dot')) {
         const id = e.target.closest('.dot').id;
         const selected = state.data.find(el => el.TECH === id);
         renderDetailsPopup(selected);
     }  
-});
-
-doms.modeChart.addEventListener('click', e => {
+};
+    
+const modeChartControl = e => {
     const id = e.target.id;
     const val = e.target.value;       
     if(val){
@@ -98,9 +78,42 @@ doms.modeChart.addEventListener('click', e => {
         radarControl.calcSectors(state.sectors, state.data, equal, false);
         radarControl.positionElements(state.data, false);
     }
-    id.includes('mode') && modes.modeControl(id, state.data);       
-});
+    id.includes('mode') && modes.modeControl(id, state.data);
+};
 
+const chartControl = e => {
+    let btn = e.target;  	   
+    const btnId = btn.id;
+    const sign = displayModule(btn);  
+    const props = {
+        sign, 
+        data: state.data
+    };    
+    btnId === 'legend' && legendControl(sign, config); 
+    btnId === 'radar_mode' && modes.modeTableControl(sign, config, subcatConfig);
+    btnId === 'anomalies' && anomalyControl(props);
+    btnId === 'sector' && listTables.sectorTableControl(props, state.sectors);
+    btnId === 'status' && listTables.statusTableControl(props, state.states);
+    btnId === 'subcat' && listTables.subcatTableControl(props, state.subcats);
+};
+
+const btnArr = Array.from(doms.btns);  	             
+const chartList = [
+    doms.sectorList, 
+    doms.statusList, 
+    doms.subcatList, 
+    doms.anomalyTable,
+    doms.modeChart
+];
+
+chartList.forEach(el => {
+    el.addEventListener('mousedown', e => dragElement(el, e));
+});
+btnArr.forEach(btn => btn.addEventListener('click', chartControl));
+doms.svg.addEventListener('click', dotPositionControl);
+doms.svg.addEventListener('mousedown', radiusControl);
+doms.svg.addEventListener('mouseover', detailsPopupControl); 
+doms.modeChart.addEventListener('click', modeChartControl);
 window.addEventListener('load', dataControl);
 
 
