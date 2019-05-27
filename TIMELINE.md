@@ -191,7 +191,8 @@ Made randomPosition calc clearer and fixed the issue with the center circle dots
 Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anomaly_table.css, mode_table.css.** <br />
   
  ### 27-5-19 <br />
- Added the ability to click and drag the radii. A cicle is resizable when it's outer edge lights up blue. <br />
+ Added the ability to click and drag the radii. <br />
+  - A cicle is resizable when it's outer edge lights up blue. <br />
   - The dots will automatically reposition. <br />
   - Maximum limits have been set so they don't overlap when resizing outwards - but not minimum limits, so use your new powers wisely! <br />
   - The main changes are in **radar.js**, **radarView.js** and **index.js**. <br />
