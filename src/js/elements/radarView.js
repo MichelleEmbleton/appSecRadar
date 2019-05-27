@@ -2,37 +2,26 @@ import { doms, svgs } from '../base';
 import '../../css/radar.css';
 import { fadeIn } from '../transitions';
 
-const renderTitles = ({radius, id, r, title}) => {   
-	title = title.toUpperCase();		 	
-	let yPos;
-	title.length > 12 ? yPos = 15 : yPos = 11;				
-	const position = (radius - r + yPos);
-	const circleSpec = document.createElementNS(svgs.ns, 'text');
-	circleSpec.setAttribute("class", `title-${id}`);
-	circleSpec.setAttribute("x", radius); 
-	circleSpec.setAttribute("y", position);
-	circleSpec.setAttribute("text-anchor","middle"); 	
+export const renderTitles = ({id, title, outerR, y}) => {   
+	title = title.toUpperCase();
+	const circleTitle = document.createElementNS(svgs.ns, 'text');
+	circleTitle.setAttribute("class", `title-${id}`);
+	circleTitle.setAttribute("x", outerR); 
+	circleTitle.setAttribute("y", y);
+	circleTitle.setAttribute("text-anchor","middle"); 	
 	const text = document.createTextNode(title);
-	circleSpec.appendChild(text);
-	doms.svg.appendChild(circleSpec);
+	circleTitle.appendChild(text);
+	doms.svg.appendChild(circleTitle);
 };
 
-export const renderRadar = config => {	
-	const radius = 330;
+export const renderRadar = (r, outerR) => {	 
 	const svgRadar = document.createElementNS(svgs.ns, 'circle');
 	svgRadar.setAttribute("class", "radar-circles");	
-	svgRadar.setAttribute("r", config.RADIUS);
-	svgRadar.setAttribute("cx", radius);	
-	svgRadar.setAttribute("cy", radius); 		
+	svgRadar.setAttribute("r", r);
+	svgRadar.setAttribute("cx", outerR);	
+	svgRadar.setAttribute("cy", outerR); 		
 	doms.svg.appendChild(svgRadar);
-	const titles = {
-		radius,
-		title: config.TITLE,
-		r: config.RADIUS,
-		id: config.ID
-	}					
-	renderTitles(titles);
-};	
+};
 
 export const renderSectors = props => { 
 	const sectorBorder = document.createElementNS(svgs.ns, 'path');	
@@ -69,11 +58,8 @@ export const alignSectors = sectorData => {
 	const arcs = Array.from(arc);
 	const text = Array.from(textPath);
 	for(let i = 0; i < sectorData.length; i++){
-		borders[i].getAttribute("d");
 		borders[i].setAttribute("d", sectorData[i].sectorLine);
-		arcs[i].getAttribute("d");
-		arcs[i].setAttribute("d", sectorData[i].sectorArc);
-		text[i].getAttribute("startOffset");    
+		arcs[i].setAttribute("d", sectorData[i].sectorArc);   
 		text[i].setAttribute("startOffset", sectorData[i].textOffset);
 		fadeIn(text[i]);		
 	};

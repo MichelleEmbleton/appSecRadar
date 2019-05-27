@@ -1,9 +1,22 @@
 import * as radarView from './radarView';
+import * as format from '../formatData';
+import { doms } from '../base';
 
 export const createRadar = (sectors, data, config) => {
-    config.forEach(el => radarView.renderRadar(el));
+    config.OUTERRADIUS = 330;  
+    config.forEach(el => {
+        radarView.renderRadar(el.RADIUS, config.OUTERRADIUS);
+        const y = calcCircleTitlePositions(el.TITLE, el.RADIUS, config.OUTERRADIUS);
+        const titleProps = {
+            id: el.ID,
+            title: el.TITLE,
+            outerR: config.OUTERRADIUS,
+            y
+        };
+        radarView.renderTitles(titleProps);
+    });
     calcSectors(sectors, data); 
-    positionElements(data);
+    positionElements(data);   
 };
 
 export const positionElements = (data, init=true) => {   
@@ -106,12 +119,12 @@ export const calcRadiiLimit = config => {
 };
 
 const calcRandomPosition = props => {  
-    	const minA = (props.minA + 0.06);
+    const minA = (props.minA + 0.06);
 	const maxA = (props.maxA - 0.06);
-    	const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
+    const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
 	const minR = props.minRadius + 6;			
-    	const maxR = props.radius - 6; 	
-    	const randomR = ~~((Math.random() * (maxR - minR)) + minR);	 				
+    const maxR = props.radius - 6; 	
+    const randomR = ~~((Math.random() * (maxR - minR)) + minR);	 				
 	const x = Math.round(Math.cos(angle) * randomR);      
 	const y =  Math.round(Math.sin(angle) * randomR);    
 	return [x, y, angle];
@@ -128,4 +141,36 @@ const calcArrowDirection = props => {
         let direction = changeSpeed > 0 ? arrowFaceIn : arrowFaceOut;	
         return direction;      
     }	
+};
+
+const calcCircleTitlePositions = (title, r, outerR) => {
+	let yOffset = title.length > 12 ? 15 : 11;				
+	const y = (outerR - r + yOffset);
+	return y;
+};
+
+export const changeRadius = (data, config, circle, initX) => {
+    const r = circle.r.animVal.value; 
+    const circleTitleId = circle.nextSibling.className.animVal; 
+    const circleTitle = document.querySelector(`.${circleTitleId}`);
+    const getNewX = e => {
+        const newX = e.clientX - initX;
+        for(let i = 0; i < config.length; i++){
+            if(config[i].ID === circleTitleId.replace('title-', '')){
+                let max = (i-1) > -1 ? (config[i-1].RADIUS - 15) : 300;
+                let newR = (r + newX) < max ? (r + newX) : max;          
+                circle.setAttribute('r', newR);
+                config[i].RADIUS = newR;
+                const newPosition = calcCircleTitlePositions(config[i].TITLE, config[i].RADIUS, config.OUTERRADIUS);
+                circleTitle.setAttribute("y", newPosition);
+            }           
+        };
+        calcRadiiLimit(config); 
+        format.configData(data, config);
+        positionElements(data, false);
+    };
+    doms.svg.addEventListener('mousemove', getNewX);
+    doms.svg.addEventListener('mouseup', () => {
+        doms.svg.removeEventListener('mousemove', getNewX);
+    });       
 };
