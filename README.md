@@ -60,7 +60,10 @@ The default path is **localhost:8080** which points to the **data.json** in **di
   - Hovering over the radar dots will display their details in the top right corner. <br />
   - Clicking on individual dots will move them to a new random position within their boundary. <br />
   - Clicking and dragging on a circle when it's outer edge lights up blue will resize it. <br />
-  - Sectors can be switched between either all equal or in proportion to the data in the **Radar View Mode** chart. The dots will find their new positions. The buttons can also be used to just rearrange the dots, without having to refresh the browser. The transitions works best in Chrome and Opera.
+  - Sectors can be switched between either all equal or in proportion to the data in the **Radar View Mode** chart. <br />
+   -- The dots will find their new positions. <br />
+   -- The buttons can also be used to just rearrange the dots, without having to refresh the browser. <br />
+   -- The transitions works best in Chrome and Opera.
 
 ## Browser Compatibility
     27th May 2019
