@@ -4,7 +4,7 @@ The objective is to provide developers with new trends in security technologies,
 
 Built with SVG and JavaScript.<br /><br />
 ## Examples
-![radar-7 6-1](https://user-images.githubusercontent.com/29818223/32985377-60ff6faa-ccb1-11e7-89f6-9ccaac5140fe.png)
+![AppSecRadar](radar-2019-05-28.png?raw=true "AppSecRadar")
 ![radar_7 7-3](https://user-images.githubusercontent.com/29818223/33029376-5925e9c0-ce10-11e7-9e31-79d7e9f44903.png)
 
 ## Set Up
