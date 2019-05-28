@@ -199,4 +199,7 @@ Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anom
   
  Also tidied up the eventListeners on **index.js** and made small changes in **formatData.js** and **radar.css**. <br />
  
+ ### 28-5-19 <br />
+ Fixed the arc calculation in **radar.js** ```calcSectors``` that was making the sector titles go off course when in unequal sector mode - by removing the 3px offset from here and adding it as: ```textElement.setAttribute("dy", "-3");``` to ```renderSectors``` in **radarView.js**. 
+ 
  
