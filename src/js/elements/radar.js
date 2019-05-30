@@ -62,16 +62,15 @@ export const calcSectors = (sectors, data, equal=true, init=true) => {
         let minA = equal ? equalAngles * i : counts[i].min;
         let maxA = equal ? equalAngles * (i + 1) : counts[i].max;
         const radA = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
-		const radAB = Number(((maxA) * (Math.PI / 180)).toFixed(4));
-		const x = 330 + Math.round(r * Math.cos(radA));	
-		const y = 330 + Math.round(r * Math.sin(radA));	
-		const xa = 330 + Math.round((r+3) * Math.cos(radA));
-		const ya = 330 + Math.round((r+3) * Math.sin(radA));
-		const xb = 330 + Math.round((r+3) * Math.cos(radAB));
-		const yb = 330 + Math.round((r+3) * Math.sin(radAB));
-		const sectorLine = `M330 330 L ${x}, ${y}`;
-		const sectorArc = `M ${xa}, ${ya} A300, 300, 0, 0, 1 ${xb}, ${yb}`;
-		let sectorConfig = [sectors[i], radA, radAB];    
+	const radAB = Number(((maxA) * (Math.PI / 180)).toFixed(4));	
+	const xa = 330 + Math.round(r * Math.cos(radA));
+	const ya = 330 + Math.round(r * Math.sin(radA));
+	const xb = 330 + Math.round(r * Math.cos(radAB));
+	const yb = 330 + Math.round(r * Math.sin(radAB));
+	const isReflex = maxA - minA <= 180 ? 0 : 1;
+	const sectorLine = `M330 330 L ${xa}, ${ya}`;
+	const sectorArc = `M ${xa} ${ya} A 300 300 0 ${isReflex} 1 ${xb} ${yb}`;
+	let sectorConfig = [sectors[i], radA, radAB];    
         setAngleLimits(sectorConfig, data);
         const sectorData = {
             sector: sectors[i],
