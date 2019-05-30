@@ -47,7 +47,8 @@ export const renderSectors = props => {
 	arc.setAttribute("fill", "none");
 	arc.setAttribute("d", props.sectorArc);
 	const textElement = document.createElementNS(svgs.ns, 'text');		
-	textElement.setAttribute("class", "sector-names");	
+	textElement.setAttribute("class", "sector-names");
+	textElement.setAttribute("dy", "-3");
 	const textpath = document.createElementNS(svgs.ns,"textPath");
 	textpath.setAttributeNS(svgs.xs, "xlink:href", `#${props.sector}`);
 	textpath.setAttribute("class", "text-path");
