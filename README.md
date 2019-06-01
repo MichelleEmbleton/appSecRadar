@@ -55,6 +55,17 @@ The default path is **localhost:8080** which points to the **data.json** in **di
  - To change the status titles on the radar - also change in **statusConfig.js** - they will be reflected everywhere else. <br />
  - To change the sector names - just use different ones in the **CAT** field of your input data. Can add more or remove sectors. <br />
  - To change or add subcat names - in **subcatConfig.js**. <br />
+ - Where there's no category (or subcat, in the subcat mode) specified, the dots appear as translucent 'ghosts'. This may be annoying in large data sets with alot of cats / subcats unallocated. It's easy to switch off: <br />
+ -- in **radar.css** : change: ```.dot-sub0,  
+              .dot-c0  { 
+	              fill: var(--ghost); 
+	                background-color: var(--ghost);
+           }``` <br />           
+ --  to: 
+       ```    .dot-sub0,
+             .dot-c0  {
+	             display: none;
+            }```  <br />    
  
  ## To use
   - Hovering over the radar dots will display their details in the top right corner. <br />
