@@ -27,13 +27,13 @@ export const positionElements = (data, init=true) => {
             minA: el.minAngle,
             maxA: el.maxAngle
         };        
-        if(el.statusId && el.CAT){
-            const dot = init ? radarView.createDots(el.statusId, el.TECH) : el.dot;  
-            el.dot = dot;           
+        if(el.statusId && el.colorId){
+            const dot = init ? radarView.createDots(el.TECH, el.colorId) : el.dot;  
+            el.dot = dot;          
             const [x, y, angle] = calcRandomPosition(boundaries);   
             let arrow;   
             if(el.CHANGE_SPEED){     
-                arrow = init ? radarView.createArrows(el.TECH, el.statusId) : el.arrow;  
+                arrow = init ? radarView.createArrows(el.TECH, el.colorId) : el.arrow;  
                 const arrowProps = {
                     arrow,
                     angle,
@@ -41,40 +41,44 @@ export const positionElements = (data, init=true) => {
                 };    
                 const direction = calcArrowDirection(arrowProps); 
                 if(!isNaN(direction)){  
+                    arrow.setAttribute('class', `dot-${el.colorId} dot`); 
                     arrow.setAttribute('transform', `translate(${x}, ${y})` 
                                         + `rotate(${direction}, 330,330)`);  
                 };
-                el.arrow = arrow;       
+                el.arrow = arrow;   
             } 
-            dot.setAttribute('transform',`translate(${x}, ${y})`);
+            dot.setAttribute('class', `dot-${el.colorId} dot`);
+            dot.setAttribute('transform',`translate(${x}, ${y})`);           
             init && radarView.renderPositions({dot, arrow});
         }       
-    });
+    });  
 };
 
 export const calcSectors = (sectors, data, equal=true, init=true) => {     
-    const counts = []; 
+    const counts = [];                  
     const sectorDataArr = []; 
+    let dataCount;
     if(!equal){       
         sectors.forEach(el => counts.push({sector: el, count: 0}));    
         data.forEach(el => {
-            counts.forEach(e => el.CAT === e.sector && e.count ++);        
+            counts.forEach(e => (el.CAT === e.sector || el.SUBCAT === e.sector) && e.count ++); 
         });
-    }     
+        dataCount = counts.reduce((acc, cur) => acc + cur.count, 0);
+    }  
     const r = 300;
     const equalAngles = (360 / sectors.length);
 	for(let i = 0; i < sectors.length; i++){
         if(!equal){
-            counts[i].angle = ~~((counts[i].count / data.length) * 360);
+            counts[i].angle = ((counts[i].count / dataCount) * 360);
             counts[i].min = (i-1) > -1 ? (counts[i-1].angle) + (counts[i-1].min) : 0;
             counts[i].max = counts[i].angle + counts[i].min;           
         }
         let textOffset = equal ? 
             Number((952 / sectors.length).toFixed(4)) : 
-            Number(((counts[i].count / data.length) * 952).toFixed(4));
+            Number(((counts[i].count / dataCount) * 952).toFixed(4));
         let minA = equal ? equalAngles * i : counts[i].min;
         let maxA = equal ? equalAngles * (i + 1) : counts[i].max;
-       	const minRad = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
+        const minRad = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
 	const maxRad = Number(((maxA) * (Math.PI / 180)).toFixed(4));	
 	const xa = 330 + Math.round(r * Math.cos(minRad));
         const ya = 330 + Math.round(r * Math.sin(minRad));        
@@ -82,8 +86,8 @@ export const calcSectors = (sectors, data, equal=true, init=true) => {
         const yb = 330 + Math.round(r * Math.sin(maxRad));       
         const isReflex = maxA - minA <= 180 ? 0 : 1;
 	const sectorLine = `M330 330 L ${xa}, ${ya}`;
-	const sectorArc = `M ${xa} ${ya} A 300 300 0 ${isReflex} 1 ${xb} ${yb}`;
-	let sectorConfig = [sectors[i], radA, radAB];    
+        const sectorArc = `M ${xa} ${ya} A 300 300 0 ${isReflex} 1 ${xb} ${yb}`;
+	let sectorConfig = [sectors[i], minRad, maxRad];    
         setAngleLimits(sectorConfig, data);
         const sectorData = {
             sector: sectors[i],
@@ -100,12 +104,14 @@ export const calcSectors = (sectors, data, equal=true, init=true) => {
 const setAngleLimits = (sectorConfig, data) => {  
 	data.forEach(el => {  
 		for(let i = 0; i < sectorConfig.length; i++){
-			if(el.CAT === sectorConfig[0]){
+			if(el.CAT === sectorConfig[0] || el.SUBCAT === sectorConfig[0]){
 				el.minAngle = sectorConfig[1];
-				el.maxAngle = sectorConfig[2];
-			}
+                el.maxAngle = sectorConfig[2];
+            } 
+            if(!el.minAngle) el.minAngle = 0;
+            if(!el.maxAngle) el.maxAngle = 0;
 		};
-	});	
+	});	 
 };
 
 export const calcRadiiLimit = config => {   
@@ -114,11 +120,11 @@ export const calcRadiiLimit = config => {
 			config[i].minRadius = 10;
 		}
 		config[i-1].minRadius = Number(config[i].RADIUS);   
-    };
+  	};
 };
 
 const calcRandomPosition = props => {  
-    	const minA = (props.minA + 0.06);
+   	const minA = (props.minA + 0.06);
 	const maxA = (props.maxA - 0.06);
     	const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
 	const minR = props.minRadius + 6;			
@@ -133,7 +139,7 @@ const calcArrowDirection = props => {
     const changeSpeed = props.changeSpeed.replace(/\+/, "");
     if(!isNaN(changeSpeed)){
         const length = 324 - (parseInt(Math.abs(changeSpeed)) * 3 + 7);	
-        const points = `330, ${length} 324.8,328 335.2,328`;
+        const points = `330, ${length} 324.8,328 335.2,328`;  
         props.arrow.setAttribute("points", points);	
         const arrowFaceIn = Number(((props.angle * 180/Math.PI)-90).toFixed(4));
         const arrowFaceOut = Number((90+(props.angle * 180/Math.PI)).toFixed(4));
@@ -165,7 +171,7 @@ export const changeRadius = (data, config, circle, initX) => {
             }           
         };
         calcRadiiLimit(config); 
-        format.configData(data, config);
+        data.forEach(el => format.setRadii(el, config));
         positionElements(data, false);
     };
     doms.svg.addEventListener('mousemove', getNewX);
