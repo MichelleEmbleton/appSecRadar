@@ -84,21 +84,3 @@ export const createSubcatTable = (headings, titles, data) => {
         renderTable(heading, titles, subcatData, element);
     });           
 };
-
-
-
-              
-  
-            
-
-
-      
-   
-      
-   
-	
-
-
-
-
-
