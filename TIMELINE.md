@@ -208,7 +208,7 @@ Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anom
  ### 1-6-19 <br />
  Changed the radar's subcategory mode so that the subcategories become the sectors, instead of just changing colour. <br />
    - I've kept them the same subcat colours to differentiate which mode it's in easier. <br />
-   - Where there is no cat (or subcat in the subcat mode), the dots will still appear as 'ghosts' - translucently. This is easy to switch off if annoying - see Config in README. <br />
+   - Where there is no cat (or subcat in the subcat mode), the dots will still appear as 'ghosts' - translucently. This is easy to switch off if annoying - see Configure in README. <br />
    
 Also some refactoring and removed a function not needed anymore for changing the colors. <br />
 Main changes are to **radar.js**, **radarView.js**, and **modeTable.js**, with smaller changes to other .js and .css files. <br />
