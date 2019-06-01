@@ -5,9 +5,10 @@ import * as tableView from './listTableView';
 const getTableListData = (data, col2, col3) => {
     const tableData = [];
     const titles = ['name', col2, col3, 'detail'];
+    
     data.forEach(el => {
         let invalidSubcat, invalidStatus;
-        if(el.SUBCAT && !el.subcatId) {
+        if(el.SUBCAT && el.subcatId === "0") {
             invalidSubcat = `
                 ${el.SUBCAT} <br /> 
                 Invalid subcat.<br /> 
@@ -21,6 +22,7 @@ const getTableListData = (data, col2, col3) => {
         }
         let subcat = invalidSubcat || el.SUBCAT;
         let status = invalidStatus || el.STATUS;
+
         tableData.push({
             tech: el.TECH,
             cat: el.CAT,
@@ -28,8 +30,9 @@ const getTableListData = (data, col2, col3) => {
             status: status,
             statusId: el.statusId,
             details: el.DETAILS
-        });
+        });   
     }); 
+
     return [tableData, titles];  
 };
 
