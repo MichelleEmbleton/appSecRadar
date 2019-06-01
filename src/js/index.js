@@ -20,17 +20,17 @@ const dataControl = async () => {
         await loadData.dataRes();    
         state.data = loadData.data;          
         state.data.forEach(el => {
-            el.CAT = format.toLower(el.CAT);
-            el.SUBCAT = format.toLower(el.SUBCAT);
-            el.STATUS = format.toLower(el.STATUS);
-        });                    
-        config.forEach(el => el.TITLE = format.toLower(el.TITLE)); 
-        subcatConfig.forEach(el => el.SUBCAT = format.toLower(el.SUBCAT));    
-        state.sectors = format.getUniqCats(state.data);        
+           el.CAT = format.format(el.CAT);   
+           el.SUBCAT = format.format(el.SUBCAT);
+           el.STATUS = format.format(el.STATUS);
+        });                                             
+        config.forEach(el => el.TITLE = format.format(el.TITLE)); 
+        subcatConfig.forEach(el => el.SUBCAT = format.format(el.SUBCAT));    
+        state.sectors = format.getUniqCats(state.data);  
         state.states = config.map(el => el.TITLE); 
         state.subcats = format.getUniqSubcats(subcatConfig);   
         radarControl.calcRadiiLimit(config); 
-        format.configData(state.data, config, subcatConfig);
+        format.configData(state.data, config, subcatConfig);       
         radarControl.createRadar(state.sectors, state.data, config);                              
     }
     catch(err){
@@ -70,25 +70,26 @@ const detailsPopupControl = e => {
     }  
 };
     
-const modeChartControl = e => {
-    const id = e.target.id;
-    const val = e.target.value;       
-    if(val){
-        let equal = val === 'equal' ? true : false;
-        radarControl.calcSectors(state.sectors, state.data, equal, false);
-        radarControl.positionElements(state.data, false);
+const modeChartControl = e => {  
+    const id = e.target.id === 'mode_chart' ? null : e.target.id;  
+    if(id){    
+        const val = e.target.value;          
+        const modeData = {
+            id,
+            val,
+            data: state.data,
+            subcats: state.subcats,
+            sectors: state.sectors
+        };  
+        modes.modeControl(modeData);
     }
-    id.includes('mode') && modes.modeControl(id, state.data);
 };
 
-const chartControl = e => {
+const displayModuleControl = e => {
     let btn = e.target;  	   
     const btnId = btn.id;
     const sign = displayModule(btn);  
-    const props = {
-        sign, 
-        data: state.data
-    };    
+    const props = {sign, data: state.data};    
     btnId === 'legend' && legendControl(sign, config); 
     btnId === 'radar_mode' && modes.modeTableControl(sign, config, subcatConfig);
     btnId === 'anomalies' && anomalyControl(props);
@@ -109,12 +110,9 @@ const chartList = [
 chartList.forEach(el => {
     el.addEventListener('mousedown', e => dragElement(el, e));
 });
-btnArr.forEach(btn => btn.addEventListener('click', chartControl));
+btnArr.forEach(btn => btn.addEventListener('click', displayModuleControl));
 doms.svg.addEventListener('click', dotPositionControl);
 doms.svg.addEventListener('mousedown', radiusControl);
 doms.svg.addEventListener('mouseover', detailsPopupControl); 
 doms.modeChart.addEventListener('click', modeChartControl);
 window.addEventListener('load', dataControl);
-
-
-
