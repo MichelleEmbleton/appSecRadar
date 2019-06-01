@@ -1,5 +1,4 @@
 
-
 export const format = el => {
     el = el.toLowerCase();
     if(!el.replace(/\s/g, "").length) el = "";  
