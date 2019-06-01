@@ -56,7 +56,7 @@ body {
 /* VARIABLES */
 
 :root {
-    --dark-green: rgb(0, 143, 0);
+    --dark-green: rgb(1, 155, 1);
     --mid-green: rgb(15, 255, 0);
     --yellow: rgb(255, 255, 0);
     --gold: rgb(255, 192, 0);
@@ -72,7 +72,7 @@ body {
     --green: rgb(70,200,30);
 
     --button-hover-color: rgb(153, 153, 153);
-    --ghost: rgba(255,255,255,.5);
+    --ghost: rgba(255,255,255,.4);
 
     --dark-green-bg: rgba(0, 255, 50, 0.2);
     --mid-green-bg: rgba(150, 255, 0, 0.2);
@@ -103,9 +103,4 @@ body {
     0% { opacity: .9; }
     100% { opacity: 0; }
 }
-
-
-
-
-
 
