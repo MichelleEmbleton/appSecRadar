@@ -19,7 +19,7 @@ const getAnomalies = data => {
                     trClass: "nostatus"
                 });
             }
-            if(!el.subcatId) {
+            if(!el.subcatId || el.subcatId === "0") {
                 let invalidSubcat = el.SUBCAT ? "Invalid Subcategory" : "Unallocated Subcategory";    
                 anomalyList.push({	
                     tech: el.TECH, 
@@ -27,7 +27,7 @@ const getAnomalies = data => {
                     trClass: "nosubcat"
                 });	
             }
-        }); 
+        });                          
     renderAnomalyTable(anomalyList);     
 };
 
