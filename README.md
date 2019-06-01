@@ -5,7 +5,7 @@ The objective is to provide developers with new trends in security technologies,
 Built with SVG and JavaScript.<br /><br />
 ## Examples
 ![AppSecRadar](radar-2019-05-28.png?raw=true "AppSecRadar")
-![radar_7 7-3](https://user-images.githubusercontent.com/29818223/33029376-5925e9c0-ce10-11e7-9e31-79d7e9f44903.png)
+![AppSecRadar](radar-subcat-mode.png?raw=true "AppSecRadar")
 
 ## Set Up
 The file structure: <br />
