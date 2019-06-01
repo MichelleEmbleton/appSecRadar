@@ -77,7 +77,7 @@ The default path is **localhost:8080** which points to the **data.json** in **di
    -- The transitions works best in Chrome and Opera.
 
 ## Browser Compatibility
-    27th May 2019
+    1st June 2019
     Tested latest changes in: 
     FireFox - new transitions on radar not working
     Safari - new transitions on radar not working
