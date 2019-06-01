@@ -14,12 +14,7 @@
 	transition: all 1s;
 }
 
-.details-c1, 
-.details-c2, 
-.details-c3, 
-.details-c4,
-.details-c5, 
-.details-c6 {	
+[class^="details-c"] {	
 	text-transform: capitalize; 
 	display: inline-block;
 	padding: 1rem;
