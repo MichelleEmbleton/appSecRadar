@@ -210,6 +210,7 @@ Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anom
    - I've kept them the same subcat colours to differentiate which mode it's in easier. <br />
    - Where there is no cat (or subcat in the subcat mode), the dots will still appear as 'ghosts' - translucently. This is easy to switch off if annoying - see Configure in README. <br />
    
+The weighted sectors on the radar took into account the entire dataset, including any unallocated sector entries - I've fixed this to just represent all data with sectors. So ```360 deg / data count for each sector```.<br />
 Also some refactoring and removed a function not needed anymore for changing the colors. <br />
 Main changes are to **radar.js**, **radarView.js**, and **modeTable.js**, with smaller changes to other .js and .css files. <br />
 
