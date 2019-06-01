@@ -201,6 +201,16 @@ Changes to **radar.js, radarView.js, index.js, modeTableView.js, radar.css, anom
  
  ### 28-5-19 <br />
  Fixed the arc calculation in **radar.js** ```calcSectors``` that was making the sector titles go off course when in unequal sector mode - by removing the 3px offset from here and adding it as: ```textElement.setAttribute("dy", "-3");``` to ```renderSectors``` in **radarView.js**. 
+ 
  ### 29-5-19 <br />
  Fixed arc calculation in **radar.js** - wasn't taking reflex angles into consideration.
  
+ ### 1-6-19 <br />
+ Changed the radar's subcategory mode so that the subcategories become the sectors, instead of just changing colour. <br />
+   - I've kept them the same subcat colours to differentiate which mode it's in easier. <br />
+   - Where there is no cat (or subcat in the subcat mode), the dots will still appear as 'ghosts' - translucently. This is easy to switch off if annoying - see Config in README. <br />
+   
+Also some refactoring and removed a function not needed anymore for changing the colors. <br />
+Main changes are to **radar.js**, **radarView.js**, and **modeTable.js**, with smaller changes to other .js and .css files. <br />
+
+
