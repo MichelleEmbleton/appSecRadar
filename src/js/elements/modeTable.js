@@ -1,7 +1,8 @@
 import { clearView } from '../transitions';
-import { changeColor } from './radarView';
+import { clearSectors, changeColor } from './radarView';
 import { renderModeTable } from './modeTableView';
 import { doms } from '../base';
+import { calcSectors, positionElements } from './radar';
 
 export const modeTableControl = (sign, config, subcatConfig) => {  
     if(sign === '+') clearView(doms.modeChart);
@@ -16,15 +17,23 @@ export const modeTableControl = (sign, config, subcatConfig) => {
     }   
 };
 
-export const modeControl = (id, data) => {  
-    data && 
-        data.forEach(el => {  
-            let colorId = id === 'subcat_mode' ? el.subcatId : el.statusId;
-            const colorData = {
-                id: colorId, 
-                dot: el.dot, 
-                arrow: el.arrow
-            }
-            colorId && changeColor(colorData);  
-        });
+const modeState = [];
+
+export const modeControl = ({id, val, data, subcats, sectors}) => {   
+    modeState.mode = id;
+    let newSectors;
+    let init = !val ? true : false;   
+    if(id.includes('_mode')) {
+        modeState.sectorType = id === 'subcat_mode' ? subcats : sectors;
+        clearSectors();
+        data &&
+            data.forEach(el => {  
+                el.colorId = id === 'subcat_mode' ? `sub${el.subcatId}` :
+                    !el.CAT ? 'c0' : el.statusId;
+            });                 
+    }
+    newSectors = modeState.sectorType || sectors;
+    if(val) modeState.equal = val === 'equal' ? true : false;   
+    calcSectors(newSectors, data, modeState.equal, init); 
+    positionElements(data, false);   
 };
