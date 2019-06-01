@@ -27,12 +27,12 @@
 .sector-names {	
 	font-size: 1.3rem;
 	text-transform: uppercase;
-	transition: all .5s;
+	transition: all .5s;   
 }
 
 .sector-border,
 .text-path { 
-	transition: all .5s;
+	transition: all .5s;  
 }
 
 /* RADAR DOTS */
@@ -93,8 +93,9 @@
 	fill: var(--lilac); 
 	background-color: var(--lilac);
 }
-	
-.no-subcat {
+
+.dot-sub0,
+.dot-c0  {
 	fill: var(--ghost); 
 	background-color: var(--ghost);
 }
