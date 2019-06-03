@@ -14,7 +14,7 @@ directory - ie. AppSecRadar/
     dist/ ---  data.json
     src/ ----  index.html
                css/ --- the 7 css files
-               js/ ---  the 7 js files 
+               js/ ---  the 8 js files 
                         elements/ ---  the 11 js files in elements
     .babelrc
     package.json
