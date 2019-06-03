@@ -20,9 +20,9 @@ export const svgs = {
 export const sectorDoms = () => {
 	const sectorBorder = document.querySelectorAll(".sector-border");
 	const arc = document.querySelectorAll(".sector-arc");
-    const textPath = document.querySelectorAll(".text-path");
+    	const textPath = document.querySelectorAll(".text-path");
 	const borders = Array.from(sectorBorder);   
-    const arcs = Array.from(arc);
-    const text = Array.from(textPath);
+    	const arcs = Array.from(arc);
+    	const text = Array.from(textPath);
 	return [borders, arcs, text];
 };
