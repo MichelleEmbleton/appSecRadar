@@ -1,5 +1,5 @@
 import { clearView } from '../transitions';
-import { clearSectors, changeColor } from './radarView';
+import { clearSectors } from './radarView';
 import { renderModeTable } from './modeTableView';
 import { doms } from '../base';
 import { calcSectors, positionElements } from './radar';
