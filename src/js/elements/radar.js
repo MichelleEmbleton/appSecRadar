@@ -54,51 +54,54 @@ export const positionElements = (data, init=true) => {
     });  
 };
 
-export const calcSectors = (sectors, data, equal=true, init=true) => {     
-    const counts = [];                  
-    const sectorDataArr = []; 
-    let dataCount;
-    if(!equal){       
-        sectors.forEach(el => counts.push({sector: el, count: 0}));    
-        data.forEach(el => {
-            counts.forEach(e => (el.CAT === e.sector || el.SUBCAT === e.sector) && e.count ++); 
-        });
-        dataCount = counts.reduce((acc, cur) => acc + cur.count, 0);
-    }  
-    const r = 300;
-    const equalAngles = (360 / sectors.length);
-	for(let i = 0; i < sectors.length; i++){
-        if(!equal){
-            counts[i].angle = ((counts[i].count / dataCount) * 360);
-            counts[i].min = (i-1) > -1 ? (counts[i-1].angle) + (counts[i-1].min) : 0;
-            counts[i].max = counts[i].angle + counts[i].min;           
-        }
-        let textOffset = equal ? 
-            Number((952 / sectors.length).toFixed(4)) : 
-            Number(((counts[i].count / dataCount) * 952).toFixed(4));
-        let minA = equal ? equalAngles * i : counts[i].min;
-        let maxA = equal ? equalAngles * (i + 1) : counts[i].max;
-        const minRad = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
-	const maxRad = Number(((maxA) * (Math.PI / 180)).toFixed(4));	
-	const xa = 330 + Math.round(r * Math.cos(minRad));
-        const ya = 330 + Math.round(r * Math.sin(minRad));        
-	const xb = 330 + Math.round(r * Math.cos(maxRad));
-        const yb = 330 + Math.round(r * Math.sin(maxRad));       
-        const isReflex = maxA - minA <= 180 ? 0 : 1;
-	const sectorLine = `M330 330 L ${xa}, ${ya}`;
-        const sectorArc = `M ${xa} ${ya} A 300 300 0 ${isReflex} 1 ${xb} ${yb}`;
-	let sectorConfig = [sectors[i], minRad, maxRad];    
-        setAngleLimits(sectorConfig, data);
-        const sectorData = {
-            sector: sectors[i],
-            textOffset,
-            sectorLine,
-            sectorArc
-        } 
-        if(init) radarView.renderSectors(sectorData);
-        else sectorDataArr.push(sectorData);	
-    };
-    !init && radarView.alignSectors(sectorDataArr);
+export const calcSectors = (sectors, data, equal=true, init=true) => {  
+    if(sectors){   
+        const counts = [];                  
+        const sectorDataArr = []; 
+        let dataCount;
+        if(!equal){       
+            sectors.forEach(el => counts.push({sector: el, count: 0}));    
+            data.forEach(el => {  
+                counts.forEach(e => (el.CAT === e.sector || el.SUBCAT === e.sector) && e.count ++); 
+            });
+            dataCount = counts.reduce((acc, cur) => acc + cur.count, 0);
+        }  
+        const r = 300;
+        const equalAngles = (360 / sectors.length);
+        for(let i = 0; i < sectors.length; i++){
+            if(!equal && dataCount > 0){
+                counts[i].angle = ((counts[i].count / dataCount) * 360);
+                counts[i].min = (i-1) > -1 ? (counts[i-1].angle) + (counts[i-1].min) : 0;
+                counts[i].max = counts[i].angle + counts[i].min;           
+            }
+            let textOffset = equal ? 
+                Number((952 / sectors.length).toFixed(4)) : 
+                dataCount > 0 ? Number(((counts[i].count / dataCount) * 952).toFixed(4)) : 0;
+            
+            let minA = equal ? equalAngles * i : counts[i].min ? counts[i].min : 0;
+            let maxA = equal ? equalAngles * (i + 1) : counts[i].max ? counts[i].max : 0;
+            const minRad = Number(((minA) * (Math.PI / 180)).toFixed(4)); 	
+            const maxRad = Number(((maxA) * (Math.PI / 180)).toFixed(4));	
+            const xa = 330 + Math.round(r * Math.cos(minRad));
+            const ya = 330 + Math.round(r * Math.sin(minRad));        
+            const xb = 330 + Math.round(r * Math.cos(maxRad));
+            const yb = 330 + Math.round(r * Math.sin(maxRad));   
+            const isReflex = maxA - minA <= 180 ? 0 : 1;
+            const sectorLine = `M330 330 L ${xa}, ${ya}`;
+            const sectorArc = `M ${xa} ${ya} A 300 300 0 ${isReflex} 1 ${xb} ${yb}`;
+            let sectorConfig = [sectors[i], minRad, maxRad];    
+            setAngleLimits(sectorConfig, data);
+            const sectorData = {
+                sector: sectors[i],
+                textOffset,
+                sectorLine,
+                sectorArc
+            };   
+            if(init) radarView.renderSectors(sectorData);
+            else sectorDataArr.push(sectorData);               
+        };
+        !init && radarView.alignSectors(sectorDataArr);
+    }
 };
 
 const setAngleLimits = (sectorConfig, data) => {  
@@ -120,11 +123,11 @@ export const calcRadiiLimit = config => {
 			config[i].minRadius = 10;
 		}
 		config[i-1].minRadius = Number(config[i].RADIUS);   
-  	};
+    };
 };
 
 const calcRandomPosition = props => {  
-   	const minA = (props.minA + 0.06);
+    	const minA = (props.minA + 0.06);
 	const maxA = (props.maxA - 0.06);
     	const angle = Number((((Math.random() * (maxA - minA) + minA))).toFixed(4));
 	const minR = props.minRadius + 6;			
