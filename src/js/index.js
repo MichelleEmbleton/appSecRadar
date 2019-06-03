@@ -3,10 +3,11 @@ import LoadData from './LoadData';
 import { config } from './statusConfig';
 import { subcatConfig } from './subcatConfig';
 import * as format from './formatData';
+import { search } from './search';
 import { dragElement, displayModule } from './transitions';
 import * as radarControl from './elements/radar';
 import { legendControl } from './elements/legend';
-import { anomalyControl } from './elements/AnomalyTable';
+import * as anomalies from './elements/AnomalyTable';
 import * as modes from './elements/modeTable';
 import * as listTables from './elements/listTables';
 import { renderDetailsPopup } from './elements/detailsPopupView';
@@ -18,38 +19,46 @@ const dataControl = async () => {
     const loadData = new LoadData();
     try {
         await loadData.dataRes();    
-        state.data = loadData.data;          
-        state.data.forEach(el => {
-           el.CAT = format.format(el.CAT);   
-           el.SUBCAT = format.format(el.SUBCAT);
-           el.STATUS = format.format(el.STATUS);
-        });                                             
-        config.forEach(el => el.TITLE = format.format(el.TITLE)); 
-        subcatConfig.forEach(el => el.SUBCAT = format.format(el.SUBCAT));    
-        state.sectors = format.getUniqCats(state.data);  
-        state.states = config.map(el => el.TITLE); 
-        state.subcats = format.getUniqSubcats(subcatConfig);   
-        radarControl.calcRadiiLimit(config); 
-        format.configData(state.data, config, subcatConfig);       
-        radarControl.createRadar(state.sectors, state.data, config);                              
+        state.data = loadData.data; 
+        if(state.data){         
+            state.data.forEach(el => {
+                el.TECH = format.capitalize(el.TECH);
+                el.CAT = format.format(el.CAT);   
+                el.SUBCAT = format.format(el.SUBCAT);
+                el.STATUS = format.format(el.STATUS);
+            });                                             
+            config.forEach(el => el.TITLE = format.format(el.TITLE)); 
+            subcatConfig.forEach(el => el.SUBCAT = format.format(el.SUBCAT)); 
+            state.sectors = format.getUniqCats(state.data);  
+            state.states = config.map(el => el.TITLE); 
+            state.subcats = format.getUniqSubcats(subcatConfig);   
+            radarControl.calcRadiiLimit(config); 
+            format.configData(state.data, config, subcatConfig);  
+            state.techs = state.data.map(el => el.TECH); 
+            const [anomalyList, tableList] = anomalies.setAnomalies(state.data);
+            state.anomalyList = anomalyList;   
+            state.tableList = tableList;         
+            radarControl.createRadar(state.sectors, state.data, config); 
+        } else {
+            const errorMessage = `No data to display.`
+            doms.errorMessage.classList.add('error-show');
+            doms.errorMessage.innerHTML = errorMessage;  
+            console.log(`Data: ${state.data}`);
+        }                           
     }
     catch(err){
-        const dataError = `
-            Data isn't loading! <br />
-            Check data source: the fields should match the template JSON file.<br />
-            Check path in LoadData - the default is localhost:8080 - <br />
-            for the test data.json file in /dist - <br />
-            you need to change it to where your json data is coming from if not here.`;
+        const dataError = `Check data for errors!`;
         doms.errorMessage.classList.add('error-show');
-        doms.errorMessage.innerHTML = dataError;   
-        console.log(err);
+        doms.errorMessage.innerHTML = dataError;  
+        console.log(`${err}, Data source: ${state.data}`);
     }
 };
 
 const dotPositionControl = e => {
     if(e.target.closest('.dot')) {
         const id = e.target.closest('.dot').id; 
-        const selected = state.data.filter(el => el.TECH === id);   
+        const index = search(state.techs, id);  
+        const selected = [state.data[index]];     
         radarControl.positionElements(selected, false);       
     }
 };
@@ -65,14 +74,15 @@ const radiusControl = e => {
 const detailsPopupControl = e => {
     if(e.target.closest('.dot')) {
         const id = e.target.closest('.dot').id;
-        const selected = state.data.find(el => el.TECH === id);
+        const index = search(state.techs, id);
+        const selected = state.data[index];
         renderDetailsPopup(selected);
     }  
 };
     
 const modeChartControl = e => {  
     const id = e.target.id === 'mode_chart' ? null : e.target.id;  
-    if(id){    
+    if(id && state.data){    
         const val = e.target.value;          
         const modeData = {
             id,
@@ -85,17 +95,35 @@ const modeChartControl = e => {
     }
 };
 
-const displayModuleControl = e => {
+const displayModuleControl = e => {    
     let btn = e.target;  	   
     const btnId = btn.id;
     const sign = displayModule(btn);  
-    const props = {sign, data: state.data};    
+    
     btnId === 'legend' && legendControl(sign, config); 
     btnId === 'radar_mode' && modes.modeTableControl(sign, config, subcatConfig);
-    btnId === 'anomalies' && anomalyControl(props);
-    btnId === 'sector' && listTables.sectorTableControl(props, state.sectors);
-    btnId === 'status' && listTables.statusTableControl(props, state.states);
-    btnId === 'subcat' && listTables.subcatTableControl(props, state.subcats);
+    btnId === 'anomalies' && anomalies.anomalyControl(sign, state.anomalyList);
+
+    if(btnId === 'sector' || btnId === 'status' || btnId === 'subcat'){
+        const props = {
+            sign, 
+            btnId,
+            data: state.tableList
+        };   
+        if(btnId === 'sector'){
+            props.headings = state.sectors;
+            props.element = doms.sectorList;
+        } 
+        if(btnId === 'status'){
+            props.headings = state.states;
+            props.element = doms.statusList;
+        }
+        if(btnId === 'subcat'){
+            props.headings = state.subcats;
+            props.element = doms.subcatList;
+        }
+        listTables.tableControl(props);   
+    };
 };
 
 const btnArr = Array.from(doms.btns);  	             
