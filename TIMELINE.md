@@ -214,4 +214,12 @@ The weighted sectors on the radar took into account the entire dataset, includin
 Also some refactoring and removed a function not needed anymore for changing the colors. <br />
 Main changes are to **radar.js**, **radarView.js**, and **modeTable.js**, with smaller changes to other .js and .css files. <br />
 
+### 2-6-19 <br />
+Refactored the tables code and moved the tableList to be created with the anomalyList data so the anomalies are set in one place. <br />
+
+Added a binary search - to lookup dot details - which may help with large datasets - and shouldn’t slow down small data sets. Anyway, the sort function needed for it is nice to have for keeping the table data in alphabetical order. <br />
+
+Added some errorhandling in a few places - for the less expected data sets. <br />
+
+Changes are to **listTables.js, listTableView.js, anomalyTable.js, index.js, formatData.js, LoadData.js. radar.js, modeTable.js** (removed fn reference), **details_box.css** (capitalize text not needed) and **search.js** added. 
 
