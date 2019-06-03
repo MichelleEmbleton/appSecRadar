@@ -1,71 +1,56 @@
-import { doms } from '../base';
 import { clearView, fadeIn } from '../transitions';
-import * as tableView from './listTableView';
+import { renderTable } from './listTableView';
 
-const getTableListData = (data, col2, col3) => {
-    const tableData = [];
-    const titles = ['name', col2, col3, 'detail'];
-    
-    data.forEach(el => {
-        let invalidSubcat, invalidStatus;
-        if(el.SUBCAT && el.subcatId === "0") {
-            invalidSubcat = `
-                ${el.SUBCAT} <br /> 
-                Invalid subcat.<br /> 
-                Register in SubcatConfig`;
-        }
-        if(el.STATUS && !el.statusId) {
-            invalidStatus = `
-                ${el.STATUS} <br /> 
-                Invalid status.<br /> 
-                Check against Titles in statusConfig`;
-        }
-        let subcat = invalidSubcat || el.SUBCAT;
-        let status = invalidStatus || el.STATUS;
-
-        tableData.push({
-            tech: el.TECH,
-            cat: el.CAT,
-            subcat: subcat,
-            status: status,
-            statusId: el.statusId,
-            details: el.DETAILS
-        });   
-    }); 
-
-    return [tableData, titles];  
+const columnTitles = (col2, col3) => {
+    return ['name', col2, col3, 'detail']; 
 };
 
-export const sectorTableControl = ({sign, data}, sectors) => {   
-    if(sign === '+') clearView(doms.sectorList);
+export const tableControl = ({sign, btnId, data, headings, element}) => {   
+    if(sign === '+') clearView(element);
     else {
         if(data){
-            const [listData, titles] = getTableListData(data, 'subcategory', 'status');
-            tableView.createSectorTable(sectors, titles, listData);
-            fadeIn(doms.sectorList);
+            let listData;                            
+            headings.forEach(heading => {  
+                const tableData = [];
+                for(let i = 0; i < data.length; i++){
+                    if(btnId === 'sector'){
+                        listData = {
+                            columns: columnTitles('subcategory', 'status'),
+                            listBy: data[i].CAT,
+                            td2: data[i].SUBCAT,
+                            td3: data[i].STATUS
+                        }
+                    }
+                    if(btnId === 'status'){
+                        listData = {
+                            columns: columnTitles('category', 'subcategory'),
+                            listBy: data[i].STATUS,
+                            td2: data[i].CAT,
+                            td3: data[i].SUBCAT
+                        }               
+                    }
+                    if(btnId === 'subcat'){
+                        listData = {
+                            columns: columnTitles('category', 'status'),
+                            listBy: data[i].SUBCAT,
+                            td2: data[i].CAT,
+                            td3: data[i].STATUS
+                        }
+                    }
+
+                    listData.listBy === heading &&                       
+                        tableData.push({
+                            td1: data[i].TECH,
+                            td2: listData.td2,
+                            td3: listData.td3,
+                            td4: data[i].DETAILS,
+                            bkColor: data[i].bkColor
+                        });                                                                              
+                };             
+                renderTable(heading, listData.columns, tableData, element);
+            });             
+            fadeIn(element);
         }       
-    }        
-};
-
-export const statusTableControl = ({sign, data}, states) => {   
-    if(sign === '+') clearView(doms.statusList);
-    else {
-        if(data){
-            const [listData, titles] = getTableListData(data, 'category', 'subcategory');
-            tableView.createStatusTable(states, titles, listData);
-            fadeIn(doms.statusList);
-        }
-    }         
-};
-
-export const subcatTableControl = ({sign, data}, subcats) => {   
-    if(sign === '+') clearView(doms.subcatList);
-    else {
-        if(data){
-            const [listData, titles] = getTableListData(data, 'category', 'status');
-            tableView.createSubcatTable(subcats, titles, listData);
-            fadeIn(doms.subcatList);
-        }
     }        
 };
 
