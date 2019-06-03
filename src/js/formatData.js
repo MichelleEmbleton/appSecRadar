@@ -3,7 +3,11 @@ export const format = el => {
     el = el.toLowerCase();
     if(!el.replace(/\s/g, "").length) el = "";  
     return el;    
-};   
+}; 
+
+export const capitalize = el => {   
+    return el.charAt(0).toUpperCase() + el.slice(1);
+};
 
 export const getUniqCats = data => { 
     const sectors = [];       
@@ -32,15 +36,16 @@ export const setRadii = (el, config) => {
     };
 };
 
-export const configData = (data, config, subcatConfig) => {                                     
-    data.forEach(el => {   
+export const configData = (data, config, subcatConfig) => {   
+    data.sort((a, b) => a.TECH < b.TECH ? -1 : (a.TECH > b.TECH ? 1 : 0));                                  
+    data.forEach(el => {  
         for(let i = 0; i < config.length; i++){
             if(el.STATUS && el.STATUS === config[i].TITLE){
                 el.statusId = config[i].ID;  
             }
             setRadii(el, config);
-            el.colorId = !el.CAT ? 'c0' : el.statusId;
-        }; 
+            el.colorId = !el.CAT ? "c0" : el.statusId;
+        };
         if(subcatConfig){                
             for(let i = 0; i < subcatConfig.length; i++){
                 if(el.SUBCAT && el.SUBCAT === subcatConfig[i].SUBCAT){
@@ -48,6 +53,6 @@ export const configData = (data, config, subcatConfig) => {
                 }	
             };
         }
-        if(!el.subcatId) el.subcatId = '0';    
-    });
+        if(!el.subcatId) el.subcatId = "0";    
+    }); 
 };
