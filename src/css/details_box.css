@@ -15,7 +15,6 @@
 }
 
 [class^="details-c"] {	
-	text-transform: capitalize; 
 	display: inline-block;
 	padding: 1rem;
 }
