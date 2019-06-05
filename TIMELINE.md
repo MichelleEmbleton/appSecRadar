@@ -223,3 +223,5 @@ Added some errorhandling in a few places - for the less expected data sets. <br 
 
 Changes are to **listTables.js, listTableView.js, anomalyTable.js, index.js, formatData.js, LoadData.js. radar.js, modeTable.js** (removed fn reference), **details_box.css** (capitalize text not needed) and **search.js** added. 
 
+### 5-6-19 <br />
+Refactored code for tables. Changes to **listTables.js** and **index.js**.
