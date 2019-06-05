@@ -99,29 +99,36 @@ const displayModuleControl = e => {
     let btn = e.target;  	   
     const btnId = btn.id;
     const sign = displayModule(btn);  
-    
+
     btnId === 'legend' && legendControl(sign, config); 
     btnId === 'radar_mode' && modes.modeTableControl(sign, config, subcatConfig);
     btnId === 'anomalies' && anomalies.anomalyControl(sign, state.anomalyList);
 
     if(btnId === 'sector' || btnId === 'status' || btnId === 'subcat'){
+        const propTypes = {
+            sector: {
+                headings: state.sectors,
+                element: doms.sectorList
+            },
+            status: {
+                headings: state.states,
+                element: doms.statusList
+            },
+            subcat: {
+                headings: state.subcats,
+                element: doms.subcatList
+            }
+        }
+        const {headings, element} = propTypes[btnId];
+
         const props = {
             sign, 
             btnId,
-            data: state.tableList
+            data: state.tableList,
+            headings,
+            element
         };   
-        if(btnId === 'sector'){
-            props.headings = state.sectors;
-            props.element = doms.sectorList;
-        } 
-        if(btnId === 'status'){
-            props.headings = state.states;
-            props.element = doms.statusList;
-        }
-        if(btnId === 'subcat'){
-            props.headings = state.subcats;
-            props.element = doms.subcatList;
-        }
+        
         listTables.tableControl(props);   
     };
 };
