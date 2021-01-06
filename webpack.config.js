@@ -32,9 +32,14 @@ module.exports = {
         test: /\.css$/,
         use: [
           MiniCssExtractPlugin.loader, 
-          { loader: 'css-loader' },
-          { loader: 'postcss-loader', options: { 
-              plugins: () => [autoprefixer, cssnano]
+          { loader: 'css-loader' },        
+          { loader: 'postcss-loader', 
+            options: { 
+              postcssOptions: {
+                plugins: [
+                  ['autoprefixer', cssnano]
+                ]
+              }
             }
           }       
         ]
