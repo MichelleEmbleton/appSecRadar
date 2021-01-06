@@ -46,7 +46,7 @@ Status names can now be easily added, deleted or changed - and the radiuses of e
 ### 26-7-17 <br />
 Accepts a JSON file as input data.<br />
 The test JSON file - 'data.json' - is in the main directory, and simply needs to be replaced with your own data - and named 'data.json'.<br />
-To accept a file in another location and/or of different name - the file path at the top of 'js/input_data.js' will need to be edited.<br />
+To accept a file in another location and/or of different name - edit the file path in 'js/LoadData.js' ('js/input_data.js'in older versions).<br />
 
 There is a neat little JSON validator here:<br />
 https://jsonlint.com  <br />
@@ -129,7 +129,7 @@ Condensed the 3 x list table css files into one file.
 More code changes.
 
 ### 23-2-18 <br />
-Renamed security-radar to: radar.html <br />
+Renamed security-radar to: radar.html (index.html in newest versions) <br />
 Updated some code.  <br />
 
 JSON import fixes:  <br />
@@ -147,7 +147,7 @@ Open a terminal and cd to the directory containing your radar.html <br />
 Type: python -m SimpleHTTPServer <br />
 or: <br />
 Type: php -S localhost:8000 (or 8001, or another port not in use) <br />
-In the browser address bar type: http://localhost:8000/radar.html (or whatever port was specified). <br />
+In the browser address bar type: http://localhost:8000/index.html (or whatever port was specified). <br />
 Then it should work fine. <br />
 (Ctrl C exits the server.) <br />
 or a Node or Apache server etc. <br />
@@ -225,3 +225,11 @@ Changes are to **listTables.js, listTableView.js, anomalyTable.js, index.js, for
 
 ### 5-6-19 <br />
 Refactored code for tables. Changes to **listTables.js** and **index.js**.
+
+### 6-1-21 <br />
+updated package.json:
+needed to update axios and webpack-dev-server versions
+(other dependency versions also updated after running npm update)
+
+updated webpack.config:  
+css loaders broke - reformatted after line 33
