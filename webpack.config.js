@@ -10,7 +10,10 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist'),   
 		filename: 'main.js'       
 	},
-	devServer: {contentBase: './dist'},
+	devServer: {
+        static: './dist',
+        open: true
+    },
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
